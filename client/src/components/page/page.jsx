@@ -5,18 +5,14 @@ import PokeSelectMenu from "../pokeSelectMenu/pokeSelectMenu"
 import VictoryScreen from "../victoryScreen/victoryScreen"
 import AnswersBox from "../answersBox/answersBox"
 import { Link, animateScroll as scroll } from 'react-scroll'
-import pokeData from '../../static/pokeData/gen_1.json'
 
 
-export const Page = () => {
-    const [metric, setMetric] = useState(false)
+export const Page = ({pokeData, gen, metric, updateMetric, mobile}) => {
     const [pokemonToGuess, setPokemonToGuess] = useState('')
     const [alreadyGuessed, setAlreadyGuessed] = useState([])
     const [isSynchronized, setIsSynchronized] = useState(false)
-    const [settingsMenuOpen, setSettingsMenuOpen] = useState(false)
     const [gameOver, setGameOver] = useState(false)
-    const mobile = window.screen.width > 500 ? false : true
-    const util = new Util(mobile)
+    const util = new Util(mobile, pokeData)
 
     useEffect(() => {
         pickRandomPokemon()
@@ -67,38 +63,29 @@ export const Page = () => {
     const getAlreadyGuessed = () => {
         return alreadyGuessed
     }
-
-    const reset = () => {
-        window.location.reload()
-    }
-
-    const updateMetric = e => {
-        setMetric(e.target.checked)
-    }
+    
     const getCookie = cookieName => {
         if (!document.cookie || document.cookie.length < 1) return false
         let cookieArr = document.cookie.split(';')
         let cookieIndex
+        cookieName = `GENERATION_${gen}_${cookieName}`
 
         for (let index in cookieArr) {
             if (cookieArr[index].includes(cookieName)) cookieIndex = index
         }
 
+        if(!cookieIndex) return false;
         return cookieArr[cookieIndex].split('=')[1]
     }
 
     const setCookie = (key, value) => {
-        document.cookie = key + '=' + value + '; path=/'
+        document.cookie = `GENERATION_${gen}_${key}=${value}; path=/`;
     }
     return (
         <>
-             <Header
-                mobile={mobile}
-                setSettingsMenuOpen={setSettingsMenuOpen}
-                settingsMenuOpen={settingsMenuOpen}
-                updateMetric={updateMetric}
-                reset={reset}
-            />
+                    {/* <p>{pokemonToGuess}</p> */}
+
+             
             {!gameOver && (
                 <PokeSelectMenu
                     pokeData={pokeData}

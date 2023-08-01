@@ -1,22 +1,23 @@
-import pokeData from '../static/pokeData/gen_1.json'
 import evolutionData from '../static/evolutionData.json'
 
 class Util {
     //Class to handle long formatting methods
     metric
     mobile
+    pokeData
 
-    constructor(mobile) {
+    constructor(mobile, pokeData) {
         this.mobile = mobile;
+        this.pokeData = pokeData
     }
 
     formatEntryDetails = (pokemonName, metricSystem) => {
 
-        let keys = Object.keys(pokeData[pokemonName])
+        let keys = Object.keys(this.pokeData[pokemonName])
         let formattedEntryDetails = {}
 
         for (let index in keys) {
-            let formattedDetail = pokeData[pokemonName][keys[index]]
+            let formattedDetail = this.pokeData[pokemonName][keys[index]]
 
             if (keys[index] === 'abilities' || keys[index] === 'types') {
                 formattedDetail = ('' + formattedDetail).replace(/,/g, ' ')

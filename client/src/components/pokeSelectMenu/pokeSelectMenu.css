@@ -40,8 +40,9 @@
     .css-t3ipsp-control {
         left: calc(50vw - 46.5vw);
     }
-    img {
+    .css-1nmdiq5-menu img {
         width: 20vw;
+        margin-right: 5%;
         vertical-align: middle;
     }
 }

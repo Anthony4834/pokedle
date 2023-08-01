@@ -1,0 +1,47 @@
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.gameModeSelector-wrapper {
+    opacity: 0;
+    animation: fadeIn .5s 2.7s forwards;
+    width: 50%;
+    margin: auto;
+    padding: 2%;
+    text-align: center;
+    color: #efefef
+}
+.gameModeSelector-list {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gameModeSelector-list li {
+    transition: all .5s;
+    color: black;
+    padding: 5%;
+    width: 50%;
+    background-color: #efefef;
+    font-size: 16pt;
+    margin: .5%;
+}
+.gameModeSelector-list li:hover {
+    cursor: pointer;
+    background-color: lightgrey;
+}
+
+@media all and (max-device-width: 500px) {
+    .gameModeSelector-wrapper {
+        width: 90%;
+    }
+    .gameModeSelector-list, .gameModeSelector-list li {
+        width: 100%;
+    }
+}

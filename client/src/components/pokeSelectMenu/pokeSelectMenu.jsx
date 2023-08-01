@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import Select from 'react-select'
 import './pokeSelectMenu.css'
 import { Link, animateScroll as scroll } from 'react-scroll'
-import pokeData from '../../static/pokeData/gen_1.json'
 
 
 const PokeSelectMenu = ({
@@ -11,6 +10,7 @@ const PokeSelectMenu = ({
     setIsSynchronized,
     isSynchronized,
     cookieMgr,
+    pokeData
 }) => {
     const [options, setOptions] = useState([])
     const selectListRef = useRef()
@@ -26,7 +26,7 @@ const PokeSelectMenu = ({
         pokemonNames.map(name => {
             if (!alreadyGuessed.includes(name)) {
                 let index = pokeData[name]['ID']
-                let img = `https://i.ibb.co/dPXxxRt/${index}.png` //require('../../static/pokeSprites/' + index + '.png')
+                let img = require('../../static/pokeSprites/' + index + '.png')
                 tempOptions.push({
                     value: name,
                     label: (
