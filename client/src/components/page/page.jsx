@@ -1,8 +1,14 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import Header from "../header/header"
 import Util from "../utl"
+import PokeSelectMenu from "../pokeSelectMenu/pokeSelectMenu"
+import VictoryScreen from "../victoryScreen/victoryScreen"
+import AnswersBox from "../answersBox/answersBox"
+import { Link, animateScroll as scroll } from 'react-scroll'
+import pokeData from '../../static/pokeData/gen_1.json'
 
-export const page = (pokedata) => {
+
+export const Page = () => {
     const [metric, setMetric] = useState(false)
     const [pokemonToGuess, setPokemonToGuess] = useState('')
     const [alreadyGuessed, setAlreadyGuessed] = useState([])
@@ -51,9 +57,10 @@ export const page = (pokedata) => {
     const pickRandomPokemon = () => {
         // setPokemonToGuess("electabuzz");
         // return;
-        let pokemonNames = Object.keys(pokeData)
+        let pokemonNames = Object.keys(pokeData);
         let selectedPokemon =
             pokemonNames[Math.floor(Math.random() * pokemonNames.length)]
+        console.log('------->', selectedPokemon);
         setPokemonToGuess(selectedPokemon)
     }
 

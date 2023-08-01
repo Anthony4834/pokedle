@@ -12,6 +12,7 @@ import Util from './components/utl'
 import Header from './components/header/header'
 import VictoryScreen from './components/victoryScreen/victoryScreen'
 import { Link, animateScroll as scroll } from 'react-scroll'
+import { Page } from './components/page/page'
 
 function App() {
     
@@ -19,7 +20,7 @@ function App() {
     return (
         <div className='App'>
             {/* <p>{pokemonToGuess}</p> */}
-
+            <Page  />
             {/* <h1>{pokemonToGuess && "" + pokemonToGuess + " " + pokeData[pokemonToGuess]["height"]}</h1> */}
            
         </div>
