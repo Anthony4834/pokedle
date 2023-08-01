@@ -1,0 +1,52 @@
+.css-13cymwt-control,
+.css-1nmdiq5-menu,
+.css-t3ipsp-control {
+    left: calc(50vw - 35.55vw);
+}
+.css-1nmdiq5-menu,
+.css-1fdsijx-ValueContainer {
+    font-size: 1.5em;
+}
+.css-1fdsijx-ValueContainer * {
+    vertical-align: middle;
+    padding-left: 1.5%;
+    padding-right: 3.7%;
+}
+.css-1n6sfyn-MenuList,
+.css-1nmdiq5-menu,
+.css-13cymwt-control,
+.css-t3ipsp-control {
+    max-width: 70vw;
+}
+.css-1n6sfyn-MenuList div {
+    padding-left: 3%;
+}
+.css-1n6sfyn-MenuList * {
+    vertical-align: middle;
+}
+.css-1n6sfyn-MenuList img {
+    padding-right: 3%;
+}
+
+@media all and (max-width: 500px) {
+    .css-1n6sfyn-MenuList,
+    .css-1nmdiq5-menu,
+    .css-13cymwt-control,
+    .css-t3ipsp-control {
+        max-width: 90vw;
+    }
+    .css-13cymwt-control,
+    .css-1nmdiq5-menu,
+    .css-t3ipsp-control {
+        left: calc(50vw - 46.5vw);
+    }
+    img {
+        width: 20vw;
+        vertical-align: middle;
+    }
+}
+@media all and (min-device-width: 1000px) {
+    .css-1nmdiq5-menu, .css-13cymwt-control,.css-1n6sfyn-MenuList {
+        min-width: 842px
+    }
+}

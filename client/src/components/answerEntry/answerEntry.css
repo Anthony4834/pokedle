@@ -1,0 +1,115 @@
+.answerEntryWrapper {
+    position: relative;
+    margin-top: 2vh;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    /* border: 1px dotted blue; */
+}
+.answerEntryWrapper .answerEntryDetail {
+    border-radius: 5px;
+    color: #ffffff;
+    height: 8vw;
+    width: 8vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    letter-spacing: 0.1vw;
+    /* border: 1px dotted red; */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.answerEntryDetail:not(.evoDetail) {
+    word-spacing: 8vw;
+}
+.evoDetail {
+    white-space: pre-line;
+}
+.answerEntryDetail:not(:nth-child(7)) {
+    box-shadow:
+        0 2px 4px rgb(0 0 0 / 10%),
+        0 8px 16px rgb(0 0 0 / 10%);
+}
+.answerEntryDetail.NUMBER {
+    font-size: 1.5em;
+}
+.answerEntryDetail.SMALL_TEXT {
+    font-size: 0.8em;
+}
+.answerEntryDetail.VERY_SMALL_TEXT {
+    font-size: 0.55em;
+}
+.answerEntryDetail.MULTI_LINE {
+    line-height: 150%;
+}
+.answerEntryDetail.PARTIAL {
+    background-color: #dbc379;
+}
+.answerEntryDetail.CORRECT {
+    background-color: #78a55a;
+}
+.answerEntryDetail.WRONG,
+.answerEntryDetail.HIGHER,
+.answerEntryDetail.LOWER {
+    background-color: #dc5a5a;
+}
+.answerEntryDetail.answerEntryDetail.HIGHER,
+.answerEntryDetail.answerEntryDetail.LOWER {
+    background-size: 150% 105%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.answerEntryDetail.answerEntryDetail.HIGHER {
+    background-image: url('../../static/triangle_red.png');
+}
+.answerEntryDetail.answerEntryDetail.LOWER {
+    background-image: url('../../static/triangle_red_down.png');
+}
+.answerEntryDetail.pokeImg {
+    background-color: white;
+}
+.answerEntryDetail.pokeImg:hover {
+}
+
+@media all and (max-width: 500px) {
+    .answerEntryWrapper {
+        margin-top: 0.5vh;
+    }
+    .answerEntryWrapper .answerEntryDetail {
+        width: 15vw;
+        height: 15vw;
+        border-radius: 0px !important;
+        box-shadow: none;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+    .answerEntryDetail.MULTI_LINE {
+        font-size: 0.8em;
+    }
+    .answerEntryDetail.SMALL_TEXT {
+        font-size: 0.6em;
+    }
+    .answerEntryDetail.VERY_SMALL_TEXT {
+        font-size: 4.5pt !important;
+    }
+}
+@media all and (max-width: 400px) {
+    .answerEntryDetail {
+        overflow-y: scroll;
+    }
+    .answerEntryDetail.MULTI_LINE {
+        font-size: 0.7em;
+    }
+    .answerEntryDetail.SMALL_TEXT {
+        font-size: 0.5em;
+    }
+    .answerEntryDetail.VERY_SMALL_TEXT {
+        font-size: 0.5em;
+    }
+}
+@media all and (min-device-width: 1000px) {
+    .answerEntryDetail {
+        min-width: 115px;
+        min-height: 115px;
+    }
+}
