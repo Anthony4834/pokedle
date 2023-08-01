@@ -1,0 +1,1299 @@
+{
+    "chikorita": {
+        "height": 9,
+        "Weight": 64,
+        "ID": 152,
+        "types": [
+          "grass"
+        ],
+        "abilities": [
+          "overgrow",
+          "leaf-guard"
+        ]
+      },
+      "bayleef": {
+        "height": 12,
+        "Weight": 158,
+        "ID": 153,
+        "types": [
+          "grass"
+        ],
+        "abilities": [
+          "overgrow",
+          "leaf-guard"
+        ]
+      },
+      "meganium": {
+        "height": 18,
+        "Weight": 1005,
+        "ID": 154,
+        "types": [
+          "grass"
+        ],
+        "abilities": [
+          "overgrow",
+          "leaf-guard"
+        ]
+      },
+      "cyndaquil": {
+        "height": 5,
+        "Weight": 79,
+        "ID": 155,
+        "types": [
+          "fire"
+        ],
+        "abilities": [
+          "blaze",
+          "flash-fire"
+        ]
+      },
+      "quilava": {
+        "height": 9,
+        "Weight": 190,
+        "ID": 156,
+        "types": [
+          "fire"
+        ],
+        "abilities": [
+          "blaze",
+          "flash-fire"
+        ]
+      },
+      "typhlosion": {
+        "height": 17,
+        "Weight": 795,
+        "ID": 157,
+        "types": [
+          "fire"
+        ],
+        "abilities": [
+          "blaze",
+          "flash-fire"
+        ]
+      },
+      "totodile": {
+        "height": 6,
+        "Weight": 95,
+        "ID": 158,
+        "types": [
+          "water"
+        ],
+        "abilities": [
+          "torrent",
+          "sheer-force"
+        ]
+      },
+      "croconaw": {
+        "height": 11,
+        "Weight": 250,
+        "ID": 159,
+        "types": [
+          "water"
+        ],
+        "abilities": [
+          "torrent",
+          "sheer-force"
+        ]
+      },
+      "feraligatr": {
+        "height": 23,
+        "Weight": 888,
+        "ID": 160,
+        "types": [
+          "water"
+        ],
+        "abilities": [
+          "torrent",
+          "sheer-force"
+        ]
+      },
+      "sentret": {
+        "height": 8,
+        "Weight": 60,
+        "ID": 161,
+        "types": [
+          "normal"
+        ],
+        "abilities": [
+          "run-away",
+          "keen-eye",
+          "frisk"
+        ]
+      },
+      "furret": {
+        "height": 18,
+        "Weight": 325,
+        "ID": 162,
+        "types": [
+          "normal"
+        ],
+        "abilities": [
+          "run-away",
+          "keen-eye",
+          "frisk"
+        ]
+      },
+      "hoothoot": {
+        "height": 7,
+        "Weight": 212,
+        "ID": 163,
+        "types": [
+          "normal",
+          "flying"
+        ],
+        "abilities": [
+          "insomnia",
+          "keen-eye",
+          "tinted-lens"
+        ]
+      },
+      "noctowl": {
+        "height": 16,
+        "Weight": 408,
+        "ID": 164,
+        "types": [
+          "normal",
+          "flying"
+        ],
+        "abilities": [
+          "insomnia",
+          "keen-eye",
+          "tinted-lens"
+        ]
+      },
+      "ledyba": {
+        "height": 10,
+        "Weight": 108,
+        "ID": 165,
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "abilities": [
+          "swarm",
+          "early-bird",
+          "rattled"
+        ]
+      },
+      "ledian": {
+        "height": 14,
+        "Weight": 356,
+        "ID": 166,
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "abilities": [
+          "swarm",
+          "early-bird",
+          "iron-fist"
+        ]
+      },
+      "spinarak": {
+        "height": 5,
+        "Weight": 85,
+        "ID": 167,
+        "types": [
+          "bug",
+          "poison"
+        ],
+        "abilities": [
+          "swarm",
+          "insomnia",
+          "sniper"
+        ]
+      },
+      "ariados": {
+        "height": 11,
+        "Weight": 335,
+        "ID": 168,
+        "types": [
+          "bug",
+          "poison"
+        ],
+        "abilities": [
+          "swarm",
+          "insomnia",
+          "sniper"
+        ]
+      },
+      "crobat": {
+        "height": 18,
+        "Weight": 750,
+        "ID": 169,
+        "types": [
+          "poison",
+          "flying"
+        ],
+        "abilities": [
+          "inner-focus",
+          "infiltrator"
+        ]
+      },
+      "chinchou": {
+        "height": 5,
+        "Weight": 120,
+        "ID": 170,
+        "types": [
+          "water",
+          "electric"
+        ],
+        "abilities": [
+          "volt-absorb",
+          "illuminate",
+          "water-absorb"
+        ]
+      },
+      "lanturn": {
+        "height": 12,
+        "Weight": 225,
+        "ID": 171,
+        "types": [
+          "water",
+          "electric"
+        ],
+        "abilities": [
+          "volt-absorb",
+          "illuminate",
+          "water-absorb"
+        ]
+      },
+      "pichu": {
+        "height": 3,
+        "Weight": 20,
+        "ID": 172,
+        "types": [
+          "electric"
+        ],
+        "abilities": [
+          "static",
+          "lightning-rod"
+        ]
+      },
+      "cleffa": {
+        "height": 3,
+        "Weight": 30,
+        "ID": 173,
+        "types": [
+          "fairy"
+        ],
+        "abilities": [
+          "cute-charm",
+          "magic-guard",
+          "friend-guard"
+        ]
+      },
+      "igglybuff": {
+        "height": 3,
+        "Weight": 10,
+        "ID": 174,
+        "types": [
+          "normal",
+          "fairy"
+        ],
+        "abilities": [
+          "cute-charm",
+          "competitive",
+          "friend-guard"
+        ]
+      },
+      "togepi": {
+        "height": 3,
+        "Weight": 15,
+        "ID": 175,
+        "types": [
+          "fairy"
+        ],
+        "abilities": [
+          "hustle",
+          "serene-grace",
+          "super-luck"
+        ]
+      },
+      "togetic": {
+        "height": 6,
+        "Weight": 32,
+        "ID": 176,
+        "types": [
+          "fairy",
+          "flying"
+        ],
+        "abilities": [
+          "hustle",
+          "serene-grace",
+          "super-luck"
+        ]
+      },
+      "natu": {
+        "height": 2,
+        "Weight": 20,
+        "ID": 177,
+        "types": [
+          "psychic",
+          "flying"
+        ],
+        "abilities": [
+          "synchronize",
+          "early-bird",
+          "magic-bounce"
+        ]
+      },
+      "xatu": {
+        "height": 15,
+        "Weight": 150,
+        "ID": 178,
+        "types": [
+          "psychic",
+          "flying"
+        ],
+        "abilities": [
+          "synchronize",
+          "early-bird",
+          "magic-bounce"
+        ]
+      },
+      "mareep": {
+        "height": 6,
+        "Weight": 78,
+        "ID": 179,
+        "types": [
+          "electric"
+        ],
+        "abilities": [
+          "static",
+          "plus"
+        ]
+      },
+      "flaaffy": {
+        "height": 8,
+        "Weight": 133,
+        "ID": 180,
+        "types": [
+          "electric"
+        ],
+        "abilities": [
+          "static",
+          "plus"
+        ]
+      },
+      "ampharos": {
+        "height": 14,
+        "Weight": 615,
+        "ID": 181,
+        "types": [
+          "electric"
+        ],
+        "abilities": [
+          "static",
+          "plus"
+        ]
+      },
+      "bellossom": {
+        "height": 4,
+        "Weight": 58,
+        "ID": 182,
+        "types": [
+          "grass"
+        ],
+        "abilities": [
+          "chlorophyll",
+          "healer"
+        ]
+      },
+      "marill": {
+        "height": 4,
+        "Weight": 85,
+        "ID": 183,
+        "types": [
+          "water",
+          "fairy"
+        ],
+        "abilities": [
+          "thick-fat",
+          "huge-power",
+          "sap-sipper"
+        ]
+      },
+      "azumarill": {
+        "height": 8,
+        "Weight": 285,
+        "ID": 184,
+        "types": [
+          "water",
+          "fairy"
+        ],
+        "abilities": [
+          "thick-fat",
+          "huge-power",
+          "sap-sipper"
+        ]
+      },
+      "sudowoodo": {
+        "height": 12,
+        "Weight": 380,
+        "ID": 185,
+        "types": [
+          "rock"
+        ],
+        "abilities": [
+          "sturdy",
+          "rock-head",
+          "rattled"
+        ]
+      },
+      "politoed": {
+        "height": 11,
+        "Weight": 339,
+        "ID": 186,
+        "types": [
+          "water"
+        ],
+        "abilities": [
+          "water-absorb",
+          "damp",
+          "drizzle"
+        ]
+      },
+      "hoppip": {
+        "height": 4,
+        "Weight": 5,
+        "ID": 187,
+        "types": [
+          "grass",
+          "flying"
+        ],
+        "abilities": [
+          "chlorophyll",
+          "leaf-guard",
+          "infiltrator"
+        ]
+      },
+      "skiploom": {
+        "height": 6,
+        "Weight": 10,
+        "ID": 188,
+        "types": [
+          "grass",
+          "flying"
+        ],
+        "abilities": [
+          "chlorophyll",
+          "leaf-guard",
+          "infiltrator"
+        ]
+      },
+      "jumpluff": {
+        "height": 8,
+        "Weight": 30,
+        "ID": 189,
+        "types": [
+          "grass",
+          "flying"
+        ],
+        "abilities": [
+          "chlorophyll",
+          "leaf-guard",
+          "infiltrator"
+        ]
+      },
+      "aipom": {
+        "height": 8,
+        "Weight": 115,
+        "ID": 190,
+        "types": [
+          "normal"
+        ],
+        "abilities": [
+          "run-away",
+          "pickup",
+          "skill-link"
+        ]
+      },
+      "sunkern": {
+        "height": 3,
+        "Weight": 18,
+        "ID": 191,
+        "types": [
+          "grass"
+        ],
+        "abilities": [
+          "chlorophyll",
+          "solar-power",
+          "early-bird"
+        ]
+      },
+      "sunflora": {
+        "height": 8,
+        "Weight": 85,
+        "ID": 192,
+        "types": [
+          "grass"
+        ],
+        "abilities": [
+          "chlorophyll",
+          "solar-power",
+          "early-bird"
+        ]
+      },
+      "yanma": {
+        "height": 12,
+        "Weight": 380,
+        "ID": 193,
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "abilities": [
+          "speed-boost",
+          "compound-eyes",
+          "frisk"
+        ]
+      },
+      "wooper": {
+        "height": 4,
+        "Weight": 85,
+        "ID": 194,
+        "types": [
+          "water",
+          "ground"
+        ],
+        "abilities": [
+          "damp",
+          "water-absorb",
+          "unaware"
+        ]
+      },
+      "quagsire": {
+        "height": 14,
+        "Weight": 750,
+        "ID": 195,
+        "types": [
+          "water",
+          "ground"
+        ],
+        "abilities": [
+          "damp",
+          "water-absorb",
+          "unaware"
+        ]
+      },
+      "espeon": {
+        "height": 9,
+        "Weight": 265,
+        "ID": 196,
+        "types": [
+          "psychic"
+        ],
+        "abilities": [
+          "synchronize",
+          "magic-bounce"
+        ]
+      },
+      "umbreon": {
+        "height": 10,
+        "Weight": 270,
+        "ID": 197,
+        "types": [
+          "dark"
+        ],
+        "abilities": [
+          "synchronize",
+          "inner-focus"
+        ]
+      },
+      "murkrow": {
+        "height": 5,
+        "Weight": 21,
+        "ID": 198,
+        "types": [
+          "dark",
+          "flying"
+        ],
+        "abilities": [
+          "insomnia",
+          "super-luck",
+          "prankster"
+        ]
+      },
+      "slowking": {
+        "height": 20,
+        "Weight": 795,
+        "ID": 199,
+        "types": [
+          "water",
+          "psychic"
+        ],
+        "abilities": [
+          "oblivious",
+          "own-tempo",
+          "regenerator"
+        ]
+      },
+      "misdreavus": {
+        "height": 7,
+        "Weight": 10,
+        "ID": 200,
+        "types": [
+          "ghost"
+        ],
+        "abilities": [
+          "levitate"
+        ]
+      },
+      "unown": {
+        "height": 5,
+        "Weight": 50,
+        "ID": 201,
+        "types": [
+          "psychic"
+        ],
+        "abilities": [
+          "levitate"
+        ]
+      },
+      "wobbuffet": {
+        "height": 13,
+        "Weight": 285,
+        "ID": 202,
+        "types": [
+          "psychic"
+        ],
+        "abilities": [
+          "shadow-tag",
+          "telepathy"
+        ]
+      },
+      "girafarig": {
+        "height": 15,
+        "Weight": 415,
+        "ID": 203,
+        "types": [
+          "normal",
+          "psychic"
+        ],
+        "abilities": [
+          "inner-focus",
+          "early-bird",
+          "sap-sipper"
+        ]
+      },
+      "pineco": {
+        "height": 6,
+        "Weight": 72,
+        "ID": 204,
+        "types": [
+          "bug"
+        ],
+        "abilities": [
+          "sturdy",
+          "overcoat"
+        ]
+      },
+      "forretress": {
+        "height": 12,
+        "Weight": 1258,
+        "ID": 205,
+        "types": [
+          "bug",
+          "steel"
+        ],
+        "abilities": [
+          "sturdy",
+          "overcoat"
+        ]
+      },
+      "dunsparce": {
+        "height": 15,
+        "Weight": 140,
+        "ID": 206,
+        "types": [
+          "normal"
+        ],
+        "abilities": [
+          "serene-grace",
+          "run-away",
+          "rattled"
+        ]
+      },
+      "gligar": {
+        "height": 11,
+        "Weight": 648,
+        "ID": 207,
+        "types": [
+          "ground",
+          "flying"
+        ],
+        "abilities": [
+          "hyper-cutter",
+          "sand-veil",
+          "immunity"
+        ]
+      },
+      "steelix": {
+        "height": 92,
+        "Weight": 4000,
+        "ID": 208,
+        "types": [
+          "steel",
+          "ground"
+        ],
+        "abilities": [
+          "rock-head",
+          "sturdy",
+          "sheer-force"
+        ]
+      },
+      "snubbull": {
+        "height": 6,
+        "Weight": 78,
+        "ID": 209,
+        "types": [
+          "fairy"
+        ],
+        "abilities": [
+          "intimidate",
+          "run-away",
+          "rattled"
+        ]
+      },
+      "granbull": {
+        "height": 14,
+        "Weight": 487,
+        "ID": 210,
+        "types": [
+          "fairy"
+        ],
+        "abilities": [
+          "intimidate",
+          "quick-feet",
+          "rattled"
+        ]
+      },
+      "qwilfish": {
+        "height": 5,
+        "Weight": 39,
+        "ID": 211,
+        "types": [
+          "water",
+          "poison"
+        ],
+        "abilities": [
+          "poison-point",
+          "swift-swim",
+          "intimidate"
+        ]
+      },
+      "scizor": {
+        "height": 18,
+        "Weight": 1180,
+        "ID": 212,
+        "types": [
+          "bug",
+          "steel"
+        ],
+        "abilities": [
+          "swarm",
+          "technician",
+          "light-metal"
+        ]
+      },
+      "shuckle": {
+        "height": 6,
+        "Weight": 205,
+        "ID": 213,
+        "types": [
+          "bug",
+          "rock"
+        ],
+        "abilities": [
+          "sturdy",
+          "gluttony",
+          "contrary"
+        ]
+      },
+      "heracross": {
+        "height": 15,
+        "Weight": 540,
+        "ID": 214,
+        "types": [
+          "bug",
+          "fighting"
+        ],
+        "abilities": [
+          "swarm",
+          "guts",
+          "moxie"
+        ]
+      },
+      "sneasel": {
+        "height": 9,
+        "Weight": 280,
+        "ID": 215,
+        "types": [
+          "dark",
+          "ice"
+        ],
+        "abilities": [
+          "inner-focus",
+          "keen-eye",
+          "pickpocket"
+        ]
+      },
+      "teddiursa": {
+        "height": 6,
+        "Weight": 88,
+        "ID": 216,
+        "types": [
+          "normal"
+        ],
+        "abilities": [
+          "pickup",
+          "quick-feet",
+          "honey-gather"
+        ]
+      },
+      "ursaring": {
+        "height": 18,
+        "Weight": 1258,
+        "ID": 217,
+        "types": [
+          "normal"
+        ],
+        "abilities": [
+          "guts",
+          "quick-feet",
+          "unnerve"
+        ]
+      },
+      "slugma": {
+        "height": 7,
+        "Weight": 350,
+        "ID": 218,
+        "types": [
+          "fire"
+        ],
+        "abilities": [
+          "magma-armor",
+          "flame-body",
+          "weak-armor"
+        ]
+      },
+      "magcargo": {
+        "height": 8,
+        "Weight": 550,
+        "ID": 219,
+        "types": [
+          "fire",
+          "rock"
+        ],
+        "abilities": [
+          "magma-armor",
+          "flame-body",
+          "weak-armor"
+        ]
+      },
+      "swinub": {
+        "height": 4,
+        "Weight": 65,
+        "ID": 220,
+        "types": [
+          "ice",
+          "ground"
+        ],
+        "abilities": [
+          "oblivious",
+          "snow-cloak",
+          "thick-fat"
+        ]
+      },
+      "piloswine": {
+        "height": 11,
+        "Weight": 558,
+        "ID": 221,
+        "types": [
+          "ice",
+          "ground"
+        ],
+        "abilities": [
+          "oblivious",
+          "snow-cloak",
+          "thick-fat"
+        ]
+      },
+      "corsola": {
+        "height": 6,
+        "Weight": 50,
+        "ID": 222,
+        "types": [
+          "water",
+          "rock"
+        ],
+        "abilities": [
+          "hustle",
+          "natural-cure",
+          "regenerator"
+        ]
+      },
+      "remoraid": {
+        "height": 6,
+        "Weight": 120,
+        "ID": 223,
+        "types": [
+          "water"
+        ],
+        "abilities": [
+          "hustle",
+          "sniper",
+          "moody"
+        ]
+      },
+      "octillery": {
+        "height": 9,
+        "Weight": 285,
+        "ID": 224,
+        "types": [
+          "water"
+        ],
+        "abilities": [
+          "suction-cups",
+          "sniper",
+          "moody"
+        ]
+      },
+      "delibird": {
+        "height": 9,
+        "Weight": 160,
+        "ID": 225,
+        "types": [
+          "ice",
+          "flying"
+        ],
+        "abilities": [
+          "vital-spirit",
+          "hustle",
+          "insomnia"
+        ]
+      },
+      "mantine": {
+        "height": 21,
+        "Weight": 2200,
+        "ID": 226,
+        "types": [
+          "water",
+          "flying"
+        ],
+        "abilities": [
+          "swift-swim",
+          "water-absorb",
+          "water-veil"
+        ]
+      },
+      "skarmory": {
+        "height": 17,
+        "Weight": 505,
+        "ID": 227,
+        "types": [
+          "steel",
+          "flying"
+        ],
+        "abilities": [
+          "keen-eye",
+          "sturdy",
+          "weak-armor"
+        ]
+      },
+      "houndour": {
+        "height": 6,
+        "Weight": 108,
+        "ID": 228,
+        "types": [
+          "dark",
+          "fire"
+        ],
+        "abilities": [
+          "early-bird",
+          "flash-fire",
+          "unnerve"
+        ]
+      },
+      "houndoom": {
+        "height": 14,
+        "Weight": 350,
+        "ID": 229,
+        "types": [
+          "dark",
+          "fire"
+        ],
+        "abilities": [
+          "early-bird",
+          "flash-fire",
+          "unnerve"
+        ]
+      },
+      "kingdra": {
+        "height": 18,
+        "Weight": 1520,
+        "ID": 230,
+        "types": [
+          "water",
+          "dragon"
+        ],
+        "abilities": [
+          "swift-swim",
+          "sniper",
+          "damp"
+        ]
+      },
+      "phanpy": {
+        "height": 5,
+        "Weight": 335,
+        "ID": 231,
+        "types": [
+          "ground"
+        ],
+        "abilities": [
+          "pickup",
+          "sand-veil"
+        ]
+      },
+      "donphan": {
+        "height": 11,
+        "Weight": 1200,
+        "ID": 232,
+        "types": [
+          "ground"
+        ],
+        "abilities": [
+          "sturdy",
+          "sand-veil"
+        ]
+      },
+      "porygon2": {
+        "height": 6,
+        "Weight": 325,
+        "ID": 233,
+        "types": [
+          "normal"
+        ],
+        "abilities": [
+          "trace",
+          "download",
+          "analytic"
+        ]
+      },
+      "stantler": {
+        "height": 14,
+        "Weight": 712,
+        "ID": 234,
+        "types": [
+          "normal"
+        ],
+        "abilities": [
+          "intimidate",
+          "frisk",
+          "sap-sipper"
+        ]
+      },
+      "smeargle": {
+        "height": 12,
+        "Weight": 580,
+        "ID": 235,
+        "types": [
+          "normal"
+        ],
+        "abilities": [
+          "own-tempo",
+          "technician",
+          "moody"
+        ]
+      },
+      "tyrogue": {
+        "height": 7,
+        "Weight": 210,
+        "ID": 236,
+        "types": [
+          "fighting"
+        ],
+        "abilities": [
+          "guts",
+          "steadfast",
+          "vital-spirit"
+        ]
+      },
+      "hitmontop": {
+        "height": 14,
+        "Weight": 480,
+        "ID": 237,
+        "types": [
+          "fighting"
+        ],
+        "abilities": [
+          "intimidate",
+          "technician",
+          "steadfast"
+        ]
+      },
+      "smoochum": {
+        "height": 4,
+        "Weight": 60,
+        "ID": 238,
+        "types": [
+          "ice",
+          "psychic"
+        ],
+        "abilities": [
+          "oblivious",
+          "forewarn",
+          "hydration"
+        ]
+      },
+      "elekid": {
+        "height": 6,
+        "Weight": 235,
+        "ID": 239,
+        "types": [
+          "electric"
+        ],
+        "abilities": [
+          "static",
+          "vital-spirit"
+        ]
+      },
+      "magby": {
+        "height": 7,
+        "Weight": 214,
+        "ID": 240,
+        "types": [
+          "fire"
+        ],
+        "abilities": [
+          "flame-body",
+          "vital-spirit"
+        ]
+      },
+      "miltank": {
+        "height": 12,
+        "Weight": 755,
+        "ID": 241,
+        "types": [
+          "normal"
+        ],
+        "abilities": [
+          "thick-fat",
+          "scrappy",
+          "sap-sipper"
+        ]
+      },
+      "blissey": {
+        "height": 15,
+        "Weight": 468,
+        "ID": 242,
+        "types": [
+          "normal"
+        ],
+        "abilities": [
+          "natural-cure",
+          "serene-grace",
+          "healer"
+        ]
+      },
+      "raikou": {
+        "height": 19,
+        "Weight": 1780,
+        "ID": 243,
+        "types": [
+          "electric"
+        ],
+        "abilities": [
+          "pressure",
+          "inner-focus"
+        ]
+      },
+      "entei": {
+        "height": 21,
+        "Weight": 1980,
+        "ID": 244,
+        "types": [
+          "fire"
+        ],
+        "abilities": [
+          "pressure",
+          "inner-focus"
+        ]
+      },
+      "suicune": {
+        "height": 20,
+        "Weight": 1870,
+        "ID": 245,
+        "types": [
+          "water"
+        ],
+        "abilities": [
+          "pressure",
+          "inner-focus"
+        ]
+      },
+      "larvitar": {
+        "height": 6,
+        "Weight": 720,
+        "ID": 246,
+        "types": [
+          "rock",
+          "ground"
+        ],
+        "abilities": [
+          "guts",
+          "sand-veil"
+        ]
+      },
+      "pupitar": {
+        "height": 12,
+        "Weight": 1520,
+        "ID": 247,
+        "types": [
+          "rock",
+          "ground"
+        ],
+        "abilities": [
+          "shed-skin"
+        ]
+      },
+      "tyranitar": {
+        "height": 20,
+        "Weight": 2020,
+        "ID": 248,
+        "types": [
+          "rock",
+          "dark"
+        ],
+        "abilities": [
+          "sand-stream",
+          "unnerve"
+        ]
+      },
+      "lugia": {
+        "height": 52,
+        "Weight": 2160,
+        "ID": 249,
+        "types": [
+          "psychic",
+          "flying"
+        ],
+        "abilities": [
+          "pressure",
+          "multiscale"
+        ]
+      },
+      "celebi": {
+        "height": 6,
+        "Weight": 50,
+        "ID": 251,
+        "types": [
+          "psychic",
+          "grass"
+        ],
+        "abilities": [
+          "natural-cure"
+        ]
+      }
+}
