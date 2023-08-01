@@ -1,4 +1,4 @@
-import pokeData from '../static/pokeData.json'
+import pokeData from '../static/pokeData/gen_1.json'
 import evolutionData from '../static/evolutionData.json'
 
 class Util {
@@ -7,10 +7,11 @@ class Util {
     mobile
 
     constructor(mobile) {
-        this.mobile = mobile
+        this.mobile = mobile;
     }
 
     formatEntryDetails = (pokemonName, metricSystem) => {
+
         let keys = Object.keys(pokeData[pokemonName])
         let formattedEntryDetails = {}
 
@@ -70,7 +71,6 @@ class Util {
     ) => {
         let correctDetail
         let guessedDetail
-
         if (detailToEval !== 'evolution') {
             correctDetail = this.formatEntryDetails(pokemonToGuess, metric)[
                 detailToEval
