@@ -47,7 +47,10 @@ export const GameModeSelector = ({ setGameMode }) => {
             </h1>
             <ul className='gameModeSelector-list gameModeSelector-list-multi'>
                 {possibleGens.map((gen, key) => (
-                    <div className='gameModeSelector-list-item-wrapper' key={key}>
+                    <div
+                        className='gameModeSelector-list-item-wrapper'
+                        key={key}
+                    >
                         <li
                             className={`gameModeSelector-list-multi-item ${
                                 gensSelected[gen] ? 'active' : 'inactive'

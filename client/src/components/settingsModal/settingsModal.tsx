@@ -1,12 +1,16 @@
-import React from 'react';
-import gearIcon from '../../static/gear.png';
-import Modal, { ModalProps } from '../Modal/Modal';
-import './settingsModal.css';
+import React from 'react'
+import gearIcon from '../../static/gear.png'
+import Modal, { ModalProps } from '../Modal/Modal'
+import './settingsModal.css'
 
 export const SettingsModal = ({ updateMetric }) => {
     const modalProps: ModalProps = {
         target: (
-            <img className='modalTargetIcon' src={gearIcon} alt='settings'></img>
+            <img
+                className='modalTargetIcon'
+                src={gearIcon}
+                alt='settings'
+            ></img>
         ),
         targetClassName: 'settingsModalTarget',
         body: (

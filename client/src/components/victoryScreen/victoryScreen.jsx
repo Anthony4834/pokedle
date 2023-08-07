@@ -22,7 +22,7 @@ const VictoryScreen = ({ pokemonToGuess, cookieMgr, pokeData }) => {
 
         window.location.replace('')
     }
-    
+
     return (
         <>
             <div className='victoryScreenWrapper'>

@@ -4,9 +4,7 @@ import { SettingsModal } from '../settingsModal/settingsModal'
 const Header = ({ mobile, updateMetric }) => {
     return (
         <div className='header'>
-            {mobile && (
-                <SettingsModal updateMetric={updateMetric} />
-            )}
+            {mobile && <SettingsModal updateMetric={updateMetric} />}
             <div className='headerText'>
                 <h1 className='p'>P</h1>
                 <img
@@ -22,7 +20,7 @@ const Header = ({ mobile, updateMetric }) => {
                     <h1>e</h1>
                 </section>
             </div>
-            
+
             <section>
                 <HelpModal />
             </section>

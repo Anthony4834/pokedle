@@ -2,12 +2,17 @@ import React, { FC, ReactNode, useEffect, useRef, useState } from 'react'
 import './Modal.css'
 
 export interface ModalProps {
-    className?: string,
+    className?: string
     target: ReactNode
     targetClassName?: string
     body: ReactNode
 }
-const Modal: FC<ModalProps> = ({ className = '', target, targetClassName= '', body }) => {
+const Modal: FC<ModalProps> = ({
+    className = '',
+    target,
+    targetClassName = '',
+    body,
+}) => {
     const [isOpen, setIsOpen] = useState(false)
     const modalRef = useRef<HTMLDivElement>(null)
 
@@ -38,7 +43,10 @@ const Modal: FC<ModalProps> = ({ className = '', target, targetClassName= '', bo
 
     return (
         <div>
-            <div className={`modalTarget ${targetClassName}`} onClick={handleToggleModal}>
+            <div
+                className={`modalTarget ${targetClassName}`}
+                onClick={handleToggleModal}
+            >
                 {target}
             </div>
 
@@ -48,7 +56,9 @@ const Modal: FC<ModalProps> = ({ className = '', target, targetClassName= '', bo
                         <span className='close-btn' onClick={handleToggleModal}>
                             &times;
                         </span>
-                        <div className={`modalBody ${className}-body`}>{body}</div>
+                        <div className={`modalBody ${className}-body`}>
+                            {body}
+                        </div>
                     </div>
                 </div>
             )}
