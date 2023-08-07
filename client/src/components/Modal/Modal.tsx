@@ -4,13 +4,11 @@ import './Modal.css'
 export interface ModalProps {
     className?: string
     target: ReactNode
-    targetClassName?: string
     body: ReactNode
 }
 const Modal: FC<ModalProps> = ({
     className = '',
     target,
-    targetClassName = '',
     body,
 }) => {
     const [isOpen, setIsOpen] = useState(false)
@@ -44,7 +42,7 @@ const Modal: FC<ModalProps> = ({
     return (
         <div>
             <div
-                className={`modalTarget ${targetClassName}`}
+                className={`modalTarget ${className}-target`}
                 onClick={handleToggleModal}
             >
                 {target}

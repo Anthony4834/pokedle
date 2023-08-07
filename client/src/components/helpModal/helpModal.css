@@ -1,3 +1,17 @@
+@keyframes shake {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+  }
 .red {
     color: #dc5a5a;
 }
@@ -8,9 +22,10 @@
     color: #78a55a;
 }
 .helpModal {
-    max-height: 90vh;
+    max-height: 85vh;
     overflow-y: scroll;
     text-align: center;
+    padding: 3%;
 }
 .helpModal-header {
     display: inline-block;
@@ -27,8 +42,11 @@
     margin-top: -2%;
     font-size: 0.7em;
 }
-.helpModalTarget {
-    left: 2vw;
+.helpModal-target {
+    left: 3vw;
+}
+.helpModal-target:hover {
+    animation: shake 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 @media all and (max-width: 750px) {
     .helpModal {

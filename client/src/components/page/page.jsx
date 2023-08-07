@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { animateScroll as scroll } from 'react-scroll'
 import AnswersBox from '../answersBox/answersBox'
+import { pm } from '../helpModal/helpModal'
 import PokeSelectMenu from '../pokeSelectMenu/pokeSelectMenu'
 import Util from '../utl'
 import VictoryScreen from '../victoryScreen/victoryScreen'
@@ -80,18 +81,25 @@ export const Page = ({ pokeData, gen, metric, updateMetric, mobile }) => {
         document.cookie = `GENERATION_${gen}_${key}=${value}; path=/`
     }
     return (
-        <>
+        <div className={`pageWrapper`}>
             {/* <p>{pokemonToGuess}</p> */}
 
             {!gameOver && (
-                <PokeSelectMenu
-                    pokeData={pokeData}
-                    pokemonToGuess={pokemonToGuess}
-                    alreadyGuessed={alreadyGuessed}
-                    setIsSynchronized={setIsSynchronized}
-                    isSynchronized={isSynchronized}
-                    cookieMgr={{ getCookie, setCookie }}
-                />
+                <>
+                    <div className='pageSubheading'>
+                        <h1>Guess today's {pm}!</h1>
+                        <p>Type a {pm}'s name or select from the list below</p>
+                    </div>
+                    <PokeSelectMenu
+                        pokeData={pokeData}
+                        pokemonToGuess={pokemonToGuess}
+                        alreadyGuessed={alreadyGuessed}
+                        setIsSynchronized={setIsSynchronized}
+                        isSynchronized={isSynchronized}
+                        cookieMgr={{ getCookie, setCookie }}
+                    />
+                </>
+               
             )}
             {gameOver && (
                 <VictoryScreen
@@ -113,6 +121,6 @@ export const Page = ({ pokeData, gen, metric, updateMetric, mobile }) => {
                     util={util}
                 />
             }
-        </>
+        </div>
     )
 }

@@ -4,7 +4,7 @@ import questionMarkIcon from '../../static/help.png'
 import Modal, { ModalProps } from '../Modal/Modal'
 import './helpModal.css'
 
-const pm = 'Pokémon'
+export const pm = 'Pokémon'
 const modalBody = (
     <div>
         <h1 className='helpModal-header'>How to play</h1>
@@ -105,7 +105,6 @@ const modalProps: ModalProps = {
     target: (
         <img className='modalTargetIcon' src={questionMarkIcon} alt='help' />
     ),
-    targetClassName: 'helpModalTarget',
     body: modalBody,
 }
 export const HelpModal = () => {

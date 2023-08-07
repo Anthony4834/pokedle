@@ -25,7 +25,8 @@ export const GameModeSelector = ({ setGameMode }) => {
         const gens = Object.keys(gensSelected)
             .filter(gen => gensSelected[gen])
             .flatMap(gen => Number(gen))
-        console.log(gens)
+            
+        if(gens.length < 1) return;
         setGameMode(getGameModeInformation(gens))
     }
 

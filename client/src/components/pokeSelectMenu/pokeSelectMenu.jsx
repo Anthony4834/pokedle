@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
+import { animateScroll as scroll } from 'react-scroll'
 import Select from 'react-select'
 import './pokeSelectMenu.css'
-import { Link, animateScroll as scroll } from 'react-scroll'
 
 const PokeSelectMenu = ({
     pokemonToGuess,
@@ -25,12 +25,11 @@ const PokeSelectMenu = ({
         pokemonNames.map(name => {
             if (!alreadyGuessed.includes(name)) {
                 let index = pokeData[name]['ID']
-                let img = require('../../static/pokeSprites/' + index + '.png')
                 tempOptions.push({
                     value: name,
                     label: (
                         <div>
-                            <img src={img} />
+                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`} alt={name} />
                             {name}
                         </div>
                     ),

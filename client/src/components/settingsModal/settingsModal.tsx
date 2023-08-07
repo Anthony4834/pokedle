@@ -1,30 +1,30 @@
 import React from 'react'
-import gearIcon from '../../static/gear.png'
 import Modal, { ModalProps } from '../Modal/Modal'
 import './settingsModal.css'
 
-export const SettingsModal = ({ updateMetric }) => {
+export const SettingsModal = ({ updateMetric, mobile, metric }) => {
     const modalProps: ModalProps = {
+        className: 'settingsModal',
         target: (
             <img
                 className='modalTargetIcon'
-                src={gearIcon}
+                src={'https://img.icons8.com/?size=512&id=364&format=png'}
                 alt='settings'
             ></img>
         ),
-        targetClassName: 'settingsModalTarget',
         body: (
             <ul className='settings-menu-options'>
-                <li className='metric-switch-mobile'>
+                { mobile && <li className='metric-switch-mobile'>
                     <label className='switch'>
                         <input
                             type='checkbox'
+                            checked={metric}
                             onChange={e => updateMetric(e)}
                         />
                         <span className='slider round'></span>
                         <span className='metric-label'>metric</span>
                     </label>
-                </li>
+                </li>}
             </ul>
         ),
     }

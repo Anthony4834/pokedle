@@ -1,10 +1,12 @@
 import { HelpModal } from '../helpModal/helpModal'
 import { SettingsModal } from '../settingsModal/settingsModal'
 
-const Header = ({ mobile, updateMetric }) => {
+const Header = ({ mobile, updateMetric, metric }) => {
     return (
         <div className='header'>
-            {mobile && <SettingsModal updateMetric={updateMetric} />}
+            <section>
+                <SettingsModal updateMetric={updateMetric} mobile={mobile} metric={metric}/>
+            </section>
             <div className='headerText'>
                 <h1 className='p'>P</h1>
                 <img

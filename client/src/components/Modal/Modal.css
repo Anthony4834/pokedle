@@ -53,112 +53,30 @@
 }
 
 button {
-    padding: 10px 20px;
+    transition: all .2s;
+    padding: 1.5% 0;
+    width: 99.5%;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0373ec;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
 
-.modal .settings-menu-options li {
-    margin-bottom: 5vw;
-    text-align: left;
-    display: block;
-    width: 100%;
-}
 
-.modal .settings-menu-options .align-left {
-    position: relative;
-    left: -14vw;
-}
-
-.metric-switch-mobile .switch {
-    left: -16vw;
-    vertical-align: middle;
-    position: relative;
-    display: inline-block;
-    /* width: 60px; */
-    height: 34px;
-    border-bottom: none;
-}
-
-/* Hide default HTML checkbox */
-.metric-switch-mobile .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.metric-switch-mobile .metric-label {
-    margin: 0px;
-    left: 0px;
-    border-bottom: none;
-    position: relative;
-}
-
-/* The slider */
-.metric-switch-mobile .slider {
-    position: absolute;
-    cursor: pointer;
-    width: 15vw;
-    height: 7vw;
-    left: 30vw;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-}
-
-.metric-switch-mobile .slider:before {
-    position: absolute;
-    content: '';
-    height: 5vw;
-    width: 5vw;
-    left: 4px;
-    bottom: 1vw;
-    background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-}
-
-.metric-switch-mobile input:checked + .slider {
-    background-color: #2196f3;
-}
-
-.metric-switch-mobile input:focus + .slider {
-    box-shadow: 0 0 1px #2196f3;
-}
-
-.metric-switch-mobile input:checked + .slider:before {
-    -webkit-transform: translateX(3vw);
-    -ms-transform: translateX(3vw);
-    transform: translateX(8vw);
-}
-
-/* Rounded sliders */
-.metric-switch-mobile .slider.round {
-    border-radius: 30px;
-}
-
-.metric-switch-mobile .slider.round:before {
-    border-radius: 50%;
-}
-
-.slider {
-    box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked + .slider:before {
-    transform: translateX(30px); /* Adjust handle position */
+@media all and (min-device-width: 501px) {
+    .modal {
+        width: 50%;
+    }
+    button {
+        font-size: 1em;
+        margin-top: .3%;
+        width: 99%;
+    }
 }

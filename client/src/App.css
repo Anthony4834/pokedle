@@ -52,6 +52,10 @@
 body {
     background-color: rgb(66, 66, 66);
 }
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+}
 .headerText {
     align-items: center;
     justify-content: center;
@@ -64,10 +68,11 @@ body {
     text-align: center;
 }
 .header {
+    height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5vw;
+    margin-top: 18vh;
 }
 .header * {
     font-family: 'Square Peg', cursive;
@@ -101,6 +106,7 @@ body {
 .header .p,
 .header .kedle * {
     animation: fade 0.2s forwards;
+    animation-iteration-count: 1;
 }
 .header .p {
     animation-delay: 2.22s;
@@ -127,17 +133,41 @@ body {
     animation-delay: 2.5s;
     width: 1.5vw;
     position: relative;
-    filter: invert();
-    top: 1vh;
+    filter: invert() brightness(200);
     opacity: 0;
 }
 .modalTargetIcon:hover {
     cursor: pointer;
 }
+.pageSubheading {
+    color: white;
+    text-align: center;
+}
+.pageSubheading * {
+    font-weight: 100;
+}
+.pageSubheading h1 {
+    font-size: 1.5em;
+}
+.pageSubheading p {
+
+}
+.pageWrapper {
+    margin-top: 2%;
+}
 
 @media all and (max-width: 500px) {
+    .header {
+        margin-top: 15vh;
+    }
     .pokeball {
         width: 8vw !important;
+    }
+    .pageSubheading h1 {
+        font-size: 1em;
+    }
+    .pageSubheading p {
+        font-size: .8em;
     }
     .modalTargetIcon {
         width: 6vw;

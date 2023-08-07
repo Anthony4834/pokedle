@@ -23,21 +23,12 @@ const AnswerEntry = ({
     useEffect(() => {
         setEntryDetails(util.formatEntryDetails(pokemon, metric))
         updateKeys(pokemon)
-        fetchPokemonImage(pokemon)
         setIsMetric(metric)
     }, [isSynchronized, metric])
 
     useEffect(() => {
         setIsSynchronized(!isSynchronized)
     }, [])
-
-    const fetchPokemonImage = pokemon => {
-        setPokemonImage(
-            require('../../static/pokeSprites/' +
-                pokeData[pokemon]['ID'] +
-                '.png'),
-        )
-    }
 
     const updateKeys = pokemonName => {
         let tempObj = { ...pokeData[pokemonName] }
@@ -56,7 +47,7 @@ const AnswerEntry = ({
                     <img
                         className='answerEntryDetail pokeImg'
                         alt={pokemon}
-                        src={pokemonImage}
+                        src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + pokeData[pokemon]['ID'] + '.png'}
                         id={pokemon}
                     ></img>
                     {detailKeys &&

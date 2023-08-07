@@ -33,7 +33,7 @@
     width: 50%;
     background-color: #efefef;
     font-size: 16pt;
-    margin: 0.5%;
+    margin: 0 0.5%;
     /* disable select */
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -43,11 +43,15 @@
     overflow: hidden;
     padding: 0;
 }
+.gameModeSelector-list li {
+    transition: all .2s;
+}
 .gameModeSelector-list li:hover {
     cursor: pointer;
-    background-color: #e7e7e7;
+    background-color: #dad8d8;
 }
 .gameModeSelector-list-multi {
+    margin: 0;
     flex-wrap: nowrap;
 }
 .gameModeSelector-list-multi li {
@@ -64,7 +68,6 @@
     background-position: 10%;
     transition: all 0.5s;
 }
-
 @media all and (max-device-width: 500px) {
     .gameModeSelector-wrapper {
         width: 90%;

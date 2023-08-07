@@ -2,14 +2,8 @@ import { useEffect, useState } from 'react'
 import './victoryScreen.css'
 
 const VictoryScreen = ({ pokemonToGuess, cookieMgr, pokeData }) => {
-    const [pokemonImage, setPokemonImage] = useState(null)
     const [numTries, setNumTries] = useState(0)
     useEffect(() => {
-        setPokemonImage(
-            require('../../static/pokeSprites/' +
-                pokeData[pokemonToGuess]['ID'] +
-                '.png'),
-        )
         setNumTries(
             cookieMgr.getCookie('already_guessed_arr').split(',').length,
         )
@@ -32,7 +26,7 @@ const VictoryScreen = ({ pokemonToGuess, cookieMgr, pokeData }) => {
                         <section className='pokemonGuessedImageAndText'>
                             <img
                                 className='pokemonGuessedImage'
-                                src={pokemonImage}
+                                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeData[pokemonToGuess]['ID']}.png`}
                                 alt=''
                             />
                             <section className='pokemonGuessedText'>

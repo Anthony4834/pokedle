@@ -7,8 +7,6 @@
 
 # testing
 /coverage
-/static/pokeSprites
-/static/pokeSprites_2
 
 
 # production
