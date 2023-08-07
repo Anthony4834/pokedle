@@ -3,1725 +3,945 @@
         "height": 5,
         "Weight": 50,
         "ID": 252,
-        "types": [
-          "grass"
-        ],
-        "abilities": [
-          "overgrow",
-          "unburden"
-        ]
-      },
-      "grovyle": {
+        "types": ["grass"],
+        "abilities": ["overgrow", "unburden"]
+    },
+    "grovyle": {
         "height": 9,
         "Weight": 216,
         "ID": 253,
-        "types": [
-          "grass"
-        ],
-        "abilities": [
-          "overgrow",
-          "unburden"
-        ]
-      },
-      "sceptile": {
+        "types": ["grass"],
+        "abilities": ["overgrow", "unburden"]
+    },
+    "sceptile": {
         "height": 17,
         "Weight": 522,
         "ID": 254,
-        "types": [
-          "grass"
-        ],
-        "abilities": [
-          "overgrow",
-          "unburden"
-        ]
-      },
-      "torchic": {
+        "types": ["grass"],
+        "abilities": ["overgrow", "unburden"]
+    },
+    "torchic": {
         "height": 4,
         "Weight": 25,
         "ID": 255,
-        "types": [
-          "fire"
-        ],
-        "abilities": [
-          "blaze",
-          "speed-boost"
-        ]
-      },
-      "combusken": {
+        "types": ["fire"],
+        "abilities": ["blaze", "speed-boost"]
+    },
+    "combusken": {
         "height": 9,
         "Weight": 195,
         "ID": 256,
-        "types": [
-          "fire",
-          "fighting"
-        ],
-        "abilities": [
-          "blaze",
-          "speed-boost"
-        ]
-      },
-      "blaziken": {
+        "types": ["fire", "fighting"],
+        "abilities": ["blaze", "speed-boost"]
+    },
+    "blaziken": {
         "height": 19,
         "Weight": 520,
         "ID": 257,
-        "types": [
-          "fire",
-          "fighting"
-        ],
-        "abilities": [
-          "blaze",
-          "speed-boost"
-        ]
-      },
-      "mudkip": {
+        "types": ["fire", "fighting"],
+        "abilities": ["blaze", "speed-boost"]
+    },
+    "mudkip": {
         "height": 4,
         "Weight": 76,
         "ID": 258,
-        "types": [
-          "water"
-        ],
-        "abilities": [
-          "torrent",
-          "damp"
-        ]
-      },
-      "marshtomp": {
+        "types": ["water"],
+        "abilities": ["torrent", "damp"]
+    },
+    "marshtomp": {
         "height": 7,
         "Weight": 280,
         "ID": 259,
-        "types": [
-          "water",
-          "ground"
-        ],
-        "abilities": [
-          "torrent",
-          "damp"
-        ]
-      },
-      "swampert": {
+        "types": ["water", "ground"],
+        "abilities": ["torrent", "damp"]
+    },
+    "swampert": {
         "height": 15,
         "Weight": 819,
         "ID": 260,
-        "types": [
-          "water",
-          "ground"
-        ],
-        "abilities": [
-          "torrent",
-          "damp"
-        ]
-      },
-      "poochyena": {
+        "types": ["water", "ground"],
+        "abilities": ["torrent", "damp"]
+    },
+    "poochyena": {
         "height": 5,
         "Weight": 136,
         "ID": 261,
-        "types": [
-          "dark"
-        ],
-        "abilities": [
-          "run-away",
-          "quick-feet",
-          "rattled"
-        ]
-      },
-      "mightyena": {
+        "types": ["dark"],
+        "abilities": ["run-away", "quick-feet", "rattled"]
+    },
+    "mightyena": {
         "height": 10,
         "Weight": 370,
         "ID": 262,
-        "types": [
-          "dark"
-        ],
-        "abilities": [
-          "intimidate",
-          "quick-feet",
-          "moxie"
-        ]
-      },
-      "zigzagoon": {
+        "types": ["dark"],
+        "abilities": ["intimidate", "quick-feet", "moxie"]
+    },
+    "zigzagoon": {
         "height": 4,
         "Weight": 175,
         "ID": 263,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "pickup",
-          "gluttony",
-          "quick-feet"
-        ]
-      },
-      "linoone": {
+        "types": ["normal"],
+        "abilities": ["pickup", "gluttony", "quick-feet"]
+    },
+    "linoone": {
         "height": 5,
         "Weight": 325,
         "ID": 264,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "pickup",
-          "gluttony",
-          "quick-feet"
-        ]
-      },
-      "wurmple": {
+        "types": ["normal"],
+        "abilities": ["pickup", "gluttony", "quick-feet"]
+    },
+    "wurmple": {
         "height": 3,
         "Weight": 36,
         "ID": 265,
-        "types": [
-          "bug"
-        ],
-        "abilities": [
-          "shield-dust",
-          "run-away"
-        ]
-      },
-      "silcoon": {
+        "types": ["bug"],
+        "abilities": ["shield-dust", "run-away"]
+    },
+    "silcoon": {
         "height": 6,
         "Weight": 100,
         "ID": 266,
-        "types": [
-          "bug"
-        ],
-        "abilities": [
-          "shed-skin"
-        ]
-      },
-      "beautifly": {
+        "types": ["bug"],
+        "abilities": ["shed-skin"]
+    },
+    "beautifly": {
         "height": 10,
         "Weight": 284,
         "ID": 267,
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "abilities": [
-          "swarm",
-          "rivalry"
-        ]
-      },
-      "cascoon": {
+        "types": ["bug", "flying"],
+        "abilities": ["swarm", "rivalry"]
+    },
+    "cascoon": {
         "height": 7,
         "Weight": 115,
         "ID": 268,
-        "types": [
-          "bug"
-        ],
-        "abilities": [
-          "shed-skin"
-        ]
-      },
-      "dustox": {
+        "types": ["bug"],
+        "abilities": ["shed-skin"]
+    },
+    "dustox": {
         "height": 12,
         "Weight": 316,
         "ID": 269,
-        "types": [
-          "bug",
-          "poison"
-        ],
-        "abilities": [
-          "shield-dust",
-          "compound-eyes"
-        ]
-      },
-      "lotad": {
+        "types": ["bug", "poison"],
+        "abilities": ["shield-dust", "compound-eyes"]
+    },
+    "lotad": {
         "height": 5,
         "Weight": 26,
         "ID": 270,
-        "types": [
-          "water",
-          "grass"
-        ],
-        "abilities": [
-          "swift-swim",
-          "rain-dish",
-          "own-tempo"
-        ]
-      },
-      "lombre": {
+        "types": ["water", "grass"],
+        "abilities": ["swift-swim", "rain-dish", "own-tempo"]
+    },
+    "lombre": {
         "height": 12,
         "Weight": 325,
         "ID": 271,
-        "types": [
-          "water",
-          "grass"
-        ],
-        "abilities": [
-          "swift-swim",
-          "rain-dish",
-          "own-tempo"
-        ]
-      },
-      "ludicolo": {
+        "types": ["water", "grass"],
+        "abilities": ["swift-swim", "rain-dish", "own-tempo"]
+    },
+    "ludicolo": {
         "height": 15,
         "Weight": 550,
         "ID": 272,
-        "types": [
-          "water",
-          "grass"
-        ],
-        "abilities": [
-          "swift-swim",
-          "rain-dish",
-          "own-tempo"
-        ]
-      },
-      "seedot": {
+        "types": ["water", "grass"],
+        "abilities": ["swift-swim", "rain-dish", "own-tempo"]
+    },
+    "seedot": {
         "height": 5,
         "Weight": 40,
         "ID": 273,
-        "types": [
-          "grass"
-        ],
-        "abilities": [
-          "chlorophyll",
-          "early-bird",
-          "pickpocket"
-        ]
-      },
-      "nuzleaf": {
+        "types": ["grass"],
+        "abilities": ["chlorophyll", "early-bird", "pickpocket"]
+    },
+    "nuzleaf": {
         "height": 10,
         "Weight": 280,
         "ID": 274,
-        "types": [
-          "grass",
-          "dark"
-        ],
-        "abilities": [
-          "chlorophyll",
-          "early-bird",
-          "pickpocket"
-        ]
-      },
-      "shiftry": {
+        "types": ["grass", "dark"],
+        "abilities": ["chlorophyll", "early-bird", "pickpocket"]
+    },
+    "shiftry": {
         "height": 13,
         "Weight": 596,
         "ID": 275,
-        "types": [
-          "grass",
-          "dark"
-        ],
-        "abilities": [
-          "chlorophyll",
-          "early-bird",
-          "pickpocket"
-        ]
-      },
-      "taillow": {
+        "types": ["grass", "dark"],
+        "abilities": ["chlorophyll", "early-bird", "pickpocket"]
+    },
+    "taillow": {
         "height": 3,
         "Weight": 23,
         "ID": 276,
-        "types": [
-          "normal",
-          "flying"
-        ],
-        "abilities": [
-          "guts",
-          "scrappy"
-        ]
-      },
-      "swellow": {
+        "types": ["normal", "flying"],
+        "abilities": ["guts", "scrappy"]
+    },
+    "swellow": {
         "height": 7,
         "Weight": 198,
         "ID": 277,
-        "types": [
-          "normal",
-          "flying"
-        ],
-        "abilities": [
-          "guts",
-          "scrappy"
-        ]
-      },
-      "wingull": {
+        "types": ["normal", "flying"],
+        "abilities": ["guts", "scrappy"]
+    },
+    "wingull": {
         "height": 6,
         "Weight": 95,
         "ID": 278,
-        "types": [
-          "water",
-          "flying"
-        ],
-        "abilities": [
-          "keen-eye",
-          "hydration",
-          "rain-dish"
-        ]
-      },
-      "pelipper": {
+        "types": ["water", "flying"],
+        "abilities": ["keen-eye", "hydration", "rain-dish"]
+    },
+    "pelipper": {
         "height": 12,
         "Weight": 280,
         "ID": 279,
-        "types": [
-          "water",
-          "flying"
-        ],
-        "abilities": [
-          "keen-eye",
-          "drizzle",
-          "rain-dish"
-        ]
-      },
-      "ralts": {
+        "types": ["water", "flying"],
+        "abilities": ["keen-eye", "drizzle", "rain-dish"]
+    },
+    "ralts": {
         "height": 4,
         "Weight": 66,
         "ID": 280,
-        "types": [
-          "psychic",
-          "fairy"
-        ],
-        "abilities": [
-          "synchronize",
-          "trace",
-          "telepathy"
-        ]
-      },
-      "kirlia": {
+        "types": ["psychic", "fairy"],
+        "abilities": ["synchronize", "trace", "telepathy"]
+    },
+    "kirlia": {
         "height": 8,
         "Weight": 202,
         "ID": 281,
-        "types": [
-          "psychic",
-          "fairy"
-        ],
-        "abilities": [
-          "synchronize",
-          "trace",
-          "telepathy"
-        ]
-      },
-      "gardevoir": {
+        "types": ["psychic", "fairy"],
+        "abilities": ["synchronize", "trace", "telepathy"]
+    },
+    "gardevoir": {
         "height": 16,
         "Weight": 484,
         "ID": 282,
-        "types": [
-          "psychic",
-          "fairy"
-        ],
-        "abilities": [
-          "synchronize",
-          "trace",
-          "telepathy"
-        ]
-      },
-      "surskit": {
+        "types": ["psychic", "fairy"],
+        "abilities": ["synchronize", "trace", "telepathy"]
+    },
+    "surskit": {
         "height": 5,
         "Weight": 17,
         "ID": 283,
-        "types": [
-          "bug",
-          "water"
-        ],
-        "abilities": [
-          "swift-swim",
-          "rain-dish"
-        ]
-      },
-      "masquerain": {
+        "types": ["bug", "water"],
+        "abilities": ["swift-swim", "rain-dish"]
+    },
+    "masquerain": {
         "height": 8,
         "Weight": 36,
         "ID": 284,
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "abilities": [
-          "intimidate",
-          "unnerve"
-        ]
-      },
-      "shroomish": {
+        "types": ["bug", "flying"],
+        "abilities": ["intimidate", "unnerve"]
+    },
+    "shroomish": {
         "height": 4,
         "Weight": 45,
         "ID": 285,
-        "types": [
-          "grass"
-        ],
-        "abilities": [
-          "effect-spore",
-          "poison-heal",
-          "quick-feet"
-        ]
-      },
-      "breloom": {
+        "types": ["grass"],
+        "abilities": ["effect-spore", "poison-heal", "quick-feet"]
+    },
+    "breloom": {
         "height": 12,
         "Weight": 392,
         "ID": 286,
-        "types": [
-          "grass",
-          "fighting"
-        ],
-        "abilities": [
-          "effect-spore",
-          "poison-heal",
-          "technician"
-        ]
-      },
-      "slakoth": {
+        "types": ["grass", "fighting"],
+        "abilities": ["effect-spore", "poison-heal", "technician"]
+    },
+    "slakoth": {
         "height": 8,
         "Weight": 240,
         "ID": 287,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "truant"
-        ]
-      },
-      "vigoroth": {
+        "types": ["normal"],
+        "abilities": ["truant"]
+    },
+    "vigoroth": {
         "height": 14,
         "Weight": 465,
         "ID": 288,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "vital-spirit"
-        ]
-      },
-      "slaking": {
+        "types": ["normal"],
+        "abilities": ["vital-spirit"]
+    },
+    "slaking": {
         "height": 20,
         "Weight": 1305,
         "ID": 289,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "truant"
-        ]
-      },
-      "nincada": {
+        "types": ["normal"],
+        "abilities": ["truant"]
+    },
+    "nincada": {
         "height": 5,
         "Weight": 55,
         "ID": 290,
-        "types": [
-          "bug",
-          "ground"
-        ],
-        "abilities": [
-          "compound-eyes",
-          "run-away"
-        ]
-      },
-      "ninjask": {
+        "types": ["bug", "ground"],
+        "abilities": ["compound-eyes", "run-away"]
+    },
+    "ninjask": {
         "height": 8,
         "Weight": 120,
         "ID": 291,
-        "types": [
-          "bug",
-          "flying"
-        ],
-        "abilities": [
-          "speed-boost",
-          "infiltrator"
-        ]
-      },
-      "shedinja": {
+        "types": ["bug", "flying"],
+        "abilities": ["speed-boost", "infiltrator"]
+    },
+    "shedinja": {
         "height": 8,
         "Weight": 12,
         "ID": 292,
-        "types": [
-          "bug",
-          "ghost"
-        ],
-        "abilities": [
-          "wonder-guard"
-        ]
-      },
-      "whismur": {
+        "types": ["bug", "ghost"],
+        "abilities": ["wonder-guard"]
+    },
+    "whismur": {
         "height": 6,
         "Weight": 163,
         "ID": 293,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "soundproof",
-          "rattled"
-        ]
-      },
-      "loudred": {
+        "types": ["normal"],
+        "abilities": ["soundproof", "rattled"]
+    },
+    "loudred": {
         "height": 10,
         "Weight": 405,
         "ID": 294,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "soundproof",
-          "scrappy"
-        ]
-      },
-      "exploud": {
+        "types": ["normal"],
+        "abilities": ["soundproof", "scrappy"]
+    },
+    "exploud": {
         "height": 15,
         "Weight": 840,
         "ID": 295,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "soundproof",
-          "scrappy"
-        ]
-      },
-      "makuhita": {
+        "types": ["normal"],
+        "abilities": ["soundproof", "scrappy"]
+    },
+    "makuhita": {
         "height": 10,
         "Weight": 864,
         "ID": 296,
-        "types": [
-          "fighting"
-        ],
-        "abilities": [
-          "thick-fat",
-          "guts",
-          "sheer-force"
-        ]
-      },
-      "hariyama": {
+        "types": ["fighting"],
+        "abilities": ["thick-fat", "guts", "sheer-force"]
+    },
+    "hariyama": {
         "height": 23,
         "Weight": 2538,
         "ID": 297,
-        "types": [
-          "fighting"
-        ],
-        "abilities": [
-          "thick-fat",
-          "guts",
-          "sheer-force"
-        ]
-      },
-      "azurill": {
+        "types": ["fighting"],
+        "abilities": ["thick-fat", "guts", "sheer-force"]
+    },
+    "azurill": {
         "height": 2,
         "Weight": 20,
         "ID": 298,
-        "types": [
-          "normal",
-          "fairy"
-        ],
-        "abilities": [
-          "thick-fat",
-          "huge-power",
-          "sap-sipper"
-        ]
-      },
-      "nosepass": {
+        "types": ["normal", "fairy"],
+        "abilities": ["thick-fat", "huge-power", "sap-sipper"]
+    },
+    "nosepass": {
         "height": 10,
         "Weight": 970,
         "ID": 299,
-        "types": [
-          "rock"
-        ],
-        "abilities": [
-          "sturdy",
-          "magnet-pull",
-          "sand-force"
-        ]
-      },
-      "skitty": {
+        "types": ["rock"],
+        "abilities": ["sturdy", "magnet-pull", "sand-force"]
+    },
+    "skitty": {
         "height": 6,
         "Weight": 110,
         "ID": 300,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "cute-charm",
-          "normalize",
-          "wonder-skin"
-        ]
-      },
-      "delcatty": {
+        "types": ["normal"],
+        "abilities": ["cute-charm", "normalize", "wonder-skin"]
+    },
+    "delcatty": {
         "height": 11,
         "Weight": 326,
         "ID": 301,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "cute-charm",
-          "normalize",
-          "wonder-skin"
-        ]
-      },
-      "sableye": {
+        "types": ["normal"],
+        "abilities": ["cute-charm", "normalize", "wonder-skin"]
+    },
+    "sableye": {
         "height": 5,
         "Weight": 110,
         "ID": 302,
-        "types": [
-          "dark",
-          "ghost"
-        ],
-        "abilities": [
-          "keen-eye",
-          "stall",
-          "prankster"
-        ]
-      },
-      "mawile": {
+        "types": ["dark", "ghost"],
+        "abilities": ["keen-eye", "stall", "prankster"]
+    },
+    "mawile": {
         "height": 6,
         "Weight": 115,
         "ID": 303,
-        "types": [
-          "steel",
-          "fairy"
-        ],
-        "abilities": [
-          "hyper-cutter",
-          "intimidate",
-          "sheer-force"
-        ]
-      },
-      "aron": {
+        "types": ["steel", "fairy"],
+        "abilities": ["hyper-cutter", "intimidate", "sheer-force"]
+    },
+    "aron": {
         "height": 4,
         "Weight": 600,
         "ID": 304,
-        "types": [
-          "steel",
-          "rock"
-        ],
-        "abilities": [
-          "sturdy",
-          "rock-head",
-          "heavy-metal"
-        ]
-      },
-      "lairon": {
+        "types": ["steel", "rock"],
+        "abilities": ["sturdy", "rock-head", "heavy-metal"]
+    },
+    "lairon": {
         "height": 9,
         "Weight": 1200,
         "ID": 305,
-        "types": [
-          "steel",
-          "rock"
-        ],
-        "abilities": [
-          "sturdy",
-          "rock-head",
-          "heavy-metal"
-        ]
-      },
-      "aggron": {
+        "types": ["steel", "rock"],
+        "abilities": ["sturdy", "rock-head", "heavy-metal"]
+    },
+    "aggron": {
         "height": 21,
         "Weight": 3600,
         "ID": 306,
-        "types": [
-          "steel",
-          "rock"
-        ],
-        "abilities": [
-          "sturdy",
-          "rock-head",
-          "heavy-metal"
-        ]
-      },
-      "meditite": {
+        "types": ["steel", "rock"],
+        "abilities": ["sturdy", "rock-head", "heavy-metal"]
+    },
+    "meditite": {
         "height": 6,
         "Weight": 112,
         "ID": 307,
-        "types": [
-          "fighting",
-          "psychic"
-        ],
-        "abilities": [
-          "pure-power",
-          "telepathy"
-        ]
-      },
-      "medicham": {
+        "types": ["fighting", "psychic"],
+        "abilities": ["pure-power", "telepathy"]
+    },
+    "medicham": {
         "height": 13,
         "Weight": 315,
         "ID": 308,
-        "types": [
-          "fighting",
-          "psychic"
-        ],
-        "abilities": [
-          "pure-power",
-          "telepathy"
-        ]
-      },
-      "electrike": {
+        "types": ["fighting", "psychic"],
+        "abilities": ["pure-power", "telepathy"]
+    },
+    "electrike": {
         "height": 6,
         "Weight": 152,
         "ID": 309,
-        "types": [
-          "electric"
-        ],
-        "abilities": [
-          "static",
-          "lightning-rod",
-          "minus"
-        ]
-      },
-      "manectric": {
+        "types": ["electric"],
+        "abilities": ["static", "lightning-rod", "minus"]
+    },
+    "manectric": {
         "height": 15,
         "Weight": 402,
         "ID": 310,
-        "types": [
-          "electric"
-        ],
-        "abilities": [
-          "static",
-          "lightning-rod",
-          "minus"
-        ]
-      },
-      "plusle": {
+        "types": ["electric"],
+        "abilities": ["static", "lightning-rod", "minus"]
+    },
+    "plusle": {
         "height": 4,
         "Weight": 42,
         "ID": 311,
-        "types": [
-          "electric"
-        ],
-        "abilities": [
-          "plus",
-          "lightning-rod"
-        ]
-      },
-      "minun": {
+        "types": ["electric"],
+        "abilities": ["plus", "lightning-rod"]
+    },
+    "minun": {
         "height": 4,
         "Weight": 42,
         "ID": 312,
-        "types": [
-          "electric"
-        ],
-        "abilities": [
-          "minus",
-          "volt-absorb"
-        ]
-      },
-      "volbeat": {
+        "types": ["electric"],
+        "abilities": ["minus", "volt-absorb"]
+    },
+    "volbeat": {
         "height": 7,
         "Weight": 177,
         "ID": 313,
-        "types": [
-          "bug"
-        ],
-        "abilities": [
-          "illuminate",
-          "swarm",
-          "prankster"
-        ]
-      },
-      "illumise": {
+        "types": ["bug"],
+        "abilities": ["illuminate", "swarm", "prankster"]
+    },
+    "illumise": {
         "height": 6,
         "Weight": 177,
         "ID": 314,
-        "types": [
-          "bug"
-        ],
-        "abilities": [
-          "oblivious",
-          "tinted-lens",
-          "prankster"
-        ]
-      },
-      "roselia": {
+        "types": ["bug"],
+        "abilities": ["oblivious", "tinted-lens", "prankster"]
+    },
+    "roselia": {
         "height": 3,
         "Weight": 20,
         "ID": 315,
-        "types": [
-          "grass",
-          "poison"
-        ],
-        "abilities": [
-          "natural-cure",
-          "poison-point",
-          "leaf-guard"
-        ]
-      },
-      "gulpin": {
+        "types": ["grass", "poison"],
+        "abilities": ["natural-cure", "poison-point", "leaf-guard"]
+    },
+    "gulpin": {
         "height": 4,
         "Weight": 103,
         "ID": 316,
-        "types": [
-          "poison"
-        ],
-        "abilities": [
-          "liquid-ooze",
-          "sticky-hold",
-          "gluttony"
-        ]
-      },
-      "swalot": {
+        "types": ["poison"],
+        "abilities": ["liquid-ooze", "sticky-hold", "gluttony"]
+    },
+    "swalot": {
         "height": 17,
         "Weight": 800,
         "ID": 317,
-        "types": [
-          "poison"
-        ],
-        "abilities": [
-          "liquid-ooze",
-          "sticky-hold",
-          "gluttony"
-        ]
-      },
-      "carvanha": {
+        "types": ["poison"],
+        "abilities": ["liquid-ooze", "sticky-hold", "gluttony"]
+    },
+    "carvanha": {
         "height": 8,
         "Weight": 208,
         "ID": 318,
-        "types": [
-          "water",
-          "dark"
-        ],
-        "abilities": [
-          "rough-skin",
-          "speed-boost"
-        ]
-      },
-      "sharpedo": {
+        "types": ["water", "dark"],
+        "abilities": ["rough-skin", "speed-boost"]
+    },
+    "sharpedo": {
         "height": 18,
         "Weight": 888,
         "ID": 319,
-        "types": [
-          "water",
-          "dark"
-        ],
-        "abilities": [
-          "rough-skin",
-          "speed-boost"
-        ]
-      },
-      "wailmer": {
+        "types": ["water", "dark"],
+        "abilities": ["rough-skin", "speed-boost"]
+    },
+    "wailmer": {
         "height": 20,
         "Weight": 1300,
         "ID": 320,
-        "types": [
-          "water"
-        ],
-        "abilities": [
-          "water-veil",
-          "oblivious",
-          "pressure"
-        ]
-      },
-      "wailord": {
+        "types": ["water"],
+        "abilities": ["water-veil", "oblivious", "pressure"]
+    },
+    "wailord": {
         "height": 145,
         "Weight": 3980,
         "ID": 321,
-        "types": [
-          "water"
-        ],
-        "abilities": [
-          "water-veil",
-          "oblivious",
-          "pressure"
-        ]
-      },
-      "numel": {
+        "types": ["water"],
+        "abilities": ["water-veil", "oblivious", "pressure"]
+    },
+    "numel": {
         "height": 7,
         "Weight": 240,
         "ID": 322,
-        "types": [
-          "fire",
-          "ground"
-        ],
-        "abilities": [
-          "oblivious",
-          "simple",
-          "own-tempo"
-        ]
-      },
-      "camerupt": {
+        "types": ["fire", "ground"],
+        "abilities": ["oblivious", "simple", "own-tempo"]
+    },
+    "camerupt": {
         "height": 19,
         "Weight": 2200,
         "ID": 323,
-        "types": [
-          "fire",
-          "ground"
-        ],
-        "abilities": [
-          "magma-armor",
-          "solid-rock",
-          "anger-point"
-        ]
-      },
-      "torkoal": {
+        "types": ["fire", "ground"],
+        "abilities": ["magma-armor", "solid-rock", "anger-point"]
+    },
+    "torkoal": {
         "height": 5,
         "Weight": 804,
         "ID": 324,
-        "types": [
-          "fire"
-        ],
-        "abilities": [
-          "white-smoke",
-          "drought",
-          "shell-armor"
-        ]
-      },
-      "spoink": {
+        "types": ["fire"],
+        "abilities": ["white-smoke", "drought", "shell-armor"]
+    },
+    "spoink": {
         "height": 7,
         "Weight": 306,
         "ID": 325,
-        "types": [
-          "psychic"
-        ],
-        "abilities": [
-          "thick-fat",
-          "own-tempo",
-          "gluttony"
-        ]
-      },
-      "grumpig": {
+        "types": ["psychic"],
+        "abilities": ["thick-fat", "own-tempo", "gluttony"]
+    },
+    "grumpig": {
         "height": 9,
         "Weight": 715,
         "ID": 326,
-        "types": [
-          "psychic"
-        ],
-        "abilities": [
-          "thick-fat",
-          "own-tempo",
-          "gluttony"
-        ]
-      },
-      "spinda": {
+        "types": ["psychic"],
+        "abilities": ["thick-fat", "own-tempo", "gluttony"]
+    },
+    "spinda": {
         "height": 11,
         "Weight": 50,
         "ID": 327,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "own-tempo",
-          "tangled-feet",
-          "contrary"
-        ]
-      },
-      "trapinch": {
+        "types": ["normal"],
+        "abilities": ["own-tempo", "tangled-feet", "contrary"]
+    },
+    "trapinch": {
         "height": 7,
         "Weight": 150,
         "ID": 328,
-        "types": [
-          "ground"
-        ],
-        "abilities": [
-          "hyper-cutter",
-          "arena-trap",
-          "sheer-force"
-        ]
-      },
-      "vibrava": {
+        "types": ["ground"],
+        "abilities": ["hyper-cutter", "arena-trap", "sheer-force"]
+    },
+    "vibrava": {
         "height": 11,
         "Weight": 153,
         "ID": 329,
-        "types": [
-          "ground",
-          "dragon"
-        ],
-        "abilities": [
-          "levitate"
-        ]
-      },
-      "flygon": {
+        "types": ["ground", "dragon"],
+        "abilities": ["levitate"]
+    },
+    "flygon": {
         "height": 20,
         "Weight": 820,
         "ID": 330,
-        "types": [
-          "ground",
-          "dragon"
-        ],
-        "abilities": [
-          "levitate"
-        ]
-      },
-      "cacnea": {
+        "types": ["ground", "dragon"],
+        "abilities": ["levitate"]
+    },
+    "cacnea": {
         "height": 4,
         "Weight": 513,
         "ID": 331,
-        "types": [
-          "grass"
-        ],
-        "abilities": [
-          "sand-veil",
-          "water-absorb"
-        ]
-      },
-      "cacturne": {
+        "types": ["grass"],
+        "abilities": ["sand-veil", "water-absorb"]
+    },
+    "cacturne": {
         "height": 13,
         "Weight": 774,
         "ID": 332,
-        "types": [
-          "grass",
-          "dark"
-        ],
-        "abilities": [
-          "sand-veil",
-          "water-absorb"
-        ]
-      },
-      "swablu": {
+        "types": ["grass", "dark"],
+        "abilities": ["sand-veil", "water-absorb"]
+    },
+    "swablu": {
         "height": 4,
         "Weight": 12,
         "ID": 333,
-        "types": [
-          "normal",
-          "flying"
-        ],
-        "abilities": [
-          "natural-cure",
-          "cloud-nine"
-        ]
-      },
-      "altaria": {
+        "types": ["normal", "flying"],
+        "abilities": ["natural-cure", "cloud-nine"]
+    },
+    "altaria": {
         "height": 11,
         "Weight": 206,
         "ID": 334,
-        "types": [
-          "dragon",
-          "flying"
-        ],
-        "abilities": [
-          "natural-cure",
-          "cloud-nine"
-        ]
-      },
-      "zangoose": {
+        "types": ["dragon", "flying"],
+        "abilities": ["natural-cure", "cloud-nine"]
+    },
+    "zangoose": {
         "height": 13,
         "Weight": 403,
         "ID": 335,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "immunity",
-          "toxic-boost"
-        ]
-      },
-      "seviper": {
+        "types": ["normal"],
+        "abilities": ["immunity", "toxic-boost"]
+    },
+    "seviper": {
         "height": 27,
         "Weight": 525,
         "ID": 336,
-        "types": [
-          "poison"
-        ],
-        "abilities": [
-          "shed-skin",
-          "infiltrator"
-        ]
-      },
-      "lunatone": {
+        "types": ["poison"],
+        "abilities": ["shed-skin", "infiltrator"]
+    },
+    "lunatone": {
         "height": 10,
         "Weight": 1680,
         "ID": 337,
-        "types": [
-          "rock",
-          "psychic"
-        ],
-        "abilities": [
-          "levitate"
-        ]
-      },
-      "solrock": {
+        "types": ["rock", "psychic"],
+        "abilities": ["levitate"]
+    },
+    "solrock": {
         "height": 12,
         "Weight": 1540,
         "ID": 338,
-        "types": [
-          "rock",
-          "psychic"
-        ],
-        "abilities": [
-          "levitate"
-        ]
-      },
-      "barboach": {
+        "types": ["rock", "psychic"],
+        "abilities": ["levitate"]
+    },
+    "barboach": {
         "height": 4,
         "Weight": 19,
         "ID": 339,
-        "types": [
-          "water",
-          "ground"
-        ],
-        "abilities": [
-          "oblivious",
-          "anticipation",
-          "hydration"
-        ]
-      },
-      "whiscash": {
+        "types": ["water", "ground"],
+        "abilities": ["oblivious", "anticipation", "hydration"]
+    },
+    "whiscash": {
         "height": 9,
         "Weight": 236,
         "ID": 340,
-        "types": [
-          "water",
-          "ground"
-        ],
-        "abilities": [
-          "oblivious",
-          "anticipation",
-          "hydration"
-        ]
-      },
-      "corphish": {
+        "types": ["water", "ground"],
+        "abilities": ["oblivious", "anticipation", "hydration"]
+    },
+    "corphish": {
         "height": 6,
         "Weight": 115,
         "ID": 341,
-        "types": [
-          "water"
-        ],
-        "abilities": [
-          "hyper-cutter",
-          "shell-armor",
-          "adaptability"
-        ]
-      },
-      "crawdaunt": {
+        "types": ["water"],
+        "abilities": ["hyper-cutter", "shell-armor", "adaptability"]
+    },
+    "crawdaunt": {
         "height": 11,
         "Weight": 328,
         "ID": 342,
-        "types": [
-          "water",
-          "dark"
-        ],
-        "abilities": [
-          "hyper-cutter",
-          "shell-armor",
-          "adaptability"
-        ]
-      },
-      "baltoy": {
+        "types": ["water", "dark"],
+        "abilities": ["hyper-cutter", "shell-armor", "adaptability"]
+    },
+    "baltoy": {
         "height": 5,
         "Weight": 215,
         "ID": 343,
-        "types": [
-          "ground",
-          "psychic"
-        ],
-        "abilities": [
-          "levitate"
-        ]
-      },
-      "claydol": {
+        "types": ["ground", "psychic"],
+        "abilities": ["levitate"]
+    },
+    "claydol": {
         "height": 15,
         "Weight": 1080,
         "ID": 344,
-        "types": [
-          "ground",
-          "psychic"
-        ],
-        "abilities": [
-          "levitate"
-        ]
-      },
-      "lileep": {
+        "types": ["ground", "psychic"],
+        "abilities": ["levitate"]
+    },
+    "lileep": {
         "height": 10,
         "Weight": 238,
         "ID": 345,
-        "types": [
-          "rock",
-          "grass"
-        ],
-        "abilities": [
-          "suction-cups",
-          "storm-drain"
-        ]
-      },
-      "cradily": {
+        "types": ["rock", "grass"],
+        "abilities": ["suction-cups", "storm-drain"]
+    },
+    "cradily": {
         "height": 15,
         "Weight": 604,
         "ID": 346,
-        "types": [
-          "rock",
-          "grass"
-        ],
-        "abilities": [
-          "suction-cups",
-          "storm-drain"
-        ]
-      },
-      "anorith": {
+        "types": ["rock", "grass"],
+        "abilities": ["suction-cups", "storm-drain"]
+    },
+    "anorith": {
         "height": 7,
         "Weight": 125,
         "ID": 347,
-        "types": [
-          "rock",
-          "bug"
-        ],
-        "abilities": [
-          "battle-armor",
-          "swift-swim"
-        ]
-      },
-      "armaldo": {
+        "types": ["rock", "bug"],
+        "abilities": ["battle-armor", "swift-swim"]
+    },
+    "armaldo": {
         "height": 15,
         "Weight": 682,
         "ID": 348,
-        "types": [
-          "rock",
-          "bug"
-        ],
-        "abilities": [
-          "battle-armor",
-          "swift-swim"
-        ]
-      },
-      "feebas": {
+        "types": ["rock", "bug"],
+        "abilities": ["battle-armor", "swift-swim"]
+    },
+    "feebas": {
         "height": 6,
         "Weight": 74,
         "ID": 349,
-        "types": [
-          "water"
-        ],
-        "abilities": [
-          "swift-swim",
-          "oblivious",
-          "adaptability"
-        ]
-      },
-      "milotic": {
+        "types": ["water"],
+        "abilities": ["swift-swim", "oblivious", "adaptability"]
+    },
+    "milotic": {
         "height": 62,
         "Weight": 1620,
         "ID": 350,
-        "types": [
-          "water"
-        ],
-        "abilities": [
-          "marvel-scale",
-          "competitive",
-          "cute-charm"
-        ]
-      },
-      "castform": {
+        "types": ["water"],
+        "abilities": ["marvel-scale", "competitive", "cute-charm"]
+    },
+    "castform": {
         "height": 3,
         "Weight": 8,
         "ID": 351,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "forecast"
-        ]
-      },
-      "kecleon": {
+        "types": ["normal"],
+        "abilities": ["forecast"]
+    },
+    "kecleon": {
         "height": 10,
         "Weight": 220,
         "ID": 352,
-        "types": [
-          "normal"
-        ],
-        "abilities": [
-          "color-change",
-          "protean"
-        ]
-      },
-      "shuppet": {
+        "types": ["normal"],
+        "abilities": ["color-change", "protean"]
+    },
+    "shuppet": {
         "height": 6,
         "Weight": 23,
         "ID": 353,
-        "types": [
-          "ghost"
-        ],
-        "abilities": [
-          "insomnia",
-          "frisk",
-          "cursed-body"
-        ]
-      },
-      "banette": {
+        "types": ["ghost"],
+        "abilities": ["insomnia", "frisk", "cursed-body"]
+    },
+    "banette": {
         "height": 11,
         "Weight": 125,
         "ID": 354,
-        "types": [
-          "ghost"
-        ],
-        "abilities": [
-          "insomnia",
-          "frisk",
-          "cursed-body"
-        ]
-      },
-      "duskull": {
+        "types": ["ghost"],
+        "abilities": ["insomnia", "frisk", "cursed-body"]
+    },
+    "duskull": {
         "height": 8,
         "Weight": 150,
         "ID": 355,
-        "types": [
-          "ghost"
-        ],
-        "abilities": [
-          "levitate",
-          "frisk"
-        ]
-      },
-      "dusclops": {
+        "types": ["ghost"],
+        "abilities": ["levitate", "frisk"]
+    },
+    "dusclops": {
         "height": 16,
         "Weight": 306,
         "ID": 356,
-        "types": [
-          "ghost"
-        ],
-        "abilities": [
-          "pressure",
-          "frisk"
-        ]
-      },
-      "tropius": {
+        "types": ["ghost"],
+        "abilities": ["pressure", "frisk"]
+    },
+    "tropius": {
         "height": 20,
         "Weight": 1000,
         "ID": 357,
-        "types": [
-          "grass",
-          "flying"
-        ],
-        "abilities": [
-          "chlorophyll",
-          "solar-power",
-          "harvest"
-        ]
-      },
-      "chimecho": {
+        "types": ["grass", "flying"],
+        "abilities": ["chlorophyll", "solar-power", "harvest"]
+    },
+    "chimecho": {
         "height": 6,
         "Weight": 10,
         "ID": 358,
-        "types": [
-          "psychic"
-        ],
-        "abilities": [
-          "levitate"
-        ]
-      },
-      "absol": {
+        "types": ["psychic"],
+        "abilities": ["levitate"]
+    },
+    "absol": {
         "height": 12,
         "Weight": 470,
         "ID": 359,
-        "types": [
-          "dark"
-        ],
-        "abilities": [
-          "pressure",
-          "super-luck",
-          "justified"
-        ]
-      },
-      "wynaut": {
+        "types": ["dark"],
+        "abilities": ["pressure", "super-luck", "justified"]
+    },
+    "wynaut": {
         "height": 6,
         "Weight": 140,
         "ID": 360,
-        "types": [
-          "psychic"
-        ],
-        "abilities": [
-          "shadow-tag",
-          "telepathy"
-        ]
-      },
-      "snorunt": {
+        "types": ["psychic"],
+        "abilities": ["shadow-tag", "telepathy"]
+    },
+    "snorunt": {
         "height": 7,
         "Weight": 168,
         "ID": 361,
-        "types": [
-          "ice"
-        ],
-        "abilities": [
-          "inner-focus",
-          "ice-body",
-          "moody"
-        ]
-      },
-      "glalie": {
+        "types": ["ice"],
+        "abilities": ["inner-focus", "ice-body", "moody"]
+    },
+    "glalie": {
         "height": 15,
         "Weight": 2565,
         "ID": 362,
-        "types": [
-          "ice"
-        ],
-        "abilities": [
-          "inner-focus",
-          "ice-body",
-          "moody"
-        ]
-      },
-      "spheal": {
+        "types": ["ice"],
+        "abilities": ["inner-focus", "ice-body", "moody"]
+    },
+    "spheal": {
         "height": 8,
         "Weight": 395,
         "ID": 363,
-        "types": [
-          "ice",
-          "water"
-        ],
-        "abilities": [
-          "thick-fat",
-          "ice-body",
-          "oblivious"
-        ]
-      },
-      "sealeo": {
+        "types": ["ice", "water"],
+        "abilities": ["thick-fat", "ice-body", "oblivious"]
+    },
+    "sealeo": {
         "height": 11,
         "Weight": 876,
         "ID": 364,
-        "types": [
-          "ice",
-          "water"
-        ],
-        "abilities": [
-          "thick-fat",
-          "ice-body",
-          "oblivious"
-        ]
-      },
-      "walrein": {
+        "types": ["ice", "water"],
+        "abilities": ["thick-fat", "ice-body", "oblivious"]
+    },
+    "walrein": {
         "height": 14,
         "Weight": 1506,
         "ID": 365,
-        "types": [
-          "ice",
-          "water"
-        ],
-        "abilities": [
-          "thick-fat",
-          "ice-body",
-          "oblivious"
-        ]
-      },
-      "clamperl": {
+        "types": ["ice", "water"],
+        "abilities": ["thick-fat", "ice-body", "oblivious"]
+    },
+    "clamperl": {
         "height": 4,
         "Weight": 525,
         "ID": 366,
-        "types": [
-          "water"
-        ],
-        "abilities": [
-          "shell-armor",
-          "rattled"
-        ]
-      },
-      "huntail": {
+        "types": ["water"],
+        "abilities": ["shell-armor", "rattled"]
+    },
+    "huntail": {
         "height": 17,
         "Weight": 270,
         "ID": 367,
-        "types": [
-          "water"
-        ],
-        "abilities": [
-          "swift-swim",
-          "water-veil"
-        ]
-      },
-      "gorebyss": {
+        "types": ["water"],
+        "abilities": ["swift-swim", "water-veil"]
+    },
+    "gorebyss": {
         "height": 18,
         "Weight": 226,
         "ID": 368,
-        "types": [
-          "water"
-        ],
-        "abilities": [
-          "swift-swim",
-          "hydration"
-        ]
-      },
-      "relicanth": {
+        "types": ["water"],
+        "abilities": ["swift-swim", "hydration"]
+    },
+    "relicanth": {
         "height": 10,
         "Weight": 234,
         "ID": 369,
-        "types": [
-          "water",
-          "rock"
-        ],
-        "abilities": [
-          "swift-swim",
-          "rock-head",
-          "sturdy"
-        ]
-      },
-      "luvdisc": {
+        "types": ["water", "rock"],
+        "abilities": ["swift-swim", "rock-head", "sturdy"]
+    },
+    "luvdisc": {
         "height": 6,
         "Weight": 87,
         "ID": 370,
-        "types": [
-          "water"
-        ],
-        "abilities": [
-          "swift-swim",
-          "hydration"
-        ]
-      },
-      "bagon": {
+        "types": ["water"],
+        "abilities": ["swift-swim", "hydration"]
+    },
+    "bagon": {
         "height": 6,
         "Weight": 421,
         "ID": 371,
-        "types": [
-          "dragon"
-        ],
-        "abilities": [
-          "rock-head",
-          "sheer-force"
-        ]
-      },
-      "shelgon": {
+        "types": ["dragon"],
+        "abilities": ["rock-head", "sheer-force"]
+    },
+    "shelgon": {
         "height": 11,
         "Weight": 1105,
         "ID": 372,
-        "types": [
-          "dragon"
-        ],
-        "abilities": [
-          "rock-head",
-          "overcoat"
-        ]
-      },
-      "salamence": {
+        "types": ["dragon"],
+        "abilities": ["rock-head", "overcoat"]
+    },
+    "salamence": {
         "height": 15,
         "Weight": 1026,
         "ID": 373,
-        "types": [
-          "dragon",
-          "flying"
-        ],
-        "abilities": [
-          "intimidate",
-          "moxie"
-        ]
-      },
-      "beldum": {
+        "types": ["dragon", "flying"],
+        "abilities": ["intimidate", "moxie"]
+    },
+    "beldum": {
         "height": 6,
         "Weight": 952,
         "ID": 374,
-        "types": [
-          "steel",
-          "psychic"
-        ],
-        "abilities": [
-          "clear-body",
-          "light-metal"
-        ]
-      },
-      "metang": {
+        "types": ["steel", "psychic"],
+        "abilities": ["clear-body", "light-metal"]
+    },
+    "metang": {
         "height": 12,
         "Weight": 2025,
         "ID": 375,
-        "types": [
-          "steel",
-          "psychic"
-        ],
-        "abilities": [
-          "clear-body",
-          "light-metal"
-        ]
-      },
-      "metagross": {
+        "types": ["steel", "psychic"],
+        "abilities": ["clear-body", "light-metal"]
+    },
+    "metagross": {
         "height": 16,
         "Weight": 5500,
         "ID": 376,
-        "types": [
-          "steel",
-          "psychic"
-        ],
-        "abilities": [
-          "clear-body",
-          "light-metal"
-        ]
-      },
-      "regirock": {
+        "types": ["steel", "psychic"],
+        "abilities": ["clear-body", "light-metal"]
+    },
+    "regirock": {
         "height": 17,
         "Weight": 2300,
         "ID": 377,
-        "types": [
-          "rock"
-        ],
-        "abilities": [
-          "clear-body",
-          "sturdy"
-        ]
-      },
-      "regice": {
+        "types": ["rock"],
+        "abilities": ["clear-body", "sturdy"]
+    },
+    "regice": {
         "height": 18,
         "Weight": 1750,
         "ID": 378,
-        "types": [
-          "ice"
-        ],
-        "abilities": [
-          "clear-body",
-          "ice-body"
-        ]
-      },
-      "registeel": {
+        "types": ["ice"],
+        "abilities": ["clear-body", "ice-body"]
+    },
+    "registeel": {
         "height": 19,
         "Weight": 2050,
         "ID": 379,
-        "types": [
-          "steel"
-        ],
-        "abilities": [
-          "clear-body",
-          "light-metal"
-        ]
-      },
-      "latias": {
+        "types": ["steel"],
+        "abilities": ["clear-body", "light-metal"]
+    },
+    "latias": {
         "height": 14,
         "Weight": 400,
         "ID": 380,
-        "types": [
-          "dragon",
-          "psychic"
-        ],
-        "abilities": [
-          "levitate"
-        ]
-      },
-      "latios": {
+        "types": ["dragon", "psychic"],
+        "abilities": ["levitate"]
+    },
+    "latios": {
         "height": 20,
         "Weight": 600,
         "ID": 381,
-        "types": [
-          "dragon",
-          "psychic"
-        ],
-        "abilities": [
-          "levitate"
-        ]
-      },
-      "kyogre": {
+        "types": ["dragon", "psychic"],
+        "abilities": ["levitate"]
+    },
+    "kyogre": {
         "height": 45,
         "Weight": 3520,
         "ID": 382,
-        "types": [
-          "water"
-        ],
-        "abilities": [
-          "drizzle"
-        ]
-      },
-      "groudon": {
+        "types": ["water"],
+        "abilities": ["drizzle"]
+    },
+    "groudon": {
         "height": 35,
         "Weight": 9500,
         "ID": 383,
-        "types": [
-          "ground"
-        ],
-        "abilities": [
-          "drought"
-        ]
-      },
-      "rayquaza": {
+        "types": ["ground"],
+        "abilities": ["drought"]
+    },
+    "rayquaza": {
         "height": 70,
         "Weight": 2065,
         "ID": 384,
-        "types": [
-          "dragon",
-          "flying"
-        ],
-        "abilities": [
-          "air-lock"
-        ]
-      },
-      "jirachi": {
+        "types": ["dragon", "flying"],
+        "abilities": ["air-lock"]
+    },
+    "jirachi": {
         "height": 3,
         "Weight": 11,
         "ID": 385,
-        "types": [
-          "steel",
-          "psychic"
-        ],
-        "abilities": [
-          "serene-grace"
-        ]
-      },
-      "deoxys": {
+        "types": ["steel", "psychic"],
+        "abilities": ["serene-grace"]
+    },
+    "deoxys": {
         "height": 17,
         "Weight": 608,
         "ID": 386,
-        "types": [
-            "psychic"
-        ],
-        "abilities": [
-            "pressure"
-        ]
-      }
+        "types": ["psychic"],
+        "abilities": ["pressure"]
+    }
 }

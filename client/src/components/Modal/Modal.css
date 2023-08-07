@@ -1,163 +1,164 @@
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Make sure the modal appears above other elements */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure the modal appears above other elements */
 }
 
 .modal {
-  width: 80vw;
-  background-color: #fefefe;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-  animation: slide-in 0.3s forwards;
+    width: 80vw;
+    background-color: #fefefe;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slide-in 0.3s forwards;
 }
 
 .modal * {
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: normal;
-  color: black;
-  font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: normal;
+    color: black;
+    font-size: 16pt;
 }
 @keyframes slide-in {
-  from {
-    opacity: 0;
+    from {
+        opacity: 0;
 
-    transform: translateY(-5%);
-  }
-  to {
-    opacity: 1;
+        transform: translateY(-5%);
+    }
+    to {
+        opacity: 1;
 
-    transform: translateY(0);
-  }
+        transform: translateY(0);
+    }
 }
 
 .close-btn {
-  color: #aaa;
-  font-size: 20px;
-  float: right;
-  cursor: pointer;
+    color: #aaa;
+    font-size: 30px;
+    margin-left: -30px;
+    float: right;
+    z-index: 5;
 }
 
 .close-btn:hover {
-  color: black;
+    color: black;
+    cursor: pointer;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
-  cursor: pointer;
+    background-color: #0056b3;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 .modal .settings-menu-options li {
-  margin-bottom: 5vw;
-  text-align: left;
-  display: block;
-  width: 100%;
+    margin-bottom: 5vw;
+    text-align: left;
+    display: block;
+    width: 100%;
 }
 
 .modal .settings-menu-options .align-left {
-  position: relative;
-  left: -14vw;
+    position: relative;
+    left: -14vw;
 }
 
 .metric-switch-mobile .switch {
-  left: -16vw;
-  vertical-align: middle;
-  position: relative;
-  display: inline-block;
-  /* width: 60px; */
-  height: 34px;
-  border-bottom: none;
+    left: -16vw;
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+    /* width: 60px; */
+    height: 34px;
+    border-bottom: none;
 }
 
 /* Hide default HTML checkbox */
 .metric-switch-mobile .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .metric-switch-mobile .metric-label {
-  margin: 0px;
-  left: 0px;
-  border-bottom: none;
-  position: relative;
+    margin: 0px;
+    left: 0px;
+    border-bottom: none;
+    position: relative;
 }
 
 /* The slider */
 .metric-switch-mobile .slider {
-  position: absolute;
-  cursor: pointer;
-  width: 15vw;
-  height: 7vw;
-  left: 30vw;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+    position: absolute;
+    cursor: pointer;
+    width: 15vw;
+    height: 7vw;
+    left: 30vw;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
 
 .metric-switch-mobile .slider:before {
-  position: absolute;
-  content: "";
-  height: 5vw;
-  width: 5vw;
-  left: 4px;
-  bottom: 1vw;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+    position: absolute;
+    content: '';
+    height: 5vw;
+    width: 5vw;
+    left: 4px;
+    bottom: 1vw;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
 
 .metric-switch-mobile input:checked + .slider {
-  background-color: #2196F3;
+    background-color: #2196f3;
 }
 
 .metric-switch-mobile input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #2196f3;
 }
 
 .metric-switch-mobile input:checked + .slider:before {
-  -webkit-transform: translateX(3vw);
-  -ms-transform: translateX(3vw);
-  transform: translateX(8vw);
+    -webkit-transform: translateX(3vw);
+    -ms-transform: translateX(3vw);
+    transform: translateX(8vw);
 }
 
 /* Rounded sliders */
 .metric-switch-mobile .slider.round {
-  border-radius: 30px;
+    border-radius: 30px;
 }
 
 .metric-switch-mobile .slider.round:before {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 .slider {
-  box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
-  transform: translateX(30px); /* Adjust handle position */
+    transform: translateX(30px); /* Adjust handle position */
 }

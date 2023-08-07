@@ -1,0 +1,49 @@
+.red {
+    color: #dc5a5a;
+}
+.yellow {
+    color: #dbc379;
+}
+.green {
+    color: #78a55a;
+}
+.helpModal {
+    max-height: 90vh;
+    overflow-y: scroll;
+    text-align: center;
+}
+.helpModal-header {
+    display: inline-block;
+    width: 50%;
+    padding: 1%;
+    font-size: 1.3em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 1%;
+}
+.helpModal-p {
+    text-align: left;
+}
+.helpModal-p .hint {
+    margin-top: -2%;
+    font-size: .7em;
+}
+.helpModalTarget {
+    left: 2vw;
+}
+@media all and (max-width: 750px) {
+    .helpModal {
+        top: 5%;
+    }
+    .helpModal-body {
+        padding-bottom: 20%;
+    }
+    .helpModal * {
+        font-size: 1em;
+
+    }
+}
+@media all and (min-width: 750px) {
+    .helpModal, .helpModal-body {
+        width: 50vw;
+    }
+}

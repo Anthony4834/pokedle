@@ -47,7 +47,9 @@
     }
 }
 @media all and (min-device-width: 1000px) {
-    .css-1nmdiq5-menu, .css-13cymwt-control,.css-1n6sfyn-MenuList {
-        min-width: 842px
+    .css-1nmdiq5-menu,
+    .css-13cymwt-control,
+    .css-1n6sfyn-MenuList {
+        min-width: 842px;
     }
 }

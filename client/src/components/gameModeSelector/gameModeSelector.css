@@ -1,4 +1,3 @@
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -9,12 +8,16 @@
 }
 .gameModeSelector-wrapper {
     opacity: 0;
-    animation: fadeIn .5s 2.7s forwards;
+    animation: fadeIn 0.5s 2.7s forwards;
     width: 50%;
     margin: auto;
     padding: 2%;
     text-align: center;
-    color: #efefef
+    color: #efefef;
+}
+.gameModeSelector-orSelect {
+    font-size: 1.1em;
+    font-weight: 100 !important;
 }
 .gameModeSelector-list {
     padding: 0;
@@ -23,25 +26,68 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-.gameModeSelector-list li {
-    transition: all .5s;
+.gameModeSelector-list li,
+.gameModeSelector-list-item-wrapper {
     color: black;
-    padding: 5%;
+    padding: 2vw 0;
     width: 50%;
     background-color: #efefef;
     font-size: 16pt;
-    margin: .5%;
+    margin: 0.5%;
+    /* disable select */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.gameModeSelector-list-item-wrapper {
+    overflow: hidden;
+    padding: 0;
 }
 .gameModeSelector-list li:hover {
     cursor: pointer;
-    background-color: lightgrey;
+    background-color: #e7e7e7;
+}
+.gameModeSelector-list-multi {
+    flex-wrap: nowrap;
+}
+.gameModeSelector-list-multi li {
+    width: 100%;
+    text-align: center;
+    padding: 2vw 0;
+    flex-grow: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.gameModeSelector-list-multi li.active {
+    width: 130%;
+    transform: scale(1.1);
+    background-position: 10%;
+    transition: all 0.5s;
 }
 
 @media all and (max-device-width: 500px) {
     .gameModeSelector-wrapper {
         width: 90%;
     }
-    .gameModeSelector-list, .gameModeSelector-list li {
+    .gameModeSelector-list li:hover {
+        background-color: white;
+    }
+    .gameModeSelector-list,
+    .gameModeSelector-list li,
+    button {
+        font-size: 16px;
         width: 100%;
+    }
+    .gameModeSelector-list-multi {
+        margin: 0;
+    }
+    .gameModeSelector-list-multi li {
+        width: 100%;
+        text-align: center;
+        padding: 10vw 0;
+        background-size: 60%;
+    }
+    .gameModeSelector-list li.active {
+        color: transparent;
     }
 }

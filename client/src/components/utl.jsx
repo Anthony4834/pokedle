@@ -7,12 +7,10 @@ class Util {
     pokeData
 
     constructor(mobile, pokeData) {
-        this.mobile = mobile;
+        this.mobile = mobile
         this.pokeData = pokeData
     }
-
     formatEntryDetails = (pokemonName, metricSystem) => {
-
         let keys = Object.keys(this.pokeData[pokemonName])
         let formattedEntryDetails = {}
 

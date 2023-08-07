@@ -111,359 +111,118 @@
     "porygon2": ["held_item", "trade"],
     "omanyte": ["min_level"],
     "kabuto": ["min_level"],
-    "munchlax": [
-        "min_happiness"
-      ],
-      "dratini": [
-        "min_level"
-      ],
-      "dragonair": [
-        "min_level"
-      ],
-      "chikorita": [
-        "min_level"
-      ],
-      "bayleef": [
-        "min_level"
-      ],
-      "cyndaquil": [
-        "min_level"
-      ],
-      "quilava": [
-        "min_level"
-      ],
-      "totodile": [
-        "min_level"
-      ],
-      "croconaw": [
-        "min_level"
-      ],
-      "sentret": [
-        "min_level"
-      ],
-      "hoothoot": [
-        "min_level"
-      ],
-      "ledyba": [
-        "min_level"
-      ],
-      "spinarak": [
-        "min_level"
-      ],
-      "chinchou": [
-        "min_level"
-      ],
-      "togepi": [
-        "min_happiness"
-      ],
-      "togetic": [
-        "item"
-      ],
-      "natu": [
-        "min_level"
-      ],
-      "mareep": [
-        "min_level"
-      ],
-      "flaaffy": [
-        "min_level"
-      ],
-      "azurill": [
-        "min_happiness"
-      ],
-      "marill": [
-        "min_level"
-      ],
-      "bonsly": [
-        "known_move"
-      ],
-      "hoppip": [
-        "min_level"
-      ],
-      "skiploom": [
-        "min_level"
-      ],
-      "aipom": [
-        "known_move"
-      ],
-      "sunkern": [
-        "item"
-      ],
-      "yanma": [
-        "known_move"
-      ],
-      "wooper": [
-        "min_level"
-      ],
-      "murkrow": [
-        "item"
-      ],
-      "misdreavus": [
-        "item"
-      ],
-      "wynaut": [
-        "min_level"
-      ],
-      "girafarig": [
-        "known_move"
-      ],
-      "pineco": [
-        "min_level"
-      ],
-      "dunsparce": [
-        "known_move"
-      ],
-      "gligar": [
-        "held_item",
-        "time_of_day"
-      ],
-      "snubbull": [
-        "min_level"
-      ],
-      "qwilfish": [
-        "known_move"
-      ],
-      "sneasel": [
-        "held_item",
-        "time_of_day"
-      ],
-      "teddiursa": [
-        "min_level"
-      ],
-      "ursaring": [
-        "time_of_day",
-        "item"
-      ],
-      "slugma": [
-        "min_level"
-      ],
-      "swinub": [
-        "min_level"
-      ],
-      "piloswine": [
-        "known_move"
-      ],
-      "corsola": [
-        "min_level"
-      ],
-      "remoraid": [
-        "min_level"
-      ],
-      "mantyke": [
-        "party_species"
-      ],
-      "houndour": [
-        "min_level"
-      ],
-      "phanpy": [
-        "min_level"
-      ],
-      "stantler": [
-        "known_move"
-      ],
-      "larvitar": [
-        "min_level"
-      ],
-      "pupitar": [
-        "min_level"
-      ],
-      "treecko": [
-        "min_level"
-      ],
-      "grovyle": [
-        "min_level"
-      ],
-      "torchic": [
-        "min_level"
-      ],
-      "combusken": [
-        "min_level"
-      ],
-      "mudkip": [
-        "min_level"
-      ],
-      "marshtomp": [
-        "min_level"
-      ],
-      "poochyena": [
-        "min_level"
-      ],
-      "zigzagoon": [
-        "min_level"
-      ],
-      "linoone": [
-        "min_level",
-        "time_of_day"
-      ],
-      "wurmple": [
-        "min_level"
-      ],
-      "silcoon": [
-        "min_level"
-      ],
-      "cascoon": [
-        "min_level"
-      ],
-      "lotad": [
-        "min_level"
-      ],
-      "lombre": [
-        "item"
-      ],
-      "seedot": [
-        "min_level"
-      ],
-      "nuzleaf": [
-        "item"
-      ],
-      "taillow": [
-        "min_level"
-      ],
-      "wingull": [
-        "min_level"
-      ],
-      "ralts": [
-        "min_level"
-      ],
-      "kirlia": [
-        "min_level",
-        "item",
-        "gender"
-      ],
-      "surskit": [
-        "min_level"
-      ],
-      "shroomish": [
-        "min_level"
-      ],
-      "slakoth": [
-        "min_level"
-      ],
-      "vigoroth": [
-        "min_level"
-      ],
-      "nincada": [
-        "min_level"
-      ],
-      "whismur": [
-        "min_level"
-      ],
-      "loudred": [
-        "min_level"
-      ],
-      "makuhita": [
-        "min_level"
-      ],
-      "nosepass": [
-        "location"
-      ],
-      "skitty": [
-        "item"
-      ],
-      "aron": [
-        "min_level"
-      ],
-      "lairon": [
-        "min_level"
-      ],
-      "meditite": [
-        "min_level"
-      ],
-      "electrike": [
-        "min_level"
-      ],
-      "budew": [
-        "min_happiness",
-        "time_of_day"
-      ],
-      "roselia": [
-        "item"
-      ],
-      "gulpin": [
-        "min_level"
-      ],
-      "carvanha": [
-        "min_level"
-      ],
-      "wailmer": [
-        "min_level"
-      ],
-      "numel": [
-        "min_level"
-      ],
-      "spoink": [
-        "min_level"
-      ],
-      "trapinch": [
-        "min_level"
-      ],
-      "vibrava": [
-        "min_level"
-      ],
-      "cacnea": [
-        "min_level"
-      ],
-      "swablu": [
-        "min_level"
-      ],
-      "barboach": [
-        "min_level"
-      ],
-      "corphish": [
-        "min_level"
-      ],
-      "baltoy": [
-        "min_level"
-      ],
-      "lileep": [
-        "min_level"
-      ],
-      "anorith": [
-        "min_level"
-      ],
-      "feebas": [
-        "held_item",
-        "min_beauty"
-      ],
-      "shuppet": [
-        "min_level"
-      ],
-      "duskull": [
-        "min_level"
-      ],
-      "dusclops": [
-        "held_item"
-      ],
-      "chingling": [
-        "min_happiness",
-        "time_of_day"
-      ],
-      "snorunt": [
-        "min_level",
-        "item",
-        "gender"
-      ],
-      "spheal": [
-        "min_level"
-      ],
-      "sealeo": [
-        "min_level"
-      ],
-      "clamperl": [
-        "held_item"
-      ],
-      "bagon": [
-        "min_level"
-      ],
-      "shelgon": [
-        "min_level"
-      ],
-      "beldum": [
-        "min_level"
-      ],
-      "metang": [
-        "min_level"
-      ]
-    
-      
+    "munchlax": ["min_happiness"],
+    "dratini": ["min_level"],
+    "dragonair": ["min_level"],
+    "chikorita": ["min_level"],
+    "bayleef": ["min_level"],
+    "cyndaquil": ["min_level"],
+    "quilava": ["min_level"],
+    "totodile": ["min_level"],
+    "croconaw": ["min_level"],
+    "sentret": ["min_level"],
+    "hoothoot": ["min_level"],
+    "ledyba": ["min_level"],
+    "spinarak": ["min_level"],
+    "chinchou": ["min_level"],
+    "togepi": ["min_happiness"],
+    "togetic": ["item"],
+    "natu": ["min_level"],
+    "mareep": ["min_level"],
+    "flaaffy": ["min_level"],
+    "azurill": ["min_happiness"],
+    "marill": ["min_level"],
+    "bonsly": ["known_move"],
+    "hoppip": ["min_level"],
+    "skiploom": ["min_level"],
+    "aipom": ["known_move"],
+    "sunkern": ["item"],
+    "yanma": ["known_move"],
+    "wooper": ["min_level"],
+    "murkrow": ["item"],
+    "misdreavus": ["item"],
+    "wynaut": ["min_level"],
+    "girafarig": ["known_move"],
+    "pineco": ["min_level"],
+    "dunsparce": ["known_move"],
+    "gligar": ["held_item", "time_of_day"],
+    "snubbull": ["min_level"],
+    "qwilfish": ["known_move"],
+    "sneasel": ["held_item", "time_of_day"],
+    "teddiursa": ["min_level"],
+    "ursaring": ["time_of_day", "item"],
+    "slugma": ["min_level"],
+    "swinub": ["min_level"],
+    "piloswine": ["known_move"],
+    "corsola": ["min_level"],
+    "remoraid": ["min_level"],
+    "mantyke": ["party_species"],
+    "houndour": ["min_level"],
+    "phanpy": ["min_level"],
+    "stantler": ["known_move"],
+    "larvitar": ["min_level"],
+    "pupitar": ["min_level"],
+    "treecko": ["min_level"],
+    "grovyle": ["min_level"],
+    "torchic": ["min_level"],
+    "combusken": ["min_level"],
+    "mudkip": ["min_level"],
+    "marshtomp": ["min_level"],
+    "poochyena": ["min_level"],
+    "zigzagoon": ["min_level"],
+    "linoone": ["min_level", "time_of_day"],
+    "wurmple": ["min_level"],
+    "silcoon": ["min_level"],
+    "cascoon": ["min_level"],
+    "lotad": ["min_level"],
+    "lombre": ["item"],
+    "seedot": ["min_level"],
+    "nuzleaf": ["item"],
+    "taillow": ["min_level"],
+    "wingull": ["min_level"],
+    "ralts": ["min_level"],
+    "kirlia": ["min_level", "item", "gender"],
+    "surskit": ["min_level"],
+    "shroomish": ["min_level"],
+    "slakoth": ["min_level"],
+    "vigoroth": ["min_level"],
+    "nincada": ["min_level"],
+    "whismur": ["min_level"],
+    "loudred": ["min_level"],
+    "makuhita": ["min_level"],
+    "nosepass": ["location"],
+    "skitty": ["item"],
+    "aron": ["min_level"],
+    "lairon": ["min_level"],
+    "meditite": ["min_level"],
+    "electrike": ["min_level"],
+    "budew": ["min_happiness", "time_of_day"],
+    "roselia": ["item"],
+    "gulpin": ["min_level"],
+    "carvanha": ["min_level"],
+    "wailmer": ["min_level"],
+    "numel": ["min_level"],
+    "spoink": ["min_level"],
+    "trapinch": ["min_level"],
+    "vibrava": ["min_level"],
+    "cacnea": ["min_level"],
+    "swablu": ["min_level"],
+    "barboach": ["min_level"],
+    "corphish": ["min_level"],
+    "baltoy": ["min_level"],
+    "lileep": ["min_level"],
+    "anorith": ["min_level"],
+    "feebas": ["held_item", "min_beauty"],
+    "shuppet": ["min_level"],
+    "duskull": ["min_level"],
+    "dusclops": ["held_item"],
+    "chingling": ["min_happiness", "time_of_day"],
+    "snorunt": ["min_level", "item", "gender"],
+    "spheal": ["min_level"],
+    "sealeo": ["min_level"],
+    "clamperl": ["held_item"],
+    "bagon": ["min_level"],
+    "shelgon": ["min_level"],
+    "beldum": ["min_level"],
+    "metang": ["min_level"]
 }

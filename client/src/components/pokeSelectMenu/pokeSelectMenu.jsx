@@ -3,20 +3,19 @@ import Select from 'react-select'
 import './pokeSelectMenu.css'
 import { Link, animateScroll as scroll } from 'react-scroll'
 
-
 const PokeSelectMenu = ({
     pokemonToGuess,
     alreadyGuessed,
     setIsSynchronized,
     isSynchronized,
     cookieMgr,
-    pokeData
+    pokeData,
 }) => {
     const [options, setOptions] = useState([])
     const selectListRef = useRef()
     const pokemonNames = Object.keys(pokeData)
-    const [selectDisabled, setSelectDisabled] = useState(false);
-    
+    const [selectDisabled, setSelectDisabled] = useState(false)
+
     window.addEventListener('keydown', () => {
         selectListRef.current.focus()
     })
@@ -51,10 +50,8 @@ const PokeSelectMenu = ({
     }, [isSynchronized])
 
     const handleSubmit = (e, submittedWithKey) => {
-        
         let pokemonGuessed
-        if(window.scrollY < 100)
-            scroll.scrollTo(100);
+        if (window.scrollY < 100) scroll.scrollTo(100)
         if (submittedWithKey) {
             e.preventDefault()
             setSelectDisabled(true)

@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react"
-import Header from "../header/header"
-import Util from "../utl"
-import PokeSelectMenu from "../pokeSelectMenu/pokeSelectMenu"
-import VictoryScreen from "../victoryScreen/victoryScreen"
-import AnswersBox from "../answersBox/answersBox"
-import { Link, animateScroll as scroll } from 'react-scroll'
+import React, { useEffect, useState } from 'react'
+import { animateScroll as scroll } from 'react-scroll'
+import AnswersBox from '../answersBox/answersBox'
+import PokeSelectMenu from '../pokeSelectMenu/pokeSelectMenu'
+import Util from '../utl'
+import VictoryScreen from '../victoryScreen/victoryScreen'
 
-
-export const Page = ({pokeData, gen, metric, updateMetric, mobile}) => {
+export const Page = ({ pokeData, gen, metric, updateMetric, mobile }) => {
     const [pokemonToGuess, setPokemonToGuess] = useState('')
     const [alreadyGuessed, setAlreadyGuessed] = useState([])
     const [isSynchronized, setIsSynchronized] = useState(false)
@@ -53,17 +51,17 @@ export const Page = ({pokeData, gen, metric, updateMetric, mobile}) => {
     const pickRandomPokemon = () => {
         // setPokemonToGuess("electabuzz");
         // return;
-        let pokemonNames = Object.keys(pokeData);
+        let pokemonNames = Object.keys(pokeData)
         let selectedPokemon =
             pokemonNames[Math.floor(Math.random() * pokemonNames.length)]
-        console.log('------->', selectedPokemon);
+        console.log('------->', selectedPokemon)
         setPokemonToGuess(selectedPokemon)
     }
 
     const getAlreadyGuessed = () => {
         return alreadyGuessed
     }
-    
+
     const getCookie = cookieName => {
         if (!document.cookie || document.cookie.length < 1) return false
         let cookieArr = document.cookie.split(';')
@@ -74,18 +72,17 @@ export const Page = ({pokeData, gen, metric, updateMetric, mobile}) => {
             if (cookieArr[index].includes(cookieName)) cookieIndex = index
         }
 
-        if(!cookieIndex) return false;
+        if (!cookieIndex) return false
         return cookieArr[cookieIndex].split('=')[1]
     }
 
     const setCookie = (key, value) => {
-        document.cookie = `GENERATION_${gen}_${key}=${value}; path=/`;
+        document.cookie = `GENERATION_${gen}_${key}=${value}; path=/`
     }
     return (
         <>
-                    {/* <p>{pokemonToGuess}</p> */}
+            {/* <p>{pokemonToGuess}</p> */}
 
-             
             {!gameOver && (
                 <PokeSelectMenu
                     pokeData={pokeData}
