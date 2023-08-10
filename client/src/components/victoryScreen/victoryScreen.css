@@ -65,6 +65,11 @@
     letter-spacing: 1pt;
     display: block;
 }
+.countdownWrapper {
+    font-weight: bold;
+    padding: 5%;
+    font-size: 1.2em;
+}
 @media screen and (max-width: 500px) {
     .victoryScreenCard {
         width: 95vw;

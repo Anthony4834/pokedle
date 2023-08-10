@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import AnswerEntry from '../answerEntry/answerEntry'
 import './answersBox.css'
-import { v4 as uuidv4 } from 'uuid'
 
 const AnswersBox = ({
     getAlreadyGuessed,
@@ -39,13 +38,13 @@ const AnswersBox = ({
                     <div>Abilities</div>
                     <div>Evolves by</div>
                     {!mobile && (
-                        <label class='switch'>
+                        <label className='switch'>
                             <input
                                 type='checkbox'
                                 onChange={e => updateMetric(e)}
                             />
-                            <span class='slider round'></span>
-                            <span class='metricLabel'>metric</span>
+                            <span className='slider round'></span>
+                            <span className='metricLabel'>metric</span>
                         </label>
                     )}
                 </div>

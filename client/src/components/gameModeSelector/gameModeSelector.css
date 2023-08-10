@@ -7,13 +7,16 @@
     }
 }
 .gameModeSelector-wrapper {
-    opacity: 0;
-    animation: fadeIn 0.5s 2.7s forwards;
     width: 50%;
     margin: auto;
     padding: 2%;
     text-align: center;
     color: #efefef;
+    animation: fadeIn 0.5s forwards;
+}
+.gameModeSelector-wrapper.animated {
+    opacity: 0;
+    animation-delay: 2.7s;
 }
 .gameModeSelector-orSelect {
     font-size: 1.1em;
@@ -44,7 +47,7 @@
     padding: 0;
 }
 .gameModeSelector-list li {
-    transition: all .2s;
+    transition: all 0.2s;
 }
 .gameModeSelector-list li:hover {
     cursor: pointer;

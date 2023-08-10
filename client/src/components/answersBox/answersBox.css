@@ -1,7 +1,7 @@
 .answersBoxOuterContainer {
     position: relative;
     left: calc(50vw - 35.55vw);
-    top: 42vh;
+    top: 37vh;
     max-width: 70vw;
     padding-bottom: 10vh;
 }

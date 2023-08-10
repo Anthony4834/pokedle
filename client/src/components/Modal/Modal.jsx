@@ -1,18 +1,9 @@
-import React, { FC, ReactNode, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Modal.css'
 
-export interface ModalProps {
-    className?: string
-    target: ReactNode
-    body: ReactNode
-}
-const Modal: FC<ModalProps> = ({
-    className = '',
-    target,
-    body,
-}) => {
+const Modal = ({ className = '', target, body }) => {
     const [isOpen, setIsOpen] = useState(false)
-    const modalRef = useRef<HTMLDivElement>(null)
+    const modalRef = useRef(null)
 
     useEffect(() => {
         // Attach event listener when the modal is open

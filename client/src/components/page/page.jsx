@@ -1,20 +1,27 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { animateScroll as scroll } from 'react-scroll'
+import { v4 as uuid } from 'uuid'
 import AnswersBox from '../answersBox/answersBox'
 import { pm } from '../helpModal/helpModal'
+import { HintsBox } from '../hints/hintsBox'
 import PokeSelectMenu from '../pokeSelectMenu/pokeSelectMenu'
 import Util from '../utl'
 import VictoryScreen from '../victoryScreen/victoryScreen'
 
-export const Page = ({ pokeData, gen, metric, updateMetric, mobile }) => {
+export const BASE_QUERY = 'http://10.37.181.220:5050/';
+export const Page = ({ pokeData, gen, metric, updateMetric, mobile, gameMode }) => {
     const [pokemonToGuess, setPokemonToGuess] = useState('')
     const [alreadyGuessed, setAlreadyGuessed] = useState([])
     const [isSynchronized, setIsSynchronized] = useState(false)
     const [gameOver, setGameOver] = useState(false)
-    const util = new Util(mobile, pokeData)
+    const util = new Util(mobile, pokeData);
+    const [pK, setPk] = useState(null);
 
     useEffect(() => {
-        pickRandomPokemon()
+        getTodaysPokemon();
+        console.log(pokemonToGuess);
+        setPk(getOrCreateUserKey());
 
         if (getCookie('initialized') == false) {
             setCookie('initialized', true)
@@ -29,7 +36,7 @@ export const Page = ({ pokeData, gen, metric, updateMetric, mobile }) => {
         }
     }, [])
 
-    useEffect(() => {
+    useEffect( () => {
         let alreadyGuessedFromCookies = getCookie('already_guessed_arr')
         let alreadyGuessedLocal = util.removeBrackets(alreadyGuessed)
 
@@ -37,11 +44,20 @@ export const Page = ({ pokeData, gen, metric, updateMetric, mobile }) => {
             alreadyGuessedLocal.replace(/ /g, '').length >
             alreadyGuessedFromCookies.length
         ) {
-            console.log('updating cookies')
             setCookie('already_guessed_arr', alreadyGuessedLocal)
         }
 
         if (getCookie('correct_answer_guessed') == 'true') {
+            axios.post(BASE_QUERY + "players/", {
+                playerKey: getOrCreateUserKey(),
+            })
+
+            axios.post(`${BASE_QUERY}success/`, {
+                playerKey: getOrCreateUserKey(),
+                attempts: alreadyGuessed.length,
+                gameMode: `GENERATION_${gen}`
+            })
+
             setGameOver(true)
             scroll.scrollToTop()
         } else {
@@ -49,25 +65,31 @@ export const Page = ({ pokeData, gen, metric, updateMetric, mobile }) => {
         }
     }, [alreadyGuessed.length, isSynchronized])
 
-    const pickRandomPokemon = () => {
-        // setPokemonToGuess("electabuzz");
-        // return;
-        let pokemonNames = Object.keys(pokeData)
-        let selectedPokemon =
-            pokemonNames[Math.floor(Math.random() * pokemonNames.length)]
-        console.log('------->', selectedPokemon)
-        setPokemonToGuess(selectedPokemon)
-    }
+    const getTodaysPokemon = async () => {
 
+        axios.get(`${BASE_QUERY}pokemon/GENERATION_${gen}`).then(({data}) => {
+            setPokemonToGuess(data['pokemon']);
+        })
+    }
+    const getOrCreateUserKey = () => {
+        const userKey = getCookie("userKey", true);
+        if(!userKey) {
+            setCookie('userKey', uuid(), true);
+        }
+
+        return getCookie('userKey', true);
+    }
     const getAlreadyGuessed = () => {
         return alreadyGuessed
     }
 
-    const getCookie = cookieName => {
+    const getCookie = (cookieName, bypass) => {
         if (!document.cookie || document.cookie.length < 1) return false
         let cookieArr = document.cookie.split(';')
         let cookieIndex
-        cookieName = `GENERATION_${gen}_${cookieName}`
+        let cookie = '';
+        if(!bypass) cookie = `GENERATION_${gen}_`;
+        cookieName = `${cookie}${cookieName}`
 
         for (let index in cookieArr) {
             if (cookieArr[index].includes(cookieName)) cookieIndex = index
@@ -77,50 +99,59 @@ export const Page = ({ pokeData, gen, metric, updateMetric, mobile }) => {
         return cookieArr[cookieIndex].split('=')[1]
     }
 
-    const setCookie = (key, value) => {
-        document.cookie = `GENERATION_${gen}_${key}=${value}; path=/`
+    const setCookie = (key, value, bypass) => {
+        let cookie = '';
+        if(!bypass) cookie = `GENERATION_${gen}_`;
+
+        document.cookie = `${cookie}${key}=${value}; path=/`
     }
     return (
-        <div className={`pageWrapper`}>
-            {/* <p>{pokemonToGuess}</p> */}
-
-            {!gameOver && (
-                <>
-                    <div className='pageSubheading'>
-                        <h1>Guess today's {pm}!</h1>
-                        <p>Type a {pm}'s name or select from the list below</p>
-                    </div>
-                    <PokeSelectMenu
+        <>
+            {pokemonToGuess && <div className={`pageWrapper`}>
+                {/* <p>{pK}</p> */}
+                {!gameOver && (
+                    <>
+                        <div className='pageSubheading'>
+                            <h1>Guess today's {pm}!</h1>
+                            <p>Type a {pm}'s name or select from the list below</p>
+                        </div>
+                        {pokemonToGuess && (
+                            <HintsBox
+                                pokemonToGuess={pokemonToGuess}
+                                pokeData={pokeData}
+                            />
+                        )}
+                        <PokeSelectMenu
+                            pokeData={pokeData}
+                            pokemonToGuess={pokemonToGuess}
+                            alreadyGuessed={alreadyGuessed}
+                            setIsSynchronized={setIsSynchronized}
+                            isSynchronized={isSynchronized}
+                            cookieMgr={{ getCookie, setCookie }}
+                        />
+                    </>
+                )}
+                {gameOver && (
+                    <VictoryScreen
                         pokeData={pokeData}
                         pokemonToGuess={pokemonToGuess}
-                        alreadyGuessed={alreadyGuessed}
-                        setIsSynchronized={setIsSynchronized}
-                        isSynchronized={isSynchronized}
                         cookieMgr={{ getCookie, setCookie }}
+                    ></VictoryScreen>
+                )}
+                {
+                    <AnswersBox
+                        getAlreadyGuessed={getAlreadyGuessed}
+                        pokeData={pokeData}
+                        pokemonToGuess={pokemonToGuess}
+                        isSynchronized={isSynchronized}
+                        setIsSynchronized={setIsSynchronized}
+                        mobile={mobile}
+                        metric={metric}
+                        updateMetric={updateMetric}
+                        util={util}
                     />
-                </>
-               
-            )}
-            {gameOver && (
-                <VictoryScreen
-                    pokeData={pokeData}
-                    pokemonToGuess={pokemonToGuess}
-                    cookieMgr={{ getCookie, setCookie }}
-                ></VictoryScreen>
-            )}
-            {
-                <AnswersBox
-                    getAlreadyGuessed={getAlreadyGuessed}
-                    pokeData={pokeData}
-                    pokemonToGuess={pokemonToGuess}
-                    isSynchronized={isSynchronized}
-                    setIsSynchronized={setIsSynchronized}
-                    mobile={mobile}
-                    metric={metric}
-                    updateMetric={updateMetric}
-                    util={util}
-                />
-            }
-        </div>
+                }
+            </div>}
+        </>
     )
 }

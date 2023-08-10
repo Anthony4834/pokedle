@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
-import { animateScroll as scroll } from 'react-scroll'
-import Select from 'react-select'
-import './pokeSelectMenu.css'
+import { useEffect, useRef, useState } from 'react';
+import { animateScroll as scroll } from 'react-scroll';
+import Select from 'react-select';
+import './pokeSelectMenu.css';
+
 
 const PokeSelectMenu = ({
     pokemonToGuess,
@@ -9,7 +10,7 @@ const PokeSelectMenu = ({
     setIsSynchronized,
     isSynchronized,
     cookieMgr,
-    pokeData,
+    pokeData
 }) => {
     const [options, setOptions] = useState([])
     const selectListRef = useRef()
@@ -23,13 +24,16 @@ const PokeSelectMenu = ({
     const updatePokemonOptions = () => {
         let tempOptions = []
         pokemonNames.map(name => {
-            if (!alreadyGuessed.includes(name)) {
+            if (!(alreadyGuessed.includes(name))) {
                 let index = pokeData[name]['ID']
                 tempOptions.push({
                     value: name,
                     label: (
                         <div>
-                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`} alt={name} />
+                            <img
+                                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`}
+                                alt={name}
+                            />
                             {name}
                         </div>
                     ),
@@ -42,7 +46,7 @@ const PokeSelectMenu = ({
     useEffect(() => {
         updatePokemonOptions()
         pokemonNames.sort()
-    }, [])
+    }, [alreadyGuessed])
 
     useEffect(() => {
         // clearSearchBar();
@@ -50,7 +54,7 @@ const PokeSelectMenu = ({
 
     const handleSubmit = (e, submittedWithKey) => {
         let pokemonGuessed
-        if (window.scrollY < 100) scroll.scrollTo(100)
+        if (window.scrollY < 240) scroll.scrollTo(240)
         if (submittedWithKey) {
             e.preventDefault()
             setSelectDisabled(true)
@@ -112,7 +116,7 @@ const PokeSelectMenu = ({
     const checkForWinner = pokemonGuessed => {
         if (pokemonGuessed == pokemonToGuess)
             setTimeout(() => {
-                cookieMgr.setCookie('correct_answer_guessed', true)
+                cookieMgr.setCookie('correct_answer_guessed', true);
                 setIsSynchronized(!isSynchronized)
             }, 4000)
     }

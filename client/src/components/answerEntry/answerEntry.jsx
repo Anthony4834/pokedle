@@ -47,12 +47,16 @@ const AnswerEntry = ({
                     <img
                         className='answerEntryDetail pokeImg'
                         alt={pokemon}
-                        src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + pokeData[pokemon]['ID'] + '.png'}
+                        src={
+                            'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
+                            pokeData[pokemon]['ID'] +
+                            '.png'
+                        }
                         id={pokemon}
                     ></img>
                     {detailKeys &&
-                        detailKeys.map(detail => (
-                            <div
+                        detailKeys.map((detail, key) => (
+                            <div key={key}
                                 className={
                                     'answerEntryDetail ' +
                                     util.getBackgroundClass(

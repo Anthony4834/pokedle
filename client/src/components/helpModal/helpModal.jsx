@@ -1,7 +1,7 @@
 import React from 'react'
 import example from '../../static/example.png'
 import questionMarkIcon from '../../static/help.png'
-import Modal, { ModalProps } from '../Modal/Modal'
+import Modal from '../Modal/Modal'
 import './helpModal.css'
 
 export const pm = 'Pokémon'
@@ -100,7 +100,7 @@ const modalBody = (
         </section>
     </div>
 )
-const modalProps: ModalProps = {
+const modalProps = {
     className: 'helpModal',
     target: (
         <img className='modalTargetIcon' src={questionMarkIcon} alt='help' />

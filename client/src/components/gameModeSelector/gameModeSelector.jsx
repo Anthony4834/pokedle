@@ -14,7 +14,7 @@ const createGenMap = () => {
 const getBackgroundImage = gen => {
     return require(`../../static/img/${gen}.png`)
 }
-export const GameModeSelector = ({ setGameMode }) => {
+export const GameModeSelector = ({ setGameMode, animated }) => {
     const [gensSelected, setGensSelected] = useState(createGenMap())
     const updateGensSelected = gen => {
         const output = { ...gensSelected }
@@ -25,13 +25,13 @@ export const GameModeSelector = ({ setGameMode }) => {
         const gens = Object.keys(gensSelected)
             .filter(gen => gensSelected[gen])
             .flatMap(gen => Number(gen))
-            
-        if(gens.length < 1) return;
+
+        if (gens.length < 1) return
         setGameMode(getGameModeInformation(gens))
     }
 
     return (
-        <div className='gameModeSelector-wrapper'>
+        <div className={`gameModeSelector-wrapper ${animated ? "animated" : ''}`} >
             <h1>select a mode</h1>
             <ul className='gameModeSelector-list'>
                 <li

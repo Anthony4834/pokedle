@@ -7,16 +7,23 @@ import { Page } from './components/page/page'
 function App() {
     const mobile = window.screen.width > 500 ? false : true
     const [metric, setMetric] = useState(false)
-    const [gameMode, setGameMode] = useState(null);
-    const bodyRef = useRef(null);
+    const [gameMode, setGameMode] = useState(null)
+    const [animated, setAnimated] = useState(true);
+    const bodyRef = useRef(null)
 
     const updateMetric = e => {
         setMetric(e.target.checked)
     }
     return (
         <div className='App' ref={bodyRef}>
-            <Header mobile={mobile} updateMetric={updateMetric} metric={metric} />
-            {!gameMode && <GameModeSelector setGameMode={setGameMode} />}
+            <Header
+                mobile={mobile}
+                updateMetric={updateMetric}
+                metric={metric}
+                setGameMode={setGameMode}
+                setAnimated={setAnimated}
+            />
+            {!gameMode && <GameModeSelector setGameMode={setGameMode} animated={animated} />}
             {gameMode && (
                 <Page
                     pokeData={gameMode.pokeData}
@@ -24,6 +31,7 @@ function App() {
                     metric={metric}
                     updateMetric={updateMetric}
                     mobile={mobile}
+                    gameMode={gameMode}
                 />
             )}
         </div>

@@ -1,12 +1,22 @@
-import { useEffect, useState } from 'react'
-import './victoryScreen.css'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Countdown from 'react-countdown';
+import { pm } from '../helpModal/helpModal';
+import { BASE_QUERY } from '../page/page';
+import { getNthGrammer } from '../utl';
+import './victoryScreen.css';
 
 const VictoryScreen = ({ pokemonToGuess, cookieMgr, pokeData }) => {
     const [numTries, setNumTries] = useState(0)
+    const [nthPersonToGuess, setNthPersonToGuess] = useState(null);
+    
+    const midnight = new Date();
+    midnight.setHours(24, 0, 0, 0);
     useEffect(() => {
         setNumTries(
             cookieMgr.getCookie('already_guessed_arr').split(',').length,
         )
+        axios.get(`${BASE_QUERY}success/today`).then(({ data }) => setNthPersonToGuess(data.length));  
     }, [])
 
     const reset = () => {
@@ -40,6 +50,12 @@ const VictoryScreen = ({ pokemonToGuess, cookieMgr, pokeData }) => {
                         <p className='numOfTries'>
                             Number of tries: {numTries}
                         </p>
+                        <p className='numOfTries'>You are the {nthPersonToGuess + 1}{getNthGrammer(nthPersonToGuess + 1)} person to guess the correct {pm} today</p>
+
+                        <div className='countdownWrapper'>
+                            <p className='numOfTries'>Next {pm} in</p>
+                            <Countdown date={midnight} daysInHours/>
+                        </div>
                         {/* <p className="numOfTries">Check back tomorrow for another challenge</p> */}
                         <p onClick={e => reset()}>Reset</p>
                     </section>
