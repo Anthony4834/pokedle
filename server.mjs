@@ -9,8 +9,7 @@ import success from './routes/success.mjs';
 
 
 const PORT = process.env.PORT || 5050;
-export const BASE_QUERY = 'http://10.37.181.220:' + PORT;
-// http://192.168.0.13:5050
+export const BASE_QUERY = 'https://ill-gold-shark-wig.cyclic.app';
 
 const app = express();
 
