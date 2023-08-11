@@ -7,7 +7,7 @@ import { pm } from '../helpModal/helpModal'
 import { HintsBox } from '../hints/hintsBox'
 import PokeSelectMenu from '../pokeSelectMenu/pokeSelectMenu'
 import Util from '../utl'
-import VictoryScreen from '../victoryScreen/victoryScreen'
+import VictoryScreen, { nextMidnightDate } from '../victoryScreen/victoryScreen'
 
 export const BASE_QUERY = 'https://ill-gold-shark-wig.cyclic.app/';
 export const Page = ({ pokeData, gen, metric, updateMetric, mobile, gameMode }) => {
@@ -20,7 +20,6 @@ export const Page = ({ pokeData, gen, metric, updateMetric, mobile, gameMode }) 
 
     useEffect(() => {
         getTodaysPokemon();
-        console.log(pokemonToGuess);
         setPk(getOrCreateUserKey());
 
         if (getCookie('initialized') == false) {
@@ -103,7 +102,7 @@ export const Page = ({ pokeData, gen, metric, updateMetric, mobile, gameMode }) 
         let cookie = '';
         if(!bypass) cookie = `GENERATION_${gen}_`;
 
-        document.cookie = `${cookie}${key}=${value}; path=/`
+        document.cookie = `${cookie}${key}=${value};${!bypass && `expires=${nextMidnightDate().toUTCString()};`}path=/;`
     }
     return (
         <>

@@ -6,18 +6,17 @@ import { BASE_QUERY } from '../page/page';
 import { getNthGrammer } from '../utl';
 import './victoryScreen.css';
 
+export const nextMidnightDate = () => {
+    const currentUTC = new Date();
+    const millisecondsUntilNextMidnight = (24 * 60 * 60 * 1000) - (currentUTC.getUTCHours() * 60 * 60 * 1000) - (currentUTC.getUTCMinutes() * 60 * 1000) - (currentUTC.getUTCSeconds() * 1000) - currentUTC.getUTCMilliseconds();
+    const nextMidnightTimestamp = currentUTC.getTime() + millisecondsUntilNextMidnight;
+    
+    return new Date(nextMidnightTimestamp);
+}
 const VictoryScreen = ({ pokemonToGuess, cookieMgr, pokeData }) => {
     const [numTries, setNumTries] = useState(0)
     const [nthPersonToGuess, setNthPersonToGuess] = useState(null);
 
-    const nextMidnightDate = () => {
-        const currentUTC = new Date();
-        const millisecondsUntilNextMidnight = (24 * 60 * 60 * 1000) - (currentUTC.getUTCHours() * 60 * 60 * 1000) - (currentUTC.getUTCMinutes() * 60 * 1000) - (currentUTC.getUTCSeconds() * 1000) - currentUTC.getUTCMilliseconds();
-        const nextMidnightTimestamp = currentUTC.getTime() + millisecondsUntilNextMidnight;
-        
-        return new Date(nextMidnightTimestamp);
-    }
-    
     useEffect(() => {
         setNumTries(
             cookieMgr.getCookie('already_guessed_arr').split(',').length,
