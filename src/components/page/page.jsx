@@ -9,7 +9,7 @@ import PokeSelectMenu from '../pokeSelectMenu/pokeSelectMenu'
 import Util from '../utl'
 import VictoryScreen from '../victoryScreen/victoryScreen'
 
-export const BASE_QUERY = 'http://10.37.181.220:5050/';
+export const BASE_QUERY = 'https://ill-gold-shark-wig.cyclic.app/players/';
 export const Page = ({ pokeData, gen, metric, updateMetric, mobile, gameMode }) => {
     const [pokemonToGuess, setPokemonToGuess] = useState('')
     const [alreadyGuessed, setAlreadyGuessed] = useState([])
