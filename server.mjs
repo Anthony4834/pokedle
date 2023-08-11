@@ -29,7 +29,7 @@ app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
 });
 
-cron.schedule("31 17 * * *", function() {
+cron.schedule("34 17 * * *", function() {
             // API call goes here
     console.log("running a task every minute");
     request.post(BASE_QUERY + '/pokemon', function (error, response, body) {
