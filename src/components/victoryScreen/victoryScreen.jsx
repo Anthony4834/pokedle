@@ -9,9 +9,15 @@ import './victoryScreen.css';
 const VictoryScreen = ({ pokemonToGuess, cookieMgr, pokeData }) => {
     const [numTries, setNumTries] = useState(0)
     const [nthPersonToGuess, setNthPersonToGuess] = useState(null);
+
+    const nextMidnightDate = () => {
+        const currentUTC = new Date();
+        const millisecondsUntilNextMidnight = (24 * 60 * 60 * 1000) - (currentUTC.getUTCHours() * 60 * 60 * 1000) - (currentUTC.getUTCMinutes() * 60 * 1000) - (currentUTC.getUTCSeconds() * 1000) - currentUTC.getUTCMilliseconds();
+        const nextMidnightTimestamp = currentUTC.getTime() + millisecondsUntilNextMidnight;
+        
+        return new Date(nextMidnightTimestamp);
+    }
     
-    const midnight = new Date();
-    midnight.setHours(24, 0, 0, 0);
     useEffect(() => {
         setNumTries(
             cookieMgr.getCookie('already_guessed_arr').split(',').length,
@@ -19,6 +25,7 @@ const VictoryScreen = ({ pokemonToGuess, cookieMgr, pokeData }) => {
         axios.get(`${BASE_QUERY}success/today`).then(({ data }) => setNthPersonToGuess(data.length));  
     }, [])
 
+   
     const reset = () => {
         cookieMgr.setCookie('initialized', false)
         cookieMgr.setCookie('correct_answer_guessed', false)
@@ -54,10 +61,11 @@ const VictoryScreen = ({ pokemonToGuess, cookieMgr, pokeData }) => {
 
                         <div className='countdownWrapper'>
                             <p className='numOfTries'>Next {pm} in</p>
-                            <Countdown date={midnight} daysInHours/>
+                            <Countdown date={nextMidnightDate()} daysInHours/>
+                            <br/>
+                            <span style={{fontSize: '10px'}}>(12:00 AM UTC)</span>
                         </div>
                         {/* <p className="numOfTries">Check back tomorrow for another challenge</p> */}
-                        <p onClick={e => reset()}>Reset</p>
                     </section>
                 </div>
             </div>
