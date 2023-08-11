@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { RotatingLines } from 'react-loader-spinner'
 import { animateScroll as scroll } from 'react-scroll'
 import { v4 as uuid } from 'uuid'
 import AnswersBox from '../answersBox/answersBox'
@@ -151,6 +152,17 @@ export const Page = ({ pokeData, gen, metric, updateMetric, mobile, gameMode }) 
                     />
                 }
             </div>}
+            {!pokemonToGuess && (
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh'}}>
+                    <RotatingLines
+                        strokeColor="grey"
+                        strokeWidth="5"
+                        animationDuration="0.75"
+                        width="40"
+                        visible={true}
+                    />
+                </div>
+            )}
         </>
     )
 }
