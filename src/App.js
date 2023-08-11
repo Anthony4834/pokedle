@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import { GameModeSelector } from './components/gameModeSelector/gameModeSelector'
 import Header from './components/header/header'
@@ -14,6 +14,9 @@ function App() {
     const updateMetric = e => {
         setMetric(e.target.checked)
     }
+    useEffect(() => {
+        document.title = 'Pokédle';
+    }, [])
     return (
         <div className='App' ref={bodyRef}>
             <Header
