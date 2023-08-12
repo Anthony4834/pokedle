@@ -1,6 +1,5 @@
 import express from "express";
 import db from "../db/conn.mjs";
-import Player from "../model/player.mjs";
 import Success from "../model/success.mjs";
 
 const router = express.Router();
@@ -35,24 +34,11 @@ router.get('/today', async(req, res) => {
 router.post('/', async (req, res) => {
     
     let successCollection = await db.collection("success");
-    let playerCollection = await db.collection('players');
-    
-    let player = await playerCollection.findOne({
-      playerKey: req.body['playerKey']
-    })
-    if(!player) {
-      await playerCollection.insertOne({playerKey: req.body['playerKey']});
-      player = await playerCollection.findOne({
-        playerKey: req.body['playerKey']
-      });
-    }
-    let playerObject = new Player(player);
 
     let success = new Success({
-      playerKey: playerObject.playerKey,
+      playerKey: req.body['playerKey'],
       attempts: req.body['attempts'],
       gameMode: req.body['gameMode'],
-      createdAt: new Date()
     });
 
     const duplicateKey = await successCollection.findOne({
@@ -69,7 +55,7 @@ router.post('/', async (req, res) => {
     }
 
     let result = await successCollection.insertOne(success);
-    res.send(result).status(200);
+    res.send({result: result, entry: entry}).status(200);
   });
 
 export default router;

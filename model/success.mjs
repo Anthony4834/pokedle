@@ -11,7 +11,7 @@ class Success {
         this.playerKey = playerKey;
         this.attempts = attempts;
         this.gameMode = gameMode;
-        this.createdAt = createdAt;
+        this.createdAt = createdAt || new Date();
     }
 }
 
