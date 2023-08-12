@@ -55,7 +55,7 @@ router.post('/', async (req, res) => {
     }
 
     let result = await successCollection.insertOne(success);
-    res.send({result: result, entry: entry}).status(200);
+    res.send({result: result, entry: success}).status(200);
   });
 
 export default router;
