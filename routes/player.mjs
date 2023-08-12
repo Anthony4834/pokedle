@@ -17,23 +17,28 @@ router.post('/', async (req, res) => {
     if(!(req.body || !req.body['playerKey'])) res.send('No body').status(400);
     let collection = await db.collection("players");
     
-    let player = new Player({
-        playerKey: req.body['playerKey'],
-        history: req.body['history']
-    });
 
-    let duplicateKey = await collection.findOne({
-        playerKey: player.playerKey
-    });
-    let exists = !!duplicateKey;
+    try {
+        let player = new Player({
+          playerKey: req.body['playerKey'],
+        });
 
-    if(exists) {
-        res.send({error: `playerKey ${player.playerKey} already exists`});
-        return;
-    }
+        let duplicateKey = await collection.findOne({
+            playerKey: player.playerKey
+        });
+        let exists = !!duplicateKey;
 
-    let result = await collection.insertOne(player);
-    res.send(result).status(204);
+        if(exists) {
+            res.send({error: `playerKey ${player.playerKey} already exists`});
+            return;
+        }
+
+        let result = await collection.insertOne(player);
+        res.send(result).status(204);
+      } catch(exception) {
+        console.error('Unexpected error: ', exception);
+      }
+    
   });
 
 export default router;

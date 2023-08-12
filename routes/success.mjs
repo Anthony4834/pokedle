@@ -67,9 +67,6 @@ router.post('/', async (req, res) => {
 
       return;
     }
- 
-    playerObject.history.push(success); 
-    await playerCollection.replaceOne({playerKey: playerObject.playerKey}, playerObject);
 
     let result = await successCollection.insertOne(success);
     res.send(result).status(200);
