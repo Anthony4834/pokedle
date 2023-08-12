@@ -23,6 +23,11 @@ router.post('/', async (req, res) => {
           playerKey: req.body['playerKey'],
         });
 
+        console.log({
+          message: 'New player',
+          player: player.toJson()
+        })
+        
         let duplicateKey = await collection.findOne({
             playerKey: player.playerKey
         });
