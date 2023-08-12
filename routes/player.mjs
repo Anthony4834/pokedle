@@ -22,11 +22,6 @@ router.post('/', async (req, res) => {
         let player = new Player({
           playerKey: req.body['playerKey'],
         });
-
-        console.log({
-          message: 'New player',
-          player: player.toJson()
-        })
         
         let duplicateKey = await collection.findOne({
             playerKey: player.playerKey
@@ -34,12 +29,16 @@ router.post('/', async (req, res) => {
         let exists = !!duplicateKey;
 
         if(exists) {
-            res.send({error: `playerKey ${player.playerKey} already exists`});
+            res.send({error: `playerKey ${player.playerKey} already exists`}).status(400);
             return;
         }
 
         let result = await collection.insertOne(player);
-        res.send(result).status(204);
+        res.send({result: result, entry: player}).status(204);
+        console.log({
+          message: 'New player',
+          player: player.toJson()
+        })
       } catch(exception) {
         console.error('Unexpected error: ', exception);
       }
