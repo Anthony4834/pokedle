@@ -118,7 +118,7 @@ const PokeSelectMenu = ({
             setTimeout(() => {
                 cookieMgr.setCookie('correct_answer_guessed', true);
                 setIsSynchronized(!isSynchronized)
-            }, 4000)
+            }, 4500)
     }
 
     const selectionFormHandler = e => {

@@ -43,6 +43,7 @@ const AnswerEntry = ({
     return (
         <>
             {entryDetails && (
+        
                 <div className='answerEntryWrapper'>
                     <img
                         className='answerEntryDetail pokeImg'
@@ -55,7 +56,7 @@ const AnswerEntry = ({
                         id={pokemon}
                     ></img>
                     {detailKeys &&
-                        detailKeys.map((detail, key) => (
+                        detailKeys.filter(key => key != 'Weight' && key != 'abilities').map((detail, key) => (
                             <div key={key}
                                 className={
                                     'answerEntryDetail ' +
@@ -73,6 +74,16 @@ const AnswerEntry = ({
                             </div>
                         ))}
                     <div
+                        className={`answerEntryDetail effectiveness ${util.getBackgroundClassForEffectiveness(true, util.getAttackingEffectiveness(entryDetails, pokemonToGuess))}`}
+                        >
+                            x{util.getAttackingEffectiveness(entryDetails, pokemonToGuess)}
+                        </div>
+                    <div
+                        className={`answerEntryDetail effectiveness ${util.getBackgroundClassForEffectiveness(false, util.getDefendingEffectiveness(entryDetails, pokemonToGuess))}`}
+                    >
+                        x{util.getDefendingEffectiveness(entryDetails, pokemonToGuess)}
+                    </div>
+                    <div
                         className={
                             'answerEntryDetail ' +
                             util.getBackgroundClass(
@@ -86,6 +97,7 @@ const AnswerEntry = ({
                         }
                     >
                         {util.getEvoDetails(pokemon).split('BREAK').join('\n')}
+
                     </div>
                     {!mobile && <div className='answerEntryDetail'></div>}
                 </div>

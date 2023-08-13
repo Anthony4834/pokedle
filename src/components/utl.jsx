@@ -1,4 +1,6 @@
 import evolutionData from '../static/evolutionData.json'
+import { typeEffectiveness } from '../static/typeEffectiveness'
+
 
 class Util {
     //Class to handle long formatting methods
@@ -191,6 +193,73 @@ class Util {
     removeBrackets = arr => {
         let arrString = '' + arr
         return arrString.substring(0, arrString.length)
+    }
+    getMultiplier = (type, vs) => {
+
+    }
+    getAttackingEffectiveness = (pokemonGuessed, pokemonToGuess) => {
+        let guessedTypes = pokemonGuessed['types'].split(' ')
+        let correctTypes = this.formatEntryDetails(pokemonToGuess, false)[
+            'types'
+        ].split(' ');
+        let output = 1;
+        
+        for(let type of guessedTypes) {
+            const {weak, strong, ineffective} = typeEffectiveness[type];
+
+            for(let correctType of correctTypes) {
+                if(weak.includes(correctType)) output *= 0.5;
+                if(strong.includes(correctType)) output *= 2
+                if(ineffective.includes(correctType)) output *= 0;
+            }
+        }
+
+        console.log({
+            guessedTypes: guessedTypes,
+            correctTypes: correctTypes,
+            effectiveness: output
+        });
+
+        return output;
+
+        if(output === 0) return 'ineffective'
+        if(output === 1) return 'effective'
+        return output > 1 ? 'super effective' : 'not very effective'
+
+    }
+    getDefendingEffectiveness = (pokemonGuessed, pokemonToGuess) => {
+        let guessedTypes = pokemonGuessed['types'].split(' ')
+        let correctTypes = this.formatEntryDetails(pokemonToGuess, false)[
+            'types'
+        ].split(' ');
+        let output = 1;
+        
+        for(let type of correctTypes) {
+            const {weak, strong, ineffective} = typeEffectiveness[type];
+
+            for(let guessedType of guessedTypes) {
+                if(weak.includes(guessedType)) output *= 0.5;
+                if(strong.includes(guessedType)) output *= 2
+                if(ineffective.includes(guessedType)) output *= 0;
+            }
+        }
+
+        console.log({
+            guessedTypes: guessedTypes,
+            correctTypes: correctTypes,
+            effectiveness: output
+        });
+        return output;
+        
+        if(output === 0) return 'ineffective'
+        if(output === 1) return 'effective'
+        return output > 1 ? 'super effective' : 'not very effective'
+    }
+    getBackgroundClassForEffectiveness = (attacking, effectiveness) => {
+        if(effectiveness === 1) return 'CORRECT';
+        if(effectiveness === 0) return 'WRONG'
+        if(attacking) return effectiveness < 1 ? 'WRONG' : 'CORRECT';
+        return effectiveness < 1 ? 'CORRECT' : 'WRONG';
     }
 }
 

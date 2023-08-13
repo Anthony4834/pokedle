@@ -69,11 +69,13 @@
 .answerEntryDetail.pokeImg {
     background-color: white;
 }
-.answerEntryDetail.pokeImg:hover {
+.answerEntryDetail.effectiveness {
+    background-color: #efefef;
+    color: black;
 }
-
 @media all and (max-width: 500px) {
     .answerEntryWrapper {
+        overflow-x: scroll;
         margin-top: 0.5vh;
     }
     .answerEntryWrapper .answerEntryDetail {
