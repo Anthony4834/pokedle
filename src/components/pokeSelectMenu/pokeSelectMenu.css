@@ -9,10 +9,11 @@
     background-color: #efefef !important;
 }
 .css-1nmdiq5-menu,
-.css-1fdsijx-ValueContainer {
+.css-1fdsijx-ValueContainer,
+.css-hlgwow {
     font-size: 1.5em;
 }
-.css-1fdsijx-ValueContainer * {
+.css-1fdsijx-ValueContainer *, .css-hlgwow * {
     vertical-align: middle;
     padding-left: 1.5%;
     padding-right: 3.7%;
