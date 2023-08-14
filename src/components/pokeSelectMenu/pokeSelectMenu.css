@@ -18,18 +18,19 @@
     padding-right: 3.7%;
 }
 .css-1n6sfyn-MenuList,
+.css-qr46ko,
 .css-1nmdiq5-menu,
 .css-13cymwt-control,
 .css-t3ipsp-control {
     max-width: 70vw;
 }
-.css-1n6sfyn-MenuList div {
+.css-1n6sfyn-MenuList div, .css-qr46ko div {
     padding-left: 3%;
 }
-.css-1n6sfyn-MenuList * {
+.css-1n6sfyn-MenuList *, .css-qr46ko * {
     vertical-align: middle;
 }
-.css-1n6sfyn-MenuList img {
+.css-1n6sfyn-MenuList img, .css-qr46ko img {
     padding-right: 3%;
 }
 
@@ -38,6 +39,7 @@
         margin-top: 5%;
     }
     .css-1n6sfyn-MenuList,
+    .css-qr46ko,
     .css-1nmdiq5-menu,
     .css-13cymwt-control,
     .css-t3ipsp-control {
@@ -57,7 +59,7 @@
 @media all and (min-device-width: 1000px) {
     .css-1nmdiq5-menu,
     .css-13cymwt-control,
-    .css-1n6sfyn-MenuList {
+    .css-1n6sfyn-MenuList , .css-qr46ko{
         min-width: 842px;
     }
 }
