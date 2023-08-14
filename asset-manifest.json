@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pokedle/static/css/main.340aa27f.css",
-    "main.js": "/pokedle/static/js/main.bfc9c5ed.js",
+    "main.css": "/pokedle/static/css/main.82a21cf3.css",
+    "main.js": "/pokedle/static/js/main.40fd7561.js",
     "static/js/787.ef6d11c7.chunk.js": "/pokedle/static/js/787.ef6d11c7.chunk.js",
     "static/media/triangle_red_down.png": "/pokedle/static/media/triangle_red_down.3f54ee1429a4cf7eba96.png",
     "static/media/triangle_red.png": "/pokedle/static/media/triangle_red.ed5999e6c9944ec31628.png",
@@ -11,12 +11,12 @@
     "static/media/3.png": "/pokedle/static/media/3.aafdbc0c7f53f3e9a909.png",
     "static/media/pokeball.png": "/pokedle/static/media/pokeball.3379e6b6754b646f19ed.png",
     "index.html": "/pokedle/index.html",
-    "main.340aa27f.css.map": "/pokedle/static/css/main.340aa27f.css.map",
-    "main.bfc9c5ed.js.map": "/pokedle/static/js/main.bfc9c5ed.js.map",
+    "main.82a21cf3.css.map": "/pokedle/static/css/main.82a21cf3.css.map",
+    "main.40fd7561.js.map": "/pokedle/static/js/main.40fd7561.js.map",
     "787.ef6d11c7.chunk.js.map": "/pokedle/static/js/787.ef6d11c7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.340aa27f.css",
-    "static/js/main.bfc9c5ed.js"
+    "static/css/main.82a21cf3.css",
+    "static/js/main.40fd7561.js"
   ]
 }
