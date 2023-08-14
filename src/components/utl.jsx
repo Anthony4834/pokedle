@@ -223,6 +223,8 @@ export const getAttackingEffectiveness = (pokemonGuessed, pokemonToGuess) => {
 }
 export const getNthGrammer = num => {
     const numAsString = String(num)
+    
+    if(numAsString.length >= 2 && numAsString.charAt(numAsString.length - 2) === '1') return 'th';
     switch (numAsString[numAsString.length - 1]) {
         case '1':
             return 'st'
