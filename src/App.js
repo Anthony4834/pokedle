@@ -8,14 +8,14 @@ function App() {
     const mobile = window.screen.width > 500 ? false : true
     const [metric, setMetric] = useState(false)
     const [gameMode, setGameMode] = useState(null)
-    const [animated, setAnimated] = useState(true);
+    const [animated, setAnimated] = useState(true)
     const bodyRef = useRef(null)
 
     const updateMetric = e => {
         setMetric(e.target.checked)
     }
     useEffect(() => {
-        document.title = 'Pokédle';
+        document.title = 'Pokédle'
     }, [])
     return (
         <div className='App' ref={bodyRef}>
@@ -26,8 +26,7 @@ function App() {
                 setGameMode={setGameMode}
                 setAnimated={setAnimated}
             />
-            {!gameMode && <GameModeSelector setGameMode={setGameMode} animated={animated} />}
-            {gameMode && (
+            {gameMode ? (
                 <Page
                     pokeData={gameMode.pokeData}
                     gen={gameMode.gen}
@@ -35,6 +34,11 @@ function App() {
                     updateMetric={updateMetric}
                     mobile={mobile}
                     gameMode={gameMode}
+                />
+            ) : (
+                <GameModeSelector
+                    setGameMode={setGameMode}
+                    animated={animated}
                 />
             )}
         </div>

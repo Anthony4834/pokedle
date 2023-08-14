@@ -1,10 +1,10 @@
-import { HelpModal } from '../helpModal/helpModal';
-import { SettingsModal } from '../settingsModal/settingsModal';
+import { HelpModal } from '../helpModal/helpModal'
+import { SettingsModal } from '../settingsModal/settingsModal'
 
 const Header = ({ mobile, updateMetric, metric, setGameMode, setAnimated }) => {
     const goHome = () => {
-        setAnimated(false);
-        setGameMode(null);
+        setAnimated(false)
+        setGameMode(null)
     }
     return (
         <div className='header'>

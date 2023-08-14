@@ -31,7 +31,9 @@ export const GameModeSelector = ({ setGameMode, animated }) => {
     }
 
     return (
-        <div className={`gameModeSelector-wrapper ${animated ? "animated" : ''}`} >
+        <div
+            className={`gameModeSelector-wrapper ${animated ? 'animated' : ''}`}
+        >
             <h1>select a mode</h1>
             <ul className='gameModeSelector-list'>
                 <li

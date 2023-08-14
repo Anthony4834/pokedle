@@ -1,7 +1,6 @@
 import evolutionData from '../static/evolutionData.json'
 import { typeEffectiveness } from '../static/typeEffectiveness'
 
-
 class Util {
     //Class to handle long formatting methods
     metric
@@ -194,87 +193,59 @@ class Util {
         let arrString = '' + arr
         return arrString.substring(0, arrString.length)
     }
-    getMultiplier = (type, vs) => {
+    getMultiplier = (type, vs) => {}
 
-    }
-    getAttackingEffectiveness = (pokemonGuessed, pokemonToGuess) => {
-        let guessedTypes = pokemonGuessed['types'].split(' ')
-        let correctTypes = this.formatEntryDetails(pokemonToGuess, false)[
-            'types'
-        ].split(' ');
-        let output = 1;
-        
-        for(let type of guessedTypes) {
-            const {weak, strong, ineffective} = typeEffectiveness[type];
-
-            for(let correctType of correctTypes) {
-                if(weak.includes(correctType)) output *= 0.5;
-                if(strong.includes(correctType)) output *= 2
-                if(ineffective.includes(correctType)) output *= 0;
-            }
-        }
-
-        console.log({
-            guessedTypes: guessedTypes,
-            correctTypes: correctTypes,
-            effectiveness: output
-        });
-
-        return output;
-
-        if(output === 0) return 'ineffective'
-        if(output === 1) return 'effective'
-        return output > 1 ? 'super effective' : 'not very effective'
-
-    }
-    getDefendingEffectiveness = (pokemonGuessed, pokemonToGuess) => {
-        let guessedTypes = pokemonGuessed['types'].split(' ')
-        let correctTypes = this.formatEntryDetails(pokemonToGuess, false)[
-            'types'
-        ].split(' ');
-        let output = 1;
-        
-        for(let type of correctTypes) {
-            const {weak, strong, ineffective} = typeEffectiveness[type];
-
-            for(let guessedType of guessedTypes) {
-                if(weak.includes(guessedType)) output *= 0.5;
-                if(strong.includes(guessedType)) output *= 2
-                if(ineffective.includes(guessedType)) output *= 0;
-            }
-        }
-
-        console.log({
-            guessedTypes: guessedTypes,
-            correctTypes: correctTypes,
-            effectiveness: output
-        });
-        return output;
-        
-        if(output === 0) return 'ineffective'
-        if(output === 1) return 'effective'
-        return output > 1 ? 'super effective' : 'not very effective'
-    }
     getBackgroundClassForEffectiveness = (attacking, effectiveness) => {
-        if(effectiveness === 1) return 'CORRECT';
-        if(effectiveness === 0) return 'WRONG'
-        if(attacking) return effectiveness < 1 ? 'WRONG' : 'CORRECT';
-        return effectiveness < 1 ? 'CORRECT' : 'WRONG';
+        if (effectiveness === 1) return 'CORRECT'
+        if (effectiveness === 0) return 'WRONG'
+        if (attacking) return effectiveness < 1 ? 'WRONG' : 'CORRECT'
+        return effectiveness < 1 ? 'CORRECT' : 'WRONG'
     }
 }
+export const getAttackingEffectiveness = (pokemonGuessed, pokemonToGuess) => {
+    let guessedTypes = pokemonGuessed['types'].split(' ')
+    let correctTypes = pokemonToGuess['types'].split(' ')
+    let output = 1
 
-export const getNthGrammer = (num) => {
-    const numAsString = String(num);
-    switch(numAsString[numAsString.length - 1]) {
-        case "1":
-            return "st";
-        case "2":
-            return "nd";
-        case "3":
-            return "rd";
-        default:
-            return "th";
+    for (let type of guessedTypes) {
+        const { weak, strong, ineffective } = typeEffectiveness[type]
+
+        for (let correctType of correctTypes) {
+            if (weak.includes(correctType)) output *= 0.5
+            if (strong.includes(correctType)) output *= 2
+            if (ineffective.includes(correctType)) output *= 0
+        }
     }
+
+    if (output === 0) return 'ineffective'
+    if (output === 1) return 'effective'
+    return output > 1 ? 'super effective' : 'not very effective'
+}
+export const getNthGrammer = num => {
+    const numAsString = String(num)
+    switch (numAsString[numAsString.length - 1]) {
+        case '1':
+            return 'st'
+        case '2':
+            return 'nd'
+        case '3':
+            return 'rd'
+        default:
+            return 'th'
+    }
+}
+export const nextMidnightDate = () => {
+    const currentUTC = new Date()
+    const millisecondsUntilNextMidnight =
+        24 * 60 * 60 * 1000 -
+        currentUTC.getUTCHours() * 60 * 60 * 1000 -
+        currentUTC.getUTCMinutes() * 60 * 1000 -
+        currentUTC.getUTCSeconds() * 1000 -
+        currentUTC.getUTCMilliseconds()
+    const nextMidnightTimestamp =
+        currentUTC.getTime() + millisecondsUntilNextMidnight
+
+    return new Date(nextMidnightTimestamp)
 }
 
 export default Util

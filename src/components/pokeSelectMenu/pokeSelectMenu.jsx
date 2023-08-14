@@ -1,30 +1,34 @@
-import { useEffect, useRef, useState } from 'react';
-import { animateScroll as scroll } from 'react-scroll';
-import Select from 'react-select';
-import './pokeSelectMenu.css';
-
+import { useEffect, useRef, useState } from 'react'
+import { animateScroll as scroll } from 'react-scroll'
+import Select from 'react-select'
+import { setCookie } from '../page/cookieManager'
+import './pokeSelectMenu.css'
 
 const PokeSelectMenu = ({
     pokemonToGuess,
     alreadyGuessed,
     setIsSynchronized,
     isSynchronized,
-    cookieMgr,
-    pokeData
+    pokeData,
+    gen,
+    mobile
 }) => {
     const [options, setOptions] = useState([])
     const selectListRef = useRef()
     const pokemonNames = Object.keys(pokeData)
     const [selectDisabled, setSelectDisabled] = useState(false)
+    const minScrollToSeeEntry = mobile ? 330 : 240;
 
     window.addEventListener('keydown', () => {
+        if(!selectListRef || !selectListRef.current) return;
+
         selectListRef.current.focus()
     })
 
     const updatePokemonOptions = () => {
         let tempOptions = []
         pokemonNames.map(name => {
-            if (!(alreadyGuessed.includes(name))) {
+            if (!alreadyGuessed.includes(name)) {
                 let index = pokeData[name]['ID']
                 tempOptions.push({
                     value: name,
@@ -54,7 +58,7 @@ const PokeSelectMenu = ({
 
     const handleSubmit = (e, submittedWithKey) => {
         let pokemonGuessed
-        if (window.scrollY < 240) scroll.scrollTo(240)
+        if (window.scrollY < minScrollToSeeEntry) scroll.scrollTo(minScrollToSeeEntry)
         if (submittedWithKey) {
             e.preventDefault()
             setSelectDisabled(true)
@@ -116,7 +120,7 @@ const PokeSelectMenu = ({
     const checkForWinner = pokemonGuessed => {
         if (pokemonGuessed == pokemonToGuess)
             setTimeout(() => {
-                cookieMgr.setCookie('correct_answer_guessed', true);
+                setCookie(gen, 'correct_answer_guessed', true)
                 setIsSynchronized(!isSynchronized)
             }, 4500)
     }

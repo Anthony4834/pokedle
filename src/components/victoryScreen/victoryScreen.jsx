@@ -1,41 +1,26 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import Countdown from 'react-countdown';
-import { pm } from '../helpModal/helpModal';
-import { BASE_QUERY } from '../page/page';
-import { getNthGrammer } from '../utl';
-import './victoryScreen.css';
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import Countdown from 'react-countdown'
+import { pm } from '../helpModal/helpModal'
+import { BASE_QUERY } from '../page/page'
+import { getNthGrammer, nextMidnightDate } from '../utl'
+import './victoryScreen.css'
 
-export const nextMidnightDate = () => {
-    const currentUTC = new Date();
-    const millisecondsUntilNextMidnight = (24 * 60 * 60 * 1000) - (currentUTC.getUTCHours() * 60 * 60 * 1000) - (currentUTC.getUTCMinutes() * 60 * 1000) - (currentUTC.getUTCSeconds() * 1000) - currentUTC.getUTCMilliseconds();
-    const nextMidnightTimestamp = currentUTC.getTime() + millisecondsUntilNextMidnight;
-    
-    return new Date(nextMidnightTimestamp);
-}
-const VictoryScreen = ({ pokemonToGuess, cookieMgr, pokeData }) => {
+
+const VictoryScreen = ({ pokemonToGuess, pokeData, gameOver, gen, getAlreadyGuessed }) => {
     const [numTries, setNumTries] = useState(0)
-    const [nthPersonToGuess, setNthPersonToGuess] = useState(null);
+    const [nthPersonToGuess, setNthPersonToGuess] = useState(null)
 
     useEffect(() => {
-        setNumTries(
-            cookieMgr.getCookie('already_guessed_arr').split(',').length,
-        )
-        axios.get(`${BASE_QUERY}success/today`).then(({ data }) => setNthPersonToGuess(data.length));  
-    }, [])
-
-   
-    const reset = () => {
-        cookieMgr.setCookie('initialized', false)
-        cookieMgr.setCookie('correct_answer_guessed', false)
-        cookieMgr.setCookie('already_guessed_arr', '')
-
-        window.location.replace('')
-    }
+        setNumTries(getAlreadyGuessed().length)
+        axios
+            .get(`${BASE_QUERY}success/today`)
+            .then(({ data }) => setNthPersonToGuess(data.length))
+    }, [getAlreadyGuessed])
 
     return (
         <>
-            <div className='victoryScreenWrapper'>
+            {gameOver && <div className='victoryScreenWrapper'>
                 <div className='victoryScreenCard'>
                     <h1>Gotcha!</h1>
                     <section className='pokemonGuessed'>
@@ -56,18 +41,24 @@ const VictoryScreen = ({ pokemonToGuess, cookieMgr, pokeData }) => {
                         <p className='numOfTries'>
                             Number of tries: {numTries}
                         </p>
-                        <p className='numOfTries'>You are the {nthPersonToGuess + 1}{getNthGrammer(nthPersonToGuess + 1)} person to guess the correct {pm} today</p>
+                        <p className='numOfTries'>
+                            You are the {nthPersonToGuess + 1}
+                            {getNthGrammer(nthPersonToGuess + 1)} person to
+                            guess the correct {pm} today
+                        </p>
 
                         <div className='countdownWrapper'>
                             <p className='numOfTries'>Next {pm} in</p>
-                            <Countdown date={nextMidnightDate()} daysInHours/>
-                            <br/>
-                            <span style={{fontSize: '10px'}}>(12:00 AM UTC)</span>
+                            <Countdown date={nextMidnightDate()} daysInHours />
+                            <br />
+                            <span style={{ fontSize: '10px' }}>
+                                (12:00 AM UTC)
+                            </span>
                         </div>
                         {/* <p className="numOfTries">Check back tomorrow for another challenge</p> */}
                     </section>
                 </div>
-            </div>
+            </div>}
         </>
     )
 }

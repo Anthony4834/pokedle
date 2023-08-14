@@ -28,9 +28,23 @@
         transform: rotate(-10deg) translate(-3px, 2px);
     }
 }
-
+.hintsBox-wrapper-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+.hintsBox-wrapper-outer .effectivenessText {
+    line-height: 200%;
+    text-align: center;
+    color: #efefef;
+}
+.hintsBox-wrapper-outer .effectivenessText-label {
+    font-size: 0.8em;
+    text-align: center;
+    color: #efefef;
+}
 .hintsBox-wrapper {
-    margin: auto;
     width: 20%;
     height: 9vh;
     padding: 1%;
@@ -64,7 +78,7 @@
     transform: scale(1);
 }
 .colorBox-wrapper {
-    transition: all ease-in-out .1s;
+    transition: all ease-in-out 0.1s;
     transform: scale(1);
 }
 .colorBox-wrapper .colorBox {
@@ -73,27 +87,27 @@
     height: 100%;
     opacity: 0;
     transform: scale(0);
-    animation: fadeInAndGrow .3s ease-in-out forwards;
+    animation: fadeInAndGrow 0.3s ease-in-out forwards;
 }
 /* Apply the animation to each box with a delay */
 .colorBox.colorBox-1 {
-    animation-delay: .025s;
+    animation-delay: 0.025s;
 }
 
 .colorBox.colorBox-2 {
-    animation-delay: .05s;
+    animation-delay: 0.05s;
 }
 
 .colorBox.colorBox-3 {
-    animation-delay: .075s;
+    animation-delay: 0.075s;
 }
 
 .colorBox.colorBox-4 {
-    animation-delay: .1s;
+    animation-delay: 0.1s;
 }
 
 .colorBox.colorBox-5 {
-    animation-delay: .125s;
+    animation-delay: 0.125s;
 }
 .hintPromptBox {
     display: flex;
@@ -103,13 +117,13 @@
 .hintText {
     flex-basis: 100%;
     color: white;
-    font-size: .9em;
+    font-size: 0.9em;
     height: 30%;
 }
 .hintsBox-wrapper .modalTargetIcon {
     position: relative;
     transition: all 1s;
-    transform: translate(0px, 0px) rotate(0deg)
+    transform: translate(0px, 0px) rotate(0deg);
 }
 .hintsBox-wrapper .modalTargetIcon:hover {
     animation: magnifying 1s forwards;
@@ -130,5 +144,11 @@
     }
     .colorSchemeBox-wrapper {
         width: 100%;
+    }
+    .hintsBox-wrapper-outer {
+        flex-wrap: wrap;
+    }
+    .hintsBox-wrapper-outer .effectivenessText-label {
+        font-size: 0.4em;
     }
 }

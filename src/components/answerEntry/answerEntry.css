@@ -83,7 +83,7 @@
         height: 15vw;
         border-radius: 0px !important;
         box-shadow: none;
-        border: 1px solid rgba(255, 255, 255, 0.7);
+        /* border: 1px solid rgba(255, 255, 255, 0.7); */
     }
     .answerEntryDetail.MULTI_LINE {
         font-size: 0.8em;

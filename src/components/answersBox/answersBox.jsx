@@ -33,11 +33,9 @@ const AnswersBox = ({
                 <div className='attrLabelWrapper'>
                     <div>Pokemon</div>
                     <div>Height ({metric ? 'm' : 'ft'})</div>
-                    {/* <div>Weight ({metric ? 'kg' : 'lbs'})</div> */}
+                    <div>Weight ({metric ? 'kg' : 'lbs'})</div>
                     <div>Type(s)</div>
-                    {/* <div>Abilities</div> */}
-                    <div>Attacking Damage</div>
-                    <div>Defending Damage</div>
+                    <div>Abilities</div>
                     <div>Evolves by</div>
                     {!mobile && (
                         <label className='switch'>
