@@ -7,7 +7,7 @@ import VictoryScreen from '../victoryScreen/victoryScreen'
 import { handleAlreadyGuessedArray, init } from './cookieManager'
 import { Loading } from './loading'
 
-export const BASE_QUERY = 'https://ill-gold-shark-wig.cyclic.app/'
+export const BASE_QUERY = 'https://defiant-bass-glasses.cyclic.app/';
 export const Page = ({
     pokeData,
     gen,
