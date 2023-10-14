@@ -4,7 +4,7 @@ import "./loadEnvironment.mjs";
 import players from './routes/player.mjs';
 import pokemon from './routes/pokemon.mjs';
 import success from './routes/success.mjs';
-
+import tiktok from './routes/tiktok.mjs';
 
 const PORT = process.env.PORT || 5050;
 export const BASE_QUERY = 'https://ill-gold-shark-wig.cyclic.app';
@@ -17,6 +17,7 @@ app.use(express.json());
 app.use("/players", players);
 app.use("/success", success);
 app.use('/pokemon', pokemon);
+app.use('/tiktok', tiktok)
 
 // start the Express server
 app.listen(PORT, () => {
