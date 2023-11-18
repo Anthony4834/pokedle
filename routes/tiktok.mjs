@@ -74,14 +74,25 @@ router.get('/fiveMin', async(req, res) => {
 router.post('/', async(req, res) => {
     const collection = db.collection('tiktok');
     let names = req.body['names'];
+    if(!req.body || !req.body['names'] || !Array.isArray(names)) {
+        res.send(false);
+        return;
+    }
 
     await purgeOldRecords();
 
     let alreadyIn = await collection.find().toArray();
-    alreadyIn = new Set(alreadyIn.map(record => record['name']))
+    alreadyIn = new Set(alreadyIn.length > 0 ? alreadyIn.map(record => record['name']) : [])
 
+    if(!names || names.length === 0) {
+        res.send(false)
+        return;
+    }
+    console.log({
+        names: names
+    });
     //filter dupes
-    names = names.filter((name) => !alreadyIn.has(name));
+    names = names.filter((name) => name && !alreadyIn.has(name));
     //create objects
     names = names.map((name) => ({
         name: name,
