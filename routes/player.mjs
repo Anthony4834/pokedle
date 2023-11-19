@@ -17,18 +17,24 @@ function getRecordsByDay(data, startDate, endDate) {
   for (let i = 0; i < daysBetween; i++) {
     const currentDay = getFormattedDate(currentDate);
 
-    const recordsForDay = data.filter(entry => {
+    const newRecords = data.filter(entry => {
       const createdAt = new Date(entry.createdAt);
 
       return createdAt.getFullYear() === currentDate.getFullYear() && createdAt.getMonth() === currentDate.getMonth() && createdAt.getDate() === currentDate.getDate();
     });
 
-    dailyRecords.set(currentDay, recordsForDay.length);
+    const totalRecords = data.filter(entry => {
+      const lastUsed = new Date(entry.lastUsed);
+
+      return lastUsed.getFullYear() === currentDate.getFullYear() && lastUsed.getMonth() === currentDate.getMonth() && lastUsed.getDate() === currentDate.getDate();
+    });
+
+    dailyRecords.set(currentDay, [newRecords.length, totalRecords.length]);
 
     currentDate.setDate(currentDate.getDate() + 1);
   }
 
-  const result = Array.from(dailyRecords.entries()).map(([date, count]) => [date, count]);
+  const result = Array.from(dailyRecords.entries()).map(([date, [nRecs, tRecs]]) => [date, [nRecs, tRecs]]);
 
   return result;
 }

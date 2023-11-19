@@ -38,6 +38,15 @@ const getAverageAttempts = (data) => {
 
 }
 
+const getUniquePlayers = (data) => {
+  const unique = new Set([]);
+
+  data.forEach(item => {
+    unique.add(item.playerKey);
+  })
+
+  return unique.size;
+}
 router.get('/all', async(req, res) => res.send({"hello": "world!!"}).status(200));
 router.get('/', async(req, res) => {
   const collection = await db.collection('success');
@@ -84,6 +93,7 @@ router.get('/stats', async (req, res) => {
   const [windowGameModePlayCounts, windowMostPlayed] = getGameModePlayCounts(newWins);
   const totalAverageAttempts = getAverageAttempts(wins);
   const windowAverageAttempts = getAverageAttempts(newWins);
+  const uniquePlayers = getUniquePlayers(newWins);
 
   res.send({
     totalPlays: wins.length,
@@ -93,7 +103,8 @@ router.get('/stats', async (req, res) => {
     windowGameModePlayCounts,
     windowMostPlayed,
     totalAverageAttempts,
-    windowAverageAttempts
+    windowAverageAttempts,
+    uniquePlayers
   })
   
 })
