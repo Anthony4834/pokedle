@@ -1,11 +1,29 @@
-import evolutionData from '../static/evolutionData.json'
-import { typeEffectiveness } from '../static/typeEffectiveness'
+import evolutionData from '../static/evolutionData.json';
+import { typeEffectiveness } from '../static/typeEffectiveness';
 
-export const getDateFromToday = (days, hrs) => {
-    const today = new Date()
+const currentDateInUTC = () =>{
+    const output = new Date(
+        new Date().getUTCFullYear(),
+        new Date().getUTCMonth(),
+        new Date().getUTCDate(),
+        new Date().getUTCHours(),
+        new Date().getUTCMinutes(),
+        new Date().getUTCSeconds()
+    );
+
+    return output;
+} 
+export const getDateFromToday = (days, hrs, zeroOut) => {
+    const today = currentDateInUTC();
     today.setDate(today.getDate() - days)
     today.setHours(today.getHours() - (hrs || 0))
-
+    if(zeroOut) {
+        today.setHours(0);
+        today.setMinutes(0);
+        today.setSeconds(0);
+        today.setMilliseconds(0);
+    }
+    
     return today
 }
 class Util {

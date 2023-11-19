@@ -33,8 +33,8 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
         axios
             .get(`${BASE_QUERY}players/new`, {
                 params: {
-                    startDate: formatDate(getDateFromToday(7)),
-                    endDate: formatDate(new Date()),
+                    startDate: formatDate(getDateFromToday(7, 0, true)),
+                    endDate: formatDate(getDateFromToday(0)),
                 },
             })
             .then(({ data }) => {
@@ -47,8 +47,8 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
         axios
             .get(`${BASE_QUERY}success/stats`, {
                 params: {
-                    startDate: formatDate(getDateFromToday(7)),
-                    endDate: formatDate(new Date()),
+                    startDate: formatDate(getDateFromToday(7, 0, true)),
+                    endDate: formatDate(getDateFromToday(0)),
                 },
             })
             .then(({ data }) => {
@@ -57,13 +57,19 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
         axios
             .get(`${BASE_QUERY}success/stats`, {
                 params: {
-                    startDate: formatDate(getDateFromToday(1)),
-                    endDate: formatDate(new Date()),
+                    startDate: formatDate(getDateFromToday(0, 0, true)),
+                    endDate: formatDate(getDateFromToday(0)),
                 },
             })
             .then(({ data }) => {
                 setDailyGameModeData(data)
             })
+        
+            console.log(
+                {
+                    today: formatDate(getDateFromToday(0, 0, true)),
+                    now: formatDate(getDateFromToday(0)),
+                })
     }, [])
 
     const isLoading = () =>
