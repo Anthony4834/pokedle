@@ -14,15 +14,15 @@ router.get("player-key/:playerKey", async (req, res) => {
     else res.send(result).status(200);
   });
 router.get('/new', async (req, res) => {
-  const { startDate, endDate } = req.body
-  console.log(req.body)
+  const { startDate, endDate } = req.query
+  console.log(req.query)
   let collection = await db.collection("players");
   
   const players = await collection.find().toArray();
 
   const result = players.filter(player => {
     const playerCreatedAtTime = new Date(player.createdAt).getTime();
-    const startDateTime = new Date(startDate).getTime();
+    const startDateTime = startDate ? new Date(startDate).getTime() : new Date('1980-01-01');
     const endDateTime = endDate ? new Date(endDate).getTime() : new Date().getTime();
 
     return playerCreatedAtTime >= startDateTime && playerCreatedAtTime <= endDateTime;
