@@ -26,35 +26,16 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
     yesterday.setDate(yesterday.getDate() - 1)
 
     React.useEffect(() => {
-        const getDataForDay = async (idx) => {
-            const today = new Date();
-            today.setDate(yesterday.getDate() - idx);
-            console.log({
-                idx,
-                dayBeforeAxios: today.getDay()
-            });
-
-            axios
+        axios
             .get(`${BASE_QUERY}players/new`, {
                 params: {
-                    startDate: formatDate(today),
+                    "startDate": "2023-11-11",
                 },
             })
-            .then(({ data }) => {
-                console.log({
-                    dayAfterAxios: today.getDay(),
-                    output: [today.getDay(), data.data]
-                })
-                setWeeklyPlayerData([...weeklyPlayerData, [today.getDay(), data.data]])
+            .then((res) => {
+                console.log(res);
+                setWeeklyPlayerData([])
             })
-        }
-        const getAllData = async () => {
-            for(let i = 0; i < 7; i++) {
-                await getDataForDay(i);
-            }
-        }
-
-        getAllData();
         axios
             .get(`${BASE_QUERY}success/stats`, {
                 params: {
