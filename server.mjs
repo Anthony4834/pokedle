@@ -7,7 +7,7 @@ import success from './routes/success.mjs';
 import tiktok from './routes/tiktok.mjs';
 
 const PORT = process.env.PORT || 5050;
-export const BASE_QUERY = 'https://ill-gold-shark-wig.cyclic.app';
+// export const BASE_QUERY = 'https://ill-gold-shark-wig.cyclic.app';
 
 const app = express();
 

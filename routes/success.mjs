@@ -2,7 +2,41 @@ import express from "express";
 import db from "../db/conn.mjs";
 import Success from "../model/success.mjs";
 
+
 const router = express.Router();
+const getGameModePlayCounts = (data) => {
+  let output = {};
+  let highest = {
+    gameMode: undefined,
+    timesPlayed: 0
+  }
+
+  data.forEach((item) => {
+    if(!output[item.gameMode]) {
+      output[item.gameMode] = 0;
+    }
+
+    output[item.gameMode] = output[item.gameMode] + 1;
+    if(output[item.gameMode] > highest.timesPlayed) {
+      highest = {
+        gameMode: item.gameMode,
+        timesPlayed: output[item.gameMode]
+      }
+    }
+  })
+
+  return [output, highest];
+}
+
+const getAverageAttempts = (data) => {
+  let total = 0;
+  data.forEach(item => {
+    total += item.attempts;
+  })
+
+  return Math.floor(total / data.length);
+
+}
 
 router.get('/all', async(req, res) => res.send({"hello": "world!!"}).status(200));
 router.get('/', async(req, res) => {
@@ -30,6 +64,38 @@ router.get('/today', async(req, res) => {
 
   res.send(today).status(200);
 });
+
+router.get('/stats', async (req, res) => {
+  const { startDate, endDate } = req.body
+  let collection = await db.collection("success");
+  
+  const wins = await collection.find().toArray();
+
+  const newWins = wins.filter(win => {
+    const winCreatedAtTime = new Date(win.createdAt).getTime();
+    const startDateTime = startDate ? new Date(startDate).getTime() : new Date('1980-01-01').getTime();
+    const endDateTime = endDate ? new Date(endDate).getTime() : new Date().getTime();
+
+    return winCreatedAtTime >= startDateTime && winCreatedAtTime <= endDateTime;
+  })
+
+  const [totalGameModePlayCounts, totalMostPlayed] = getGameModePlayCounts(wins);
+  const [windowGameModePlayCounts, windowMostPlayed] = getGameModePlayCounts(newWins);
+  const totalAverageAttempts = getAverageAttempts(wins);
+  const windowAverageAttempts = getAverageAttempts(newWins);
+
+  res.send({
+    totalPlays: wins.length,
+    windowPlays: newWins.length,
+    totalGameModePlayCounts,
+    totalMostPlayed,
+    windowGameModePlayCounts,
+    windowMostPlayed,
+    totalAverageAttempts,
+    windowAverageAttempts
+  })
+  
+})
 
 router.post('/', async (req, res) => {
     

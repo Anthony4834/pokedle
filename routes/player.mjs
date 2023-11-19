@@ -4,8 +4,8 @@ import Player from "../model/player.mjs";
 
 const router = express.Router();
 
-router.get('/', async(req, res) => res.send({"hello": "world"}).status(200));
-router.get("/:playerKey", async (req, res) => {
+router.get('/', async(req, res) => res.send({"hello": "world!!"}).status(200));
+router.get("player-key/:playerKey", async (req, res) => {
     let collection = await db.collection("players");
     let query = {playerKey: req.params.playerKey};
     let result = await collection.findOne(query);
@@ -13,6 +13,25 @@ router.get("/:playerKey", async (req, res) => {
     if (!result) res.send("Not found").status(404);
     else res.send(result).status(200);
   });
+router.get('/new', async (req, res) => {
+  const { startDate, endDate } = req.body
+  let collection = await db.collection("players");
+  
+  const players = await collection.find().toArray();
+
+  const result = players.filter(player => {
+    const playerCreatedAtTime = new Date(player.createdAt).getTime();
+    const startDateTime = new Date(startDate).getTime();
+    const endDateTime = endDate ? new Date(endDate).getTime() : new Date().getTime();
+
+    return playerCreatedAtTime >= startDateTime && playerCreatedAtTime <= endDateTime;
+  })
+
+  res.send({
+    data: result.length
+  })
+  
+})
 router.post('/', async (req, res) => {
     if(!(req.body || !req.body['playerKey'])) res.send('No body').status(400);
     let collection = await db.collection("players");
