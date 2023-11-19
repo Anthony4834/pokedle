@@ -76,11 +76,10 @@ router.get('/today', async(req, res) => {
 
 router.get('/stats', async (req, res) => {
   const { startDate, endDate } = req.query
-  console.log(req.query);
   let collection = await db.collection("success");
   
   const wins = await collection.find().toArray();
-
+  
   const newWins = wins.filter(win => {
     const winCreatedAtTime = new Date(win.createdAt).getTime();
     const startDateTime = startDate ? new Date(startDate).getTime() : new Date('1980-01-01').getTime();
