@@ -49,7 +49,7 @@ router.get('/new', async (req, res) => {
   
   const players = await collection.find().toArray();
 
-  const result = getRecordsByDay(players, new Date(startDate), new Date(endDate));
+  const result = getRecordsByDay(players, new Date(startDate), endDate ? new Date(endDate) : new Date());
 
   res.send({
     data: result
