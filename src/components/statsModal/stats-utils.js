@@ -7,10 +7,10 @@ export const shapeDataPie = obj => {
         ]),
     ]
 }
-export const shapeDailyData = (obj) => {
+export const shapeDailyData = obj => {
     return [
         ['Winners', obj.windowPlays],
-        ['Average Attempts', obj.windowAverageAttempts]
+        ['Average Attempts', obj.windowAverageAttempts],
     ]
 }
 export const shapeDataLine = arr => {}

@@ -20,7 +20,7 @@ const formatDate = date => {
     return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
 }
 export const StatsModal = ({ updateMetric, mobile, metric }) => {
-    const [dailyPlayerData, setDailyPlayerData] = React.useState();
+    const [dailyPlayerData, setDailyPlayerData] = React.useState()
     const [weeklyPlayerData, setWeeklyPlayerData] = React.useState([])
     const [dailyGameModeData, setDailyGameModeData] = React.useState()
     const [weeklyGameModeData, setWeeklyGameModeData] =
@@ -40,7 +40,7 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
             .then(({ data }) => {
                 console.log(data.data)
                 setWeeklyPlayerData(data.data)
-                if(data.data.length > 0) {
+                if (data.data.length > 0) {
                     setDailyPlayerData(data.data[data.data.length - 1])
                 }
             })
@@ -95,13 +95,19 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
                         overflowY: 'scroll',
                     }}
                 >
-                    <div style={{  display: 'flex',  justifyContent: 'center', }} >
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <p>Analytics</p>
                     </div>
 
-                    {!!dailyGameModeData && !!dailyPlayerData &&
-                        <BarChart data={[['Item', 'Value'], ...shapeDailyData(dailyGameModeData), ['New Players', dailyPlayerData[1]]]} />
-                    }
+                    {!!dailyGameModeData && !!dailyPlayerData && (
+                        <BarChart
+                            data={[
+                                ['Item', 'Value'],
+                                ...shapeDailyData(dailyGameModeData),
+                                ['New Players', dailyPlayerData[1]],
+                            ]}
+                        />
+                    )}
                     {weeklyPlayerData.length >= 1 && (
                         <LineChart
                             data={[['Day', 'New Players'], ...weeklyPlayerData]}

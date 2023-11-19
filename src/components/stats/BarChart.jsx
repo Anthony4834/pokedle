@@ -1,5 +1,5 @@
-import React from 'react';
-import { Chart } from 'react-google-charts';
+import React from 'react'
+import { Chart } from 'react-google-charts'
 
 export const data = [
     ['City', '2010 Population', '2000 Population'],
@@ -12,12 +12,12 @@ export const data = [
 
 export const options = {
     chart: {
-      title: "Daily",
+        title: 'Daily',
     },
-  };
+}
 
-export const BarChart = ({data}) => {
-    console.log(data);
+export const BarChart = ({ data }) => {
+    console.log(data)
     return (
         <div
             className='chartWrapper lineChart'
@@ -28,16 +28,21 @@ export const BarChart = ({data}) => {
                 justifyContent: 'center',
             }}
         >
-            <div style={{backgroundColor: 'white', padding: '30px 50px', width: '100%'}}>
+            <div
+                style={{
+                    backgroundColor: 'white',
+                    padding: '30px 50px',
+                    width: '100%',
+                }}
+            >
                 <Chart
-                chartType="Bar"
-                width="100%"
-                height="400px"
-                data={data}
-                options={options}
+                    chartType='Bar'
+                    width='100%'
+                    height='400px'
+                    data={data}
+                    options={options}
                 />
             </div>
-            
         </div>
     )
 }
