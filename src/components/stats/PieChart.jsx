@@ -1,7 +1,6 @@
 import { Chart } from "react-google-charts";
 
 export const PieChart = ({data}) => {
-    console.log(data);
     return (
         <div className="pieChartWrapper" style={{display: 'flex', width: '90%', margin: 'auto', border: '1px solid', justifyContent: 'center'}} >
              <Chart

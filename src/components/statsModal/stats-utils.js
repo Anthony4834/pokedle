@@ -1,6 +1,8 @@
-export const shapeData = obj => {
-    console.log(Object.keys(obj).flatMap(key => ({ name: key, plays: obj[key] })))
+export const shapeDataPie = obj => {
     return [['Game Mode', '# of Plays'], ...Object.keys(obj).map(key => ([key.replace('GENERATION_', 'Generation ').replace(/_/g, ', '), obj[key]]))]
+}
+export const shapeDataLine = arr => {
+
 }
 export const chartColors = [
     "#1f77b4", // blue

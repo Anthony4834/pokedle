@@ -1,9 +1,10 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Modal from '../Modal/Modal'
 import { BASE_QUERY } from '../page/page'
+import { LineChart } from '../stats/LineChart'
 import { PieChart } from '../stats/PieChart'
-import { shapeData } from './stats-utils'
+import { shapeDataPie } from './stats-utils'
 import './statsModal.css'
 
 const formatDate = date => {
@@ -17,7 +18,7 @@ const formatDate = date => {
     return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
 }
 export const StatsModal = ({ updateMetric, mobile, metric }) => {
-    const [weeklyPlayerData, setWeeklyPlayerData] = React.useState(undefined)
+    const [weeklyPlayerData, setWeeklyPlayerData] = React.useState([])
     const [weeklyGameModeData, setWeeklyGameModeData] =
         React.useState(undefined)
 
@@ -25,16 +26,35 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
     yesterday.setDate(yesterday.getDate() - 1)
 
     React.useEffect(() => {
-        axios
+        const getDataForDay = async (idx) => {
+            const today = new Date();
+            today.setDate(yesterday.getDate() - idx);
+            console.log({
+                idx,
+                dayBeforeAxios: today.getDay()
+            });
+
+            axios
             .get(`${BASE_QUERY}players/new`, {
                 params: {
-                    startDate: formatDate(yesterday),
+                    startDate: formatDate(today),
                 },
             })
             .then(({ data }) => {
-                setWeeklyPlayerData(data.data)
+                console.log({
+                    dayAfterAxios: today.getDay(),
+                    output: [today.getDay(), data.data]
+                })
+                setWeeklyPlayerData([...weeklyPlayerData, [today.getDay(), data.data]])
             })
+        }
+        const getAllData = async () => {
+            for(let i = 0; i < 7; i++) {
+                await getDataForDay(i);
+            }
+        }
 
+        getAllData();
         axios
             .get(`${BASE_QUERY}success/stats`, {
                 params: {
@@ -42,11 +62,12 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
                 },
             })
             .then(({ data }) => {
-                console.log(data)
                 setWeeklyGameModeData(data)
             })
     }, [])
-
+    useEffect(() => {
+        console.log({weeklyPlayerData})
+    }, [weeklyPlayerData])
     const isLoading = () =>
         weeklyGameModeData === undefined || weeklyPlayerData === undefined
 
@@ -64,8 +85,11 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
     return <Modal {...modalProps} body={(
             <div style={{width: '45vw', height: '800px'}}>
 
+                {!!weeklyPlayerData.length === 7 && (
+                    <LineChart data={[["Day", "New Players"], ...weeklyPlayerData]} />
+                )}
                 {!!weeklyGameModeData && (
-                    <PieChart data={shapeData(weeklyGameModeData.windowGameModePlayCounts)} />
+                    <PieChart data={shapeDataPie(weeklyGameModeData.windowGameModePlayCounts)} />
                 )}
             </div>
     )} />
