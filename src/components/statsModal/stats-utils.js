@@ -22,14 +22,14 @@ const currentDateInUTC = () =>{
     return output;
 } 
 export const getDateFromToday = (days, hrs, zeroOut) => {
-    const today = currentDateInUTC();
-    today.setUTCDate(today.getUTCDate() - days)
-    today.setUTCHours(today.getUTCHours() - (hrs || 0))
+    const today = new Date();
+    today.setDate(today.getDate() - days)
+    today.setHours(today.getHours() - (hrs || 0))
     if(zeroOut) {
-        today.setUTCHours(0);
-        today.setUTCMinutes(0);
-        today.setUTCSeconds(0);
-        today.setUTCMilliseconds(0);
+        today.setHours(0);
+        today.setMinutes(0);
+        today.setSeconds(0);
+        today.setMilliseconds(0);
     }
     
     return today

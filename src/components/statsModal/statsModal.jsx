@@ -20,11 +20,17 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
     yesterday.setDate(yesterday.getDate() - 1)
 
     React.useEffect(() => {
+        console.log({
+            params: {
+                startDate: formatDate(getDateFromToday(7, 0, true)),
+                endDate: formatDate(getDateFromToday(0, 0, true)),
+            },
+        })
         axios
             .get(`${BASE_QUERY}players/new`, {
                 params: {
-                    startDate: formatDate(getDateFromToday(6, 0, true)),
-                    endDate: formatDate(getDateFromToday(-2, 0, true)),
+                    startDate: formatDate(getDateFromToday(7, 0, true)),
+                    endDate: formatDate(getDateFromToday(-1, 0, true)),
                 },
             })
             .then(({ data }) => {
@@ -55,7 +61,10 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
             .then(({ data }) => {
                 setDailyGameModeData(data)
             })
+        console.log({
+            startDate: formatDate(getDateFromToday(0, 0, true)),
 
+        })
     }, [])
 
     const isLoading = () =>
