@@ -6,8 +6,15 @@
     display: flex;
     justify-content: center;
 }
-.modal .pieChartWrapper * {
-    font-size: 16px !important;
+.modal .chartWrapper {
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.modal .chartWrapper * {
+    font-size: 13px;
+    border-radius: 8px;
 }
 .statsModal-target .modalTargetIcon:hover {
     transform: scale(1.1);

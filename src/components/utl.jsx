@@ -1,6 +1,13 @@
 import evolutionData from '../static/evolutionData.json'
 import { typeEffectiveness } from '../static/typeEffectiveness'
 
+export const getDateFromToday = (days, hrs) => {
+    const today = new Date()
+    today.setDate(today.getDate() - days)
+    today.setHours(today.getHours() - (hrs || 0))
+
+    return today
+}
 class Util {
     //Class to handle long formatting methods
     metric

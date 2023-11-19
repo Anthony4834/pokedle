@@ -15,7 +15,7 @@ const Header = ({ mobile, updateMetric, metric, setGameMode, setAnimated }) => {
                     mobile={mobile}
                     metric={metric}
                 />
-                <StatsModal />
+                {!mobile && <StatsModal />}
             </section>
             <div className='headerText' onClick={() => goHome()}>
                 <h1 className='p'>P</h1>

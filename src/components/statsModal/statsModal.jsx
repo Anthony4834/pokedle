@@ -1,10 +1,12 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React from 'react'
 import Modal from '../Modal/Modal'
 import { BASE_QUERY } from '../page/page'
+import { BarChart } from '../stats/BarChart'
 import { LineChart } from '../stats/LineChart'
 import { PieChart } from '../stats/PieChart'
-import { shapeDataPie } from './stats-utils'
+import { getDateFromToday } from '../utl'
+import { shapeDailyData, shapeDataPie } from './stats-utils'
 import './statsModal.css'
 
 const formatDate = date => {
@@ -18,7 +20,9 @@ const formatDate = date => {
     return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
 }
 export const StatsModal = ({ updateMetric, mobile, metric }) => {
+    const [dailyPlayerData, setDailyPlayerData] = React.useState();
     const [weeklyPlayerData, setWeeklyPlayerData] = React.useState([])
+    const [dailyGameModeData, setDailyGameModeData] = React.useState()
     const [weeklyGameModeData, setWeeklyGameModeData] =
         React.useState(undefined)
 
@@ -29,26 +33,39 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
         axios
             .get(`${BASE_QUERY}players/new`, {
                 params: {
-                    "startDate": "2023-11-11",
+                    startDate: formatDate(getDateFromToday(7)),
+                    endDate: formatDate(new Date()),
                 },
             })
-            .then((res) => {
-                console.log(res);
-                setWeeklyPlayerData([])
+            .then(({ data }) => {
+                console.log(data.data)
+                setWeeklyPlayerData(data.data)
+                if(data.data.length > 0) {
+                    setDailyPlayerData(data.data[data.data.length - 1])
+                }
             })
         axios
             .get(`${BASE_QUERY}success/stats`, {
                 params: {
-                    "startDate": "2023-10-18",
+                    startDate: formatDate(getDateFromToday(7)),
+                    endDate: formatDate(new Date()),
                 },
             })
             .then(({ data }) => {
                 setWeeklyGameModeData(data)
             })
+        axios
+            .get(`${BASE_QUERY}success/stats`, {
+                params: {
+                    startDate: formatDate(getDateFromToday(1)),
+                    endDate: formatDate(new Date()),
+                },
+            })
+            .then(({ data }) => {
+                setDailyGameModeData(data)
+            })
     }, [])
-    useEffect(() => {
-        console.log({weeklyPlayerData})
-    }, [weeklyPlayerData])
+
     const isLoading = () =>
         weeklyGameModeData === undefined || weeklyPlayerData === undefined
 
@@ -60,18 +77,45 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
                 src={'https://img.icons8.com/?size=256&id=47341&format=png'}
                 alt='statistics'
             ></img>
-        )
+        ),
     }
 
-    return <Modal {...modalProps} body={(
-            <div style={{width: '45vw', height: '800px'}}>
+    return (
+        <Modal
+            {...modalProps}
+            body={
+                <div
+                    className='stats-modal-content'
+                    style={{
+                        width: '45vw',
+                        height: '800px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        rowGap: '10px',
+                        overflowY: 'scroll',
+                    }}
+                >
+                    <div style={{  display: 'flex',  justifyContent: 'center', }} >
+                        <p>Analytics</p>
+                    </div>
 
-                {!!weeklyPlayerData.length === 7 && (
-                    <LineChart data={[["Day", "New Players"], ...weeklyPlayerData]} />
-                )}
-                {!!weeklyGameModeData && (
-                    <PieChart data={shapeDataPie(weeklyGameModeData.windowGameModePlayCounts)} />
-                )}
-            </div>
-    )} />
+                    {!!dailyGameModeData && !!dailyPlayerData &&
+                        <BarChart data={[['Item', 'Value'], ...shapeDailyData(dailyGameModeData), ['New Players', dailyPlayerData[1]]]} />
+                    }
+                    {weeklyPlayerData.length >= 1 && (
+                        <LineChart
+                            data={[['Day', 'New Players'], ...weeklyPlayerData]}
+                        />
+                    )}
+                    {!!weeklyGameModeData && (
+                        <PieChart
+                            data={shapeDataPie(
+                                weeklyGameModeData.windowGameModePlayCounts,
+                            )}
+                        />
+                    )}
+                </div>
+            }
+        />
+    )
 }
