@@ -7,8 +7,9 @@ import VictoryScreen from '../victoryScreen/victoryScreen'
 import { handleAlreadyGuessedArray, init } from './cookieManager'
 import { Loading } from './loading'
 
-// export const BASE_QUERY = 'https://defiant-bass-glasses.cyclic.app/';
-export const BASE_QUERY = 'http://localhost:5050/'
+export const BASE_QUERY = 'https://defiant-bass-glasses.cyclic.app/';
+// export const BASE_QUERY = 'http://localhost:5050/'
+
 export const Page = ({ pokeData, gen, metric, updateMetric, mobile }) => {
     const [pokemonToGuess, setPokemonToGuess] = useState('')
     const [alreadyGuessed, setAlreadyGuessed] = useState([])
