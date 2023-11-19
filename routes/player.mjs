@@ -34,7 +34,7 @@ function getRecordsByDay(data, startDate, endDate) {
 }
 
 router.get('/', async(req, res) => res.send({"hello": "world!!"}).status(200));
-router.get("player-key/:playerKey", async (req, res) => {
+router.get("/player-key/:playerKey", async (req, res) => {
     let collection = await db.collection("players");
     let query = {playerKey: req.params.playerKey};
     let result = await collection.findOne(query);
