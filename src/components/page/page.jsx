@@ -7,14 +7,9 @@ import VictoryScreen from '../victoryScreen/victoryScreen'
 import { handleAlreadyGuessedArray, init } from './cookieManager'
 import { Loading } from './loading'
 
-export const BASE_QUERY = 'https://defiant-bass-glasses.cyclic.app/';
-export const Page = ({
-    pokeData,
-    gen,
-    metric,
-    updateMetric,
-    mobile,
-}) => {
+// export const BASE_QUERY = 'https://defiant-bass-glasses.cyclic.app/';
+export const BASE_QUERY = 'http://localhost:5050/'
+export const Page = ({ pokeData, gen, metric, updateMetric, mobile }) => {
     const [pokemonToGuess, setPokemonToGuess] = useState('')
     const [alreadyGuessed, setAlreadyGuessed] = useState([])
     const [isSynchronized, setIsSynchronized] = useState(false)
@@ -36,7 +31,7 @@ export const Page = ({
     }
     const props = {
         gameOver: gameOver,
-        pokeData: pokeData, 
+        pokeData: pokeData,
         pokemonToGuess: pokemonToGuess,
         alreadyGuessed: alreadyGuessed,
         getAlreadyGuessed: getAlreadyGuessed,
@@ -46,7 +41,7 @@ export const Page = ({
         setIsSynchronized: setIsSynchronized,
         gen: gen,
         metric: metric,
-        updateMetric: updateMetric
+        updateMetric: updateMetric,
     }
     return pokemonToGuess ? (
         <div className={`pageWrapper`}>
@@ -54,5 +49,7 @@ export const Page = ({
             <VictoryScreen {...props} />
             <AnswersBox {...props} />
         </div>
-    ) : <Loading />
+    ) : (
+        <Loading />
+    )
 }

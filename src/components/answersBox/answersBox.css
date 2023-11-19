@@ -15,30 +15,30 @@
 }
 @keyframes flip {
     0% {
-      transform: scaleY(0);
+        transform: scaleY(0);
     }
-  
+
     50% {
-      background-color: white;
-      transform: scaleY(0);
+        background-color: white;
+        transform: scaleY(0);
     }
     100% {
-      transform: scaleY(1);
+        transform: scaleY(1);
     }
-  }
-  @keyframes cardFlip {
+}
+@keyframes cardFlip {
     0% {
-      transform: perspective(1000px) rotateX(100deg);
+        transform: perspective(1000px) rotateX(100deg);
     }
     50% {
         transform: perspective(1000px) rotateX(-20deg);
     }
     100% {
-      transform: perspective(1000px) rotateX(0deg);
+        transform: perspective(1000px) rotateX(0deg);
     }
-  }
+}
 .entriesBox * *:not(:last-child) {
-    animation: cardFlip .5s forwards;
+    animation: cardFlip 0.5s forwards;
     /* transition: all 2s; */
 }
 .entriesBox *:nth-child(1) {
@@ -167,7 +167,7 @@ input:checked + .slider:before {
         width: 15vw !important;
     }
     .entriesBox * * {
-        animation: cardFlip .5s ease-out forwards;
+        animation: cardFlip 0.5s ease-out forwards;
         /* transition: all 2s; */
     }
 }

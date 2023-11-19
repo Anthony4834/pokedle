@@ -1,9 +1,9 @@
-import axios from 'axios';
-import { animateScroll as scroll } from 'react-scroll';
-import { v4 as uuid } from 'uuid';
-import { mobile } from '../../App';
-import { nextMidnightDate } from '../utl';
-import { BASE_QUERY } from './page';
+import axios from 'axios'
+import { animateScroll as scroll } from 'react-scroll'
+import { v4 as uuid } from 'uuid'
+import { mobile } from '../../App'
+import { nextMidnightDate } from '../utl'
+import { BASE_QUERY } from './page'
 
 export const getCookie = (gen, cookieName, bypass) => {
     if (!document.cookie || document.cookie.length < 1) return false
@@ -53,35 +53,40 @@ export const init = (gen, setAlreadyGuessed) => {
     }
 }
 
-export const handleAlreadyGuessedArray = (gen, util, alreadyGuessed, setGameOver) => {
-        let alreadyGuessedFromCookies = getCookie(gen, 'already_guessed_arr')
-        let alreadyGuessedLocal = util.removeBrackets(alreadyGuessed)
+export const handleAlreadyGuessedArray = (
+    gen,
+    util,
+    alreadyGuessed,
+    setGameOver,
+) => {
+    let alreadyGuessedFromCookies = getCookie(gen, 'already_guessed_arr')
+    let alreadyGuessedLocal = util.removeBrackets(alreadyGuessed)
 
-        if (
-            alreadyGuessedLocal.replace(/ /g, '').length >
-            alreadyGuessedFromCookies.length
-        ) {
-            setCookie(gen, 'already_guessed_arr', alreadyGuessedLocal)
-        }
+    if (
+        alreadyGuessedLocal.replace(/ /g, '').length >
+        alreadyGuessedFromCookies.length
+    ) {
+        setCookie(gen, 'already_guessed_arr', alreadyGuessedLocal)
+    }
 
-        if (getCookie(gen, 'correct_answer_guessed') == 'true') {
-            axios.post(BASE_QUERY + 'players/', {
-                playerKey: getOrCreateUserKey(),
-            })
+    if (getCookie(gen, 'correct_answer_guessed') == 'true') {
+        axios.post(BASE_QUERY + 'players/', {
+            playerKey: getOrCreateUserKey(),
+        })
 
-            axios.post(`${BASE_QUERY}success/`, {
-                playerKey: getOrCreateUserKey(),
-                attempts: alreadyGuessed.length,
-                gameMode: `GENERATION_${gen}`,
-            })
+        axios.post(`${BASE_QUERY}success/`, {
+            playerKey: getOrCreateUserKey(),
+            attempts: alreadyGuessed.length,
+            gameMode: `GENERATION_${gen}`,
+        })
 
-            setGameOver(true)
-            if(mobile) {
-                scroll.scrollToTop()
-            } else {
-                scroll.scrollTo(120)
-            }
+        setGameOver(true)
+        if (mobile) {
+            scroll.scrollToTop()
         } else {
-            setGameOver(false)
+            scroll.scrollTo(120)
         }
+    } else {
+        setGameOver(false)
+    }
 }

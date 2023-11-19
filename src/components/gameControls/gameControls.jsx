@@ -1,9 +1,19 @@
-import { pm } from "../helpModal/helpModal"
-import { HintsBox } from "../hints/hintsBox"
-import PokeSelectMenu from "../pokeSelectMenu/pokeSelectMenu"
+import { pm } from '../helpModal/helpModal'
+import { HintsBox } from '../hints/hintsBox'
+import PokeSelectMenu from '../pokeSelectMenu/pokeSelectMenu'
 
-export const GameControls = ({gameOver, pokemonToGuess, alreadyGuessed, pokeData, util, mobile, isSynchronized, setIsSynchronized, gen}) => {
-    return( !gameOver ?
+export const GameControls = ({
+    gameOver,
+    pokemonToGuess,
+    alreadyGuessed,
+    pokeData,
+    util,
+    mobile,
+    isSynchronized,
+    setIsSynchronized,
+    gen,
+}) => {
+    return !gameOver ? (
         <>
             <div className='pageSubheading'>
                 <h1>Guess today's {pm}!</h1>
@@ -27,6 +37,8 @@ export const GameControls = ({gameOver, pokemonToGuess, alreadyGuessed, pokeData
                 gen={gen}
                 mobile={mobile}
             />
-        </> : <></>
+        </>
+    ) : (
+        <></>
     )
 }

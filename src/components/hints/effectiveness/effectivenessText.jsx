@@ -39,7 +39,10 @@ export const EffectivenessHint = ({
                 <EffectivenessInfo {...effectivenessProps} />
                 <EffectivenessInfo
                     {...effectivenessProps}
-                    effectiveness={getAttackingEffectiveness(pokemonToGuessStats, guessedPokemonStats)}
+                    effectiveness={getAttackingEffectiveness(
+                        pokemonToGuessStats,
+                        guessedPokemonStats,
+                    )}
                     isAttacking={false}
                 />
             </div>

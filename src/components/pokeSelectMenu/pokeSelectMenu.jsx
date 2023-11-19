@@ -11,16 +11,16 @@ const PokeSelectMenu = ({
     isSynchronized,
     pokeData,
     gen,
-    mobile
+    mobile,
 }) => {
     const [options, setOptions] = useState([])
     const selectListRef = useRef()
     const pokemonNames = Object.keys(pokeData)
     const [selectDisabled, setSelectDisabled] = useState(false)
-    const minScrollToSeeEntry = mobile ? 330 : 240;
+    const minScrollToSeeEntry = mobile ? 330 : 240
 
     window.addEventListener('keydown', () => {
-        if(!selectListRef || !selectListRef.current) return;
+        if (!selectListRef || !selectListRef.current) return
 
         selectListRef.current.focus()
     })
@@ -58,7 +58,8 @@ const PokeSelectMenu = ({
 
     const handleSubmit = (e, submittedWithKey) => {
         let pokemonGuessed
-        if (window.scrollY < minScrollToSeeEntry) scroll.scrollTo(minScrollToSeeEntry)
+        if (window.scrollY < minScrollToSeeEntry)
+            scroll.scrollTo(minScrollToSeeEntry)
         if (submittedWithKey) {
             e.preventDefault()
             setSelectDisabled(true)
@@ -119,10 +120,13 @@ const PokeSelectMenu = ({
     }
     const checkForWinner = pokemonGuessed => {
         if (pokemonGuessed == pokemonToGuess)
-            setTimeout(() => {
-                setCookie(gen, 'correct_answer_guessed', true)
-                setIsSynchronized(!isSynchronized)
-            }, mobile ? 3000 : 4500)
+            setTimeout(
+                () => {
+                    setCookie(gen, 'correct_answer_guessed', true)
+                    setIsSynchronized(!isSynchronized)
+                },
+                mobile ? 3000 : 4500,
+            )
     }
 
     const selectionFormHandler = e => {
@@ -157,7 +161,7 @@ const PokeSelectMenu = ({
                 menuIsOpen={true}
                 options={options}
                 ref={selectListRef}
-            /> 
+            />
         </form>
     )
 }

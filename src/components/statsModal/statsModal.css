@@ -1,7 +1,13 @@
-
 .statsModal-target .modalTargetIcon {
     right: 3vw;
     transition: all 0.3s;
+}
+.modal {
+    display: flex;
+    justify-content: center;
+}
+.modal .pieChartWrapper * {
+    font-size: 16px !important;
 }
 .statsModal-target .modalTargetIcon:hover {
     transform: scale(1.1);

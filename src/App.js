@@ -17,7 +17,7 @@ function App() {
     useEffect(() => {
         document.title = 'Pokédle'
     }, [])
-    
+
     return (
         <div className='App' ref={bodyRef}>
             <Header
