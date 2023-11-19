@@ -102,15 +102,23 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
                     {!!dailyGameModeData && !!dailyPlayerData && (
                         <BarChart
                             data={[
-                                ['Item', 'Value'],
+                                ['', 'Value'],
                                 ...shapeDailyData(dailyGameModeData),
-                                ['New Players', dailyPlayerData[1]],
+                                ['Players', dailyPlayerData[1][1]],
+                                ['New Players', dailyPlayerData[1][0]],
                             ]}
                         />
                     )}
                     {weeklyPlayerData.length >= 1 && (
                         <LineChart
-                            data={[['Day', 'New Players'], ...weeklyPlayerData]}
+                            data={[
+                                ['Day', 'New Players', 'Total Players'],
+                                ...weeklyPlayerData.map(item => [
+                                    item[0],
+                                    item[1][0],
+                                    item[1][1],
+                                ]),
+                            ]}
                         />
                     )}
                     {!!weeklyGameModeData && (

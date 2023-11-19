@@ -17,7 +17,7 @@ export const options = {
 }
 
 export const BarChart = ({ data }) => {
-    console.log(data)
+    console.log({data})
     return (
         <div
             className='chartWrapper lineChart'
