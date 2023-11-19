@@ -3,6 +3,35 @@ import db from "../db/conn.mjs";
 import Player from "../model/player.mjs";
 
 const router = express.Router();
+function getRecordsByDay(data, startDate, endDate) {
+  const dailyRecords = new Map();
+
+  function getFormattedDate(date) {
+    const options = { month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+  }
+
+  const daysBetween = (endDate.getTime() - startDate.getTime()) / (1000 * 3600 * 24)
+
+  let currentDate = new Date(startDate);
+  for (let i = 0; i < daysBetween; i++) {
+    const currentDay = getFormattedDate(currentDate);
+
+    const recordsForDay = data.filter(entry => {
+      const createdAt = new Date(entry.createdAt);
+
+      return createdAt.getFullYear() === currentDate.getFullYear() && createdAt.getMonth() === currentDate.getMonth() && createdAt.getDate() === currentDate.getDate();
+    });
+
+    dailyRecords.set(currentDay, recordsForDay.length);
+
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+
+  const result = Array.from(dailyRecords.entries()).map(([date, count]) => [date, count]);
+
+  return result;
+}
 
 router.get('/', async(req, res) => res.send({"hello": "world!!"}).status(200));
 router.get("player-key/:playerKey", async (req, res) => {
@@ -20,16 +49,10 @@ router.get('/new', async (req, res) => {
   
   const players = await collection.find().toArray();
 
-  const result = players.filter(player => {
-    const playerCreatedAtTime = new Date(player.createdAt).getTime();
-    const startDateTime = startDate ? new Date(startDate).getTime() : new Date('1980-01-01');
-    const endDateTime = endDate ? new Date(endDate).getTime() : new Date().getTime();
-
-    return playerCreatedAtTime >= startDateTime && playerCreatedAtTime <= endDateTime;
-  })
+  const result = getRecordsByDay(players, new Date(startDate), new Date(endDate));
 
   res.send({
-    data: result.length
+    data: result
   })
   
 })
