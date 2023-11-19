@@ -1,5 +1,6 @@
 import { HelpModal } from '../helpModal/helpModal'
 import { SettingsModal } from '../settingsModal/settingsModal'
+import { StatsModal } from '../statsModal/statsModal'
 
 const Header = ({ mobile, updateMetric, metric, setGameMode, setAnimated }) => {
     const goHome = () => {
@@ -14,6 +15,7 @@ const Header = ({ mobile, updateMetric, metric, setGameMode, setAnimated }) => {
                     mobile={mobile}
                     metric={metric}
                 />
+                <StatsModal />
             </section>
             <div className='headerText' onClick={() => goHome()}>
                 <h1 className='p'>P</h1>
