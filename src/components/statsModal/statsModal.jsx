@@ -5,20 +5,10 @@ import { BASE_QUERY } from '../page/page'
 import { BarChart } from '../stats/BarChart'
 import { LineChart } from '../stats/LineChart'
 import { PieChart } from '../stats/PieChart'
-import { getDateFromToday } from '../utl'
-import { shapeDailyData, shapeDataPie } from './stats-utils'
+import { formatDate, getDateFromToday, shapeDailyData, shapeDataPie } from './stats-utils'
 import './statsModal.css'
 
-const formatDate = date => {
-    const year = date.getFullYear()
-    const month = String(date.getMonth() + 1).padStart(2, '0') // Adding 1 to month since it's zero-based
-    const day = String(date.getDate()).padStart(2, '0')
-    const hours = String(date.getHours()).padStart(2, '0')
-    const minutes = String(date.getMinutes()).padStart(2, '0')
-    const seconds = String(date.getSeconds()).padStart(2, '0')
 
-    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
-}
 export const StatsModal = ({ updateMetric, mobile, metric }) => {
     const [dailyPlayerData, setDailyPlayerData] = React.useState()
     const [weeklyPlayerData, setWeeklyPlayerData] = React.useState([])
@@ -33,16 +23,18 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
         axios
             .get(`${BASE_QUERY}players/new`, {
                 params: {
-                    startDate: formatDate(getDateFromToday(7, 0, true)),
-                    endDate: formatDate(getDateFromToday(0)),
+                    startDate: formatDate(getDateFromToday(6, 0, true)),
+                    endDate: formatDate(getDateFromToday(-2, 0, true)),
                 },
             })
             .then(({ data }) => {
-                console.log(data.data)
-                setWeeklyPlayerData(data.data)
                 if (data.data.length > 0) {
-                    setDailyPlayerData(data.data[data.data.length - 1])
-                }
+                    setWeeklyPlayerData(data.data.slice(0, data.data.length - 1));
+                    if(data.data.length > 1) {
+                        setDailyPlayerData(data.data[data.data.length - 2])
+                    }
+                }                
+                
             })
         axios
             .get(`${BASE_QUERY}success/stats`, {
@@ -58,18 +50,12 @@ export const StatsModal = ({ updateMetric, mobile, metric }) => {
             .get(`${BASE_QUERY}success/stats`, {
                 params: {
                     startDate: formatDate(getDateFromToday(0, 0, true)),
-                    endDate: formatDate(getDateFromToday(0)),
                 },
             })
             .then(({ data }) => {
                 setDailyGameModeData(data)
             })
-        
-            console.log(
-                {
-                    today: formatDate(getDateFromToday(0, 0, true)),
-                    now: formatDate(getDateFromToday(0)),
-                })
+
     }, [])
 
     const isLoading = () =>
