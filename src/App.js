@@ -4,8 +4,8 @@ import { GameModeSelector } from './components/gameModeSelector/gameModeSelector
 import Header from './components/header/header'
 import { Page } from './components/page/page'
 
+export const mobile = window.screen.width > 500 ? false : true
 function App() {
-    const mobile = window.screen.width > 500 ? false : true
     const [metric, setMetric] = useState(false)
     const [gameMode, setGameMode] = useState(null)
     const [animated, setAnimated] = useState(true)
@@ -17,6 +17,7 @@ function App() {
     useEffect(() => {
         document.title = 'Pokédle'
     }, [])
+    
     return (
         <div className='App' ref={bodyRef}>
             <Header

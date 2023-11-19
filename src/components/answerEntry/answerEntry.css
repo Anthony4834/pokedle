@@ -7,6 +7,8 @@
     /* border: 1px dotted blue; */
 }
 .answerEntryWrapper .answerEntryDetail {
+    transform-style: preserve-3d;
+    transform: scaleY(0);
     border-radius: 5px;
     color: #ffffff;
     height: 8vw;
@@ -79,6 +81,7 @@
         margin-top: 0.5vh;
     }
     .answerEntryWrapper .answerEntryDetail {
+        transform: scale(0);
         width: 15vw;
         height: 15vw;
         border-radius: 0px !important;
@@ -86,7 +89,7 @@
         /* border: 1px solid rgba(255, 255, 255, 0.7); */
     }
     .answerEntryDetail.MULTI_LINE {
-        font-size: 0.8em;
+        font-size: 0.2em;
     }
     .answerEntryDetail.SMALL_TEXT {
         font-size: 0.6em;
@@ -100,13 +103,13 @@
         overflow-y: scroll;
     }
     .answerEntryDetail.MULTI_LINE {
-        font-size: 0.7em;
+        font-size: 0.2em;
     }
     .answerEntryDetail.SMALL_TEXT {
         font-size: 0.5em;
     }
     .answerEntryDetail.VERY_SMALL_TEXT {
-        font-size: 0.5em;
+        font-size: 0.4em;
     }
 }
 @media all and (min-device-width: 1000px) {

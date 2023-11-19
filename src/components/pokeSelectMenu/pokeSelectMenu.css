@@ -1,6 +1,9 @@
 #pokeSelectMenuWrapper {
     margin-top: 1%;
 }
+#pokeSelectMenuWrapper div {
+    position: relative;
+}
 .css-13cymwt-control,
 .css-13cymwt-control,
 .css-1nmdiq5-menu,

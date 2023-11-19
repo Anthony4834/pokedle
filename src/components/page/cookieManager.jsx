@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { animateScroll as scroll } from 'react-scroll';
 import { v4 as uuid } from 'uuid';
+import { mobile } from '../../App';
 import { nextMidnightDate } from '../utl';
 import { BASE_QUERY } from './page';
 
@@ -75,7 +76,11 @@ export const handleAlreadyGuessedArray = (gen, util, alreadyGuessed, setGameOver
             })
 
             setGameOver(true)
-            scroll.scrollToTop()
+            if(mobile) {
+                scroll.scrollToTop()
+            } else {
+                scroll.scrollTo(120)
+            }
         } else {
             setGameOver(false)
         }

@@ -122,7 +122,7 @@ const PokeSelectMenu = ({
             setTimeout(() => {
                 setCookie(gen, 'correct_answer_guessed', true)
                 setIsSynchronized(!isSynchronized)
-            }, 4500)
+            }, mobile ? 3000 : 4500)
     }
 
     const selectionFormHandler = e => {
@@ -157,7 +157,7 @@ const PokeSelectMenu = ({
                 menuIsOpen={true}
                 options={options}
                 ref={selectListRef}
-            />
+            /> 
         </form>
     )
 }
