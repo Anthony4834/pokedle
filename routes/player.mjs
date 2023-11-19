@@ -14,7 +14,7 @@ function getRecordsByDay(data, startDate, endDate) {
   const daysBetween = (endDate.getTime() - startDate.getTime()) / (1000 * 3600 * 24)
 
   let currentDate = new Date(startDate);
-  for (let i = 0; i < daysBetween; i++) {
+  for (let i = 0; i <= daysBetween; i++) {
     const currentDay = getFormattedDate(currentDate);
 
     const newRecords = data.filter(entry => {
