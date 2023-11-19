@@ -67,6 +67,7 @@ router.get('/today', async(req, res) => {
 
 router.get('/stats', async (req, res) => {
   const { startDate, endDate } = req.body
+  console.log(req.body);
   let collection = await db.collection("success");
   
   const wins = await collection.find().toArray();

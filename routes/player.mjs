@@ -15,6 +15,7 @@ router.get("player-key/:playerKey", async (req, res) => {
   });
 router.get('/new', async (req, res) => {
   const { startDate, endDate } = req.body
+  console.log(req.body)
   let collection = await db.collection("players");
   
   const players = await collection.find().toArray();
