@@ -15,7 +15,7 @@ export const PieChart = ({ data }) => {
                 chartType='PieChart'
                 data={data}
                 options={{
-                    title: 'Weekly # of Winners by Game Mode',
+                    title: '# of Winners by Game Mode',
                     animation: {
                         startup: true,
                         easing: 'linear',

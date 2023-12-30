@@ -48,7 +48,7 @@
     cursor: pointer;
     width: 15vw;
     height: 7vw;
-    left: 35vw;
+    left: 150% !important;
     right: 0;
     bottom: 0;
     background-color: #ccc;
@@ -61,7 +61,7 @@
     content: '';
     height: 5vw;
     width: 5vw;
-    left: 4px;
+    left: 0px;
     bottom: 1vw;
     background-color: white;
     -webkit-transition: 0.4s;
@@ -97,4 +97,16 @@
 
 input:checked + .slider:before {
     transform: translateX(30px); /* Adjust handle position */
+}
+
+@media all and (max-width: 500px) {
+    .settingsModal {
+        border: 1px solid;
+        display: flex;
+        justify-content: center;
+    }
+    .settingsModal ul {
+        position: relative;
+        left: -100px;
+    }
 }

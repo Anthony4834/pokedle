@@ -104,3 +104,13 @@
 input:checked + .slider:before {
     transform: translateX(30px); /* Adjust handle position */
 }
+
+@media all and (max-width: 500px) {
+    .statsModal {
+        margin-top: 30%;
+    }
+    .stats-modal-content {
+        overflow-y: scroll;
+        width: 98vw !important;
+    }
+}

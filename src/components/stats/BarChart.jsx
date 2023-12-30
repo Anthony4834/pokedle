@@ -1,14 +1,7 @@
 import React from 'react'
 import { Chart } from 'react-google-charts'
-import { formatDate, getDateFromToday } from '../statsModal/stats-utils'
 
-export const options = {
-    chart: {
-        title: 'Daily ' + formatDate(getDateFromToday(-1, 0, true)).split(' ')[0],
-    },
-}
-
-export const BarChart = ({ data }) => {
+export const BarChart = ({ data, header }) => {
     return (
         <div
             className='chartWrapper lineChart'
@@ -31,7 +24,15 @@ export const BarChart = ({ data }) => {
                     width='100%'
                     height='400px'
                     data={data}
-                    options={options}
+                    options={{
+                        chart: {
+                            title: header,
+                        },
+                        legend: {
+                            position: 'none'
+                        }
+
+                    }}
                 />
             </div>
         </div>

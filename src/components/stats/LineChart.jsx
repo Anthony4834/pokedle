@@ -1,7 +1,7 @@
 import Chart from 'react-google-charts';
 
 export const options = {
-    title: 'Weekly Players',
+    title: 'Players',
     curveType: 'function',
     legend: { position: 'bottom', className: 'fuck' },
     animation: {
