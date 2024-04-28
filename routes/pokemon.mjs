@@ -3,7 +3,7 @@ import request from "request";
 import db from "../db/conn.mjs";
 
 export const dateAsKey = (date) => {
-    return `${date.getMonth()}-${date.getDate()}-${date.getFullYear()}`;
+    return `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}`;
 } 
 const router = express.Router();
 const pickRandomFromArray = (array) => {
@@ -14,6 +14,7 @@ const pickRandomFromArray = (array) => {
 
 router.get('/', async(req, res) => {
     const collection = db.collection('pokemon');
+
     console.log({
         date: new Date(),
         formatted: dateAsKey(new Date())
@@ -26,11 +27,15 @@ router.get('/', async(req, res) => {
 });
 router.get('/:gameMode', async(req, res) => {
     const collection = db.collection('pokemon');
+
+    const date = dateAsKey(new Date());
+    console.log(new Date())
+
     console.log({
-        date: dateAsKey(new Date()),
+        date
     })
     const result = await collection.findOne({
-        date: dateAsKey(new Date()),
+        date,
         gameMode: req.params.gameMode
     })
     res.send(result).status(200)
