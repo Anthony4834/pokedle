@@ -14,11 +14,7 @@ const pickRandomFromArray = (array) => {
 
 router.get('/', async(req, res) => {
     const collection = db.collection('pokemon');
-
-    console.log({
-        date: new Date(),
-        formatted: dateAsKey(new Date())
-    })
+    
     const result = await collection.findOne({
         date: dateAsKey(new Date()),
         gameMode: 'GENERATION_1_2_3'
