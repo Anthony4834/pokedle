@@ -10,7 +10,7 @@
       "ignoreBranches": ["gh-pages", "client-only"]
     },
     "crons": [{
-      "path": "cron",
+      "path": "/cron",
       "schedule": "0 17 * * *"
     }]
   }
