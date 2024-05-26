@@ -1,15 +1,19 @@
 class Player {
     _id;
     playerKey;
-    history;
+    createdAt;
+    lastUsed;
 
     constructor(options) {
-        if(!(options['playerKey'])) throw new Error('invalid playerKey');
+        let {_id, playerKey, createdAt} = options;
 
-        this.playerKey = options['playerKey'];
+        if(!playerKey) return;
+        if(!createdAt) createdAt = new Date();
         
-        if(options['_id']) this._id = options['_id'];
-        this.history = options.history ?? [];
+        this.lastUsed = new Date();
+        this.createdAt = createdAt;
+        this.playerKey = playerKey;
+        this._id = _id;
     }
     
     toJson = () => {

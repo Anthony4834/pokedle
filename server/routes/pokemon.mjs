@@ -3,11 +3,10 @@ import request from "request";
 import db from "../db/conn.mjs";
 
 export const dateAsKey = (date) => {
-    return `${date.getMonth()}-${date.getDate()}-${date.getFullYear()}`;
+    return `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}`;
 } 
 const router = express.Router();
 const pickRandomFromArray = (array) => {
-    console.log(array.length);
     const rand = Math.floor(Math.random() * array.length);
 
     return array[rand];
@@ -15,9 +14,7 @@ const pickRandomFromArray = (array) => {
 
 router.get('/', async(req, res) => {
     const collection = db.collection('pokemon');
-    console.log({
-        dateThing: dateAsKey(new Date())
-    })
+    
     const result = await collection.findOne({
         date: dateAsKey(new Date()),
         gameMode: 'GENERATION_1_2_3'
@@ -26,22 +23,27 @@ router.get('/', async(req, res) => {
 });
 router.get('/:gameMode', async(req, res) => {
     const collection = db.collection('pokemon');
+
+    const date = dateAsKey(new Date());
+    console.log(new Date())
+
     console.log({
-        dateThing: dateAsKey(new Date()),
+        date
     })
     const result = await collection.findOne({
-        date: dateAsKey(new Date()),
+        date,
         gameMode: req.params.gameMode
     })
     res.send(result).status(200)
 });
 router.post('/', async(req, res) => {
     const collection = db.collection('pokemon');
-    await request('https://pokeapi.co/api/v2/pokemon?limit=300', async function (error, response, body) {
+    await request('https://pokeapi.co/api/v2/pokemon?limit=386', async function (error, response, body) {
        if (!error && response.statusCode == 200) {
         let obj = JSON.parse(body);
         let arr = obj['results'].map((obj) => obj['name']);
         arr = arr.filter((name) => !(name.includes('-')));
+        arr.push('deoxys');
 
         const gens = {
             1: arr.slice(0, 148),
@@ -80,14 +82,26 @@ const pickPokemonForAllGameModes = async (collection, gens) => {
         [3]
     ]
 
-    for(let gameMode of gameModes) {
-        let gensArr = [];
-        for(let gen of gameMode) {
-            gensArr = [...gensArr, ...gens[String(gen)]];
+    console.log('Choosing new pokemon..')
+    try {
+        for(let gameMode of gameModes) {
+            console.log(`${gameMode}..`)
+            let gensArr = [];
+            for(let gen of gameMode) {
+                console.log()
+                gensArr = [...gensArr, ...gens[String(gen)]];
+            }
+    
+            await pickPokemonForGameMode(gameModeToString(gameMode), gensArr, collection);
+    
+            console.log(`${gameMode}.. DONE`)
         }
-
-        await pickPokemonForGameMode(gameModeToString(gameMode), gensArr, collection);
+    
+        console.log('SUCCESS');
+    } catch(exception) {
+        console.log('FAIL', exception);
     }
+
 }
 
 export default router;
