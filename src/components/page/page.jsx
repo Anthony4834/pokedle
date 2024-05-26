@@ -7,7 +7,7 @@ import VictoryScreen from '../victoryScreen/victoryScreen'
 import { handleAlreadyGuessedArray, init } from './cookieManager'
 import { Loading } from './loading'
 
-export const BASE_QUERY = 'http://pokedle-lyart.vercel.app/';
+export const BASE_QUERY = 'https://pokedle-lyart.vercel.app/';
 // export const BASE_QUERY = 'http://localhost:5050/'
 
 export const Page = ({ pokeData, gen, metric, updateMetric, mobile }) => {
