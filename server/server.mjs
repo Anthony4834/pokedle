@@ -7,7 +7,7 @@ import success from './routes/success.mjs';
 import tiktok from './routes/tiktok.mjs';
 
 // Assuming that you have your environment variables loaded here
-const BASE_QUERY = 'https://pokedle-lyart.vercel.app';
+export const BASE_QUERY = 'https://pokedle-lyart.vercel.app';
 
 const app = express();
 

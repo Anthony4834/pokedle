@@ -8,5 +8,8 @@
     ],
     "git": {
       "ignoreBranches": ["gh-pages", "client-only"]
-    }
+    },
+    "crons": [{
+      "path": "./cron"
+    }]
   }
