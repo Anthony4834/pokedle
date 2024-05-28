@@ -5,8 +5,8 @@
     { "src": "cron.mjs", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/server.mjs" },
-    { "src": "/cron", "dest": "/cron.mjs" }
+    { "src": "/cron", "dest": "/cron.mjs" },
+    { "src": "/(.*)", "dest": "/server.mjs" }
   ],
   "git": {
     "ignoreBranches": ["gh-pages", "client-only"]
@@ -14,7 +14,7 @@
   "crons": [
     {
       "path": "/cron",
-      "schedule": "49 17 * * *"
+      "schedule": "53 17 * * *"
     }
   ]
 }
