@@ -1,12 +1,11 @@
-import { BASE_QUERY } from "./server.mjs";
+import axios from 'axios';
+import { BASE_QUERY } from './server.mjs';
 
 export default async function selectDailyPokemon(req, res) {
-    return await request.post(`${BASE_QUERY}/pokemon`,  async function (error, response, body) {
-        if(error) {
-            res.status(503).send({error});
-            return;
-        }
-
-        return res.status(200).send({message: "Done", response})
-    })
+    try {
+        const response = await axios.post(`${BASE_QUERY}/pokemon`);
+        res.status(200).send({ message: 'Done', response: response.data });
+    } catch (error) {
+        res.status(503).send({ error: error.message });
+    }
 }
