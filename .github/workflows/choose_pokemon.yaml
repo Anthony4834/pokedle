@@ -1,0 +1,19 @@
+name: Choose pokemon scheduler
+
+on:
+  schedule:
+    # Runs at 17:00 UTC every day
+    - cron: '0 0 17 * *'
+  workflow_dispatch: # Allows manual triggering from the GitHub Actions tab
+
+jobs:
+  run-daily-task:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send request to trigger the daily task
+        env:
+          AUTH_TOKEN: ${{ secrets.CHOOSE_POKEMON_SECRET }}
+        run: |
+          curl -X POST "https://pokedle-lyart.vercel.app/pokemon" \
+          -H "Authorization: Bearer $AUTH_TOKEN"
