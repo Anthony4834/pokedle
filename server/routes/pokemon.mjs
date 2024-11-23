@@ -37,6 +37,13 @@ router.get('/:gameMode', async(req, res) => {
     res.send(result).status(200)
 });
 router.post('/', async(req, res) => {
+    const secretFromReq = req.headers['authorization'];
+    const { CHOOSE_POKEMON_SECRET: secretActual } = process.env;
+
+    if(secretFromReq !== `Bearer ${secretActual}`) {
+        return res.status(401).json({ error: 'Unauthorized' });
+    }
+
     const collection = db.collection('pokemon');
     await request('https://pokeapi.co/api/v2/pokemon?limit=386', async function (error, response, body) {
        if (!error && response.statusCode == 200) {
